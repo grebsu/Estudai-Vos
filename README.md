@@ -50,11 +50,43 @@ Siga estas instruções para obter uma cópia do projeto e executá-lo em sua m�
 
 ### Executando a Aplicação
 
+#### Modo de Desenvolvimento
+
 Para iniciar o servidor de desenvolvimento:
 ```bash
 npm run dev
 ```
 Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
+
+#### Modo de Produção (Recomendado)
+
+Para uma implantação robusta que reinicia com o sistema, recomendamos o uso do `pm2`.
+
+1.  **Instale o pm2 globalmente:**
+    ```bash
+    npm install pm2 -g
+    ```
+
+2.  **Crie a build de produção do projeto:**
+    ```bash
+    npm run build
+    ```
+
+3.  **Inicie a aplicação com o pm2:**
+    ```bash
+    pm2 start npm --name "Estudai-Vos" -- run start
+    ```
+
+4.  **Configure o pm2 para iniciar com o sistema:**
+    ```bash
+    pm2 startup
+    ```
+    *Este comando irá gerar outro que você precisará copiar e executar para finalizar a configuração.*
+
+5.  **Salve a configuração atual do pm2:**
+    ```bash
+    pm2 save
+    ```
 
 ## 📄 Licença
 
