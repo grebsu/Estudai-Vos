@@ -2,6 +2,12 @@
 
 O Estudai Vós é uma aplicação completa para planejamento de estudos, projetada para ajudar estudantes a organizar seus horários, acompanhar o progresso e gerenciar revisões de forma eficaz.
 
+## 🎥 Demonstração em Vídeo
+
+Assista a uma demonstração completa da aplicação e suas funcionalidades no vídeo abaixo:
+
+**[➡️ Assistir à demonstração no Dailymotion](https://www.dailymotion.com/video/x9ptl4i)**
+
 ## ✨ Funcionalidades
 
 - **Planejamento de Estudos por Ciclos:** Crie e gerencie ciclos de estudo com base em editais ou objetivos específicos.
