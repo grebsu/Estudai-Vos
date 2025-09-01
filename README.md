@@ -6,7 +6,7 @@ O Estudai Vós é uma aplicação completa para planejamento de estudos, projeta
 
 Assista a uma demonstração completa da aplicação e suas funcionalidades no vídeo abaixo:
 
-**[➡️ Assistir à demonstração no Dailymotion](https://www.dailymotion.com/video/x9ptl4i)**
+**[➡️ Assistir à demonstração no YouTube](https://youtu.be/cTVlvHOR89g)**
 
 ## ✨ Funcionalidades
 
