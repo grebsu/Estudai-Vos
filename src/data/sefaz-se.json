@@ -1,0 +1,885 @@
+{
+  "name": "SEFAZ-SE",
+  "observations": "",
+  "cargo": "Auditor Fiscal",
+  "edital": "2025",
+  "subjects": [
+    {
+      "subject": "LÍNGUA PORTUGUESA",
+      "topics": [
+        {
+          "topic_number": "1.1",
+          "topic_text": "1 Compreensão e interpretação de textos de gêneros variados."
+        },
+        {
+          "topic_number": "1.2",
+          "topic_text": "2 Reconhecimento de tipos e gêneros textuais."
+        },
+        {
+          "topic_number": "1.3",
+          "topic_text": "3 Domínio da ortografia oficial."
+        },
+        {
+          "topic_number": "1.4",
+          "topic_text": "4 Domínio dos mecanismos de coesão textual. 4.1 Emprego de elementos de referenciação, substituição e repetição, de conectores e de outros elementos de sequenciação textual. 4.2 Emprego de tempos e modos verbais."
+        },
+        {
+          "topic_number": "1.5",
+          "topic_text": "5 Domínio da estrutura morfossintática do período. 5.1 Emprego das classes de palavras. 5.2 Relações de coordenação entre orações e entre termos da oração. 5.3 Relações de subordinação entre orações e entre termos da oração. 5.4 Emprego dos sinais de pontuação. 5.5 Concordância verbal e nominal. 5.6 Regência verbal e nominal. 5.7 Emprego do sinal indicativo de crase. 5.8 Colocação dos pronomes átonos."
+        },
+        {
+          "topic_number": "1.6",
+          "topic_text": "6 Reescrita de frases e parágrafos do texto. 6.1 Significação das palavras. 6.2 Substituição e palavras ou de trechos de texto. 6.3 Reorganização da estrutura de orações e de períodos do texto. 6.4 Reescrita de textos de diferentes gêneros e níveis de formalidade."
+        }
+      ],
+      "color": "#EF4444"
+    },
+    {
+      "subject": "RACIOCÍNIO LÓGICO",
+      "topics": [
+        {
+          "topic_number": "2.1",
+          "topic_text": "1 Estruturas lógicas."
+        },
+        {
+          "topic_number": "2.2",
+          "topic_text": "2 Lógica de argumentação: analogias, inferências, deduções e conclusões."
+        },
+        {
+          "topic_number": "2.3",
+          "topic_text": "3 Lógica sentencial (ou proposicional)."
+        },
+        {
+          "topic_number": "2.4",
+          "topic_text": "3.1 Proposições simples e compostas. 3.2 Tabelas-verdade. 3.3 Equivalências.3.4 Leis De Morgan. 3.5 Diagramas lógicos."
+        },
+        {
+          "topic_number": "2.5",
+          "topic_text": "4 Lógica de primeira ordem."
+        },
+        {
+          "topic_number": "2.6",
+          "topic_text": "5 Princípios de contagem e probabilidade."
+        },
+        {
+          "topic_number": "2.7",
+          "topic_text": "6 Operações com conjuntos."
+        },
+        {
+          "topic_number": "2.8",
+          "topic_text": "7 Raciocínio lógico envolvendo problemas aritméticos, geométricos e matriciais."
+        }
+      ],
+      "color": "#84CC16"
+    },
+    {
+      "subject": "MATEMÁTICA FINANCEIRA",
+      "topics": [
+        {
+          "topic_number": "3.1",
+          "topic_text": "1 Regra de três simples e composta, proporcionalidades e porcentagens."
+        },
+        {
+          "topic_number": "3.2",
+          "topic_text": "2 Juros simples e compostos."
+        },
+        {
+          "topic_number": "3.3",
+          "topic_text": "3 Capitalização e desconto."
+        },
+        {
+          "topic_number": "3.4",
+          "topic_text": "4 Taxas de juros nominal, efetiva, equivalente, real e aparente."
+        },
+        {
+          "topic_number": "3.5",
+          "topic_text": "5 Rendas uniformes e variáveis."
+        },
+        {
+          "topic_number": "3.6",
+          "topic_text": "6 Planos de amortização de empréstimos e financiamentos. 6.1 Sistema francês (tabela Price). 6.2 Sistema de amortização constante (SAC). 6.3 Sistema de amortização misto (SAM)."
+        },
+        {
+          "topic_number": "3.7",
+          "topic_text": "7 Cálculo financeiro. 7.1 Custo real e efetivo das operações de financiamento, empréstimo e investimento."
+        },
+        {
+          "topic_number": "3.8",
+          "topic_text": "8 Avaliação econômica de projetos."
+        },
+        {
+          "topic_number": "3.9",
+          "topic_text": "9 Taxas de retorno e taxas internas de retorno."
+        }
+      ],
+      "color": "#A3E635"
+    },
+    {
+      "subject": "AFO",
+      "topics": [
+        {
+          "topic_number": "4.1",
+          "topic_text": "1 O papel do Estado e a atuação do governo nas finanças públicas."
+        },
+        {
+          "topic_number": "4.2",
+          "topic_text": "1.1 Formas e dimensões da intervenção da administração na economia.1.2 Funções do orçamento público."
+        },
+        {
+          "topic_number": "4.3",
+          "topic_text": "2 Orçamento público. 2.1 Conceito. 2.2 Técnicas orçamentárias. 2.3 Princípios orçamentários. 2.4 Ciclo orçamentário. 2.5 Processo orçamentário."
+        },
+        {
+          "topic_number": "4.4",
+          "topic_text": "3 O orçamento público no Brasil. 3.1 Sistema de planejamento e de orçamento federal."
+        },
+        {
+          "topic_number": "4.5",
+          "topic_text": "3.2 Plano plurianual. 3.3 Diretrizes orçamentárias. 3.4 Orçamento anual. 3.5 Outros planos e programas. 3.6 Sistema e processo de orçamentação. 3.7 Classificações orçamentárias. 3.8 Estrutura programática. 3.9 Créditos ordinários e adicionais."
+        },
+        {
+          "topic_number": "4.6",
+          "topic_text": "4 Programação e execução orçamentária e financeira. 4.1 Descentralização orçamentária e financeira. 4.2 Acompanhamento da execução. 4.3 Sistemas de informações. 4.4 Alterações orçamentárias."
+        },
+        {
+          "topic_number": "4.7",
+          "topic_text": "5 Receita pública. 5.1 Conceito e classificações. 5.2 Estágios. 5.3 Fontes. 5.4 Dívida ativa."
+        },
+        {
+          "topic_number": "4.8",
+          "topic_text": "6 Despesa pública. 6.1 Conceito e classificações. 6.2 Estágios. 6.3 Restos a pagar. 6.4 Despesas de exercícios anteriores. 6.5 Dívida flutuante e fundada. 6.6 Suprimento de fundos."
+        },
+        {
+          "topic_number": "4.9",
+          "topic_text": "7 Lei de Responsabilidade Fiscal. 7.1 Conceitos e objetivos. 7.2 Planejamento. 7.3 Receita Pública. 7.4 Despesa Pública. 7.5 Dívida e endividamento. 7.6 Transparência, controle e fiscalização."
+        },
+        {
+          "topic_number": "4.10",
+          "topic_text": "8 Termo de execução descentralizada, convênios, termo de referência e relatório de cumprimento de objeto."
+        },
+        {
+          "topic_number": "4.11",
+          "topic_text": "9 Tesouro Gerencial."
+        },
+        {
+          "topic_number": "4.12",
+          "topic_text": "10 Decretos de Programação Orçamentária e Financeira (DPOF)."
+        }
+      ],
+      "color": "#8B5CF6"
+    },
+    {
+      "subject": "DIREITO TRIBUTÁRIO",
+      "topics": [
+        {
+          "topic_number": "5.1",
+          "topic_text": "1 Sistema Tributário Nacional. Princípios Gerais. Limitações do Poder de Tributar."
+        },
+        {
+          "topic_number": "5.2",
+          "topic_text": "2 Direito tributário. Conceito e princípios."
+        },
+        {
+          "topic_number": "5.3",
+          "topic_text": "3 Tributos: conceito e espécies. Impostos. Taxas. Contribuição de Melhoria. Imunidades. Impostos da União. Impostos dos estados e do Distrito Federal. Impostos dos municípios."
+        },
+        {
+          "topic_number": "5.4",
+          "topic_text": "4 Repartição das receitas tributárias."
+        },
+        {
+          "topic_number": "5.5",
+          "topic_text": "5 Código Tributário Nacional. Competência tributária e suas limitações. Normas gerais de direito tributário. Norma tributária: espécies; vigência e aplicação; interpretação e integração; natureza."
+        },
+        {
+          "topic_number": "5.6",
+          "topic_text": "6 Obrigação tributária: conceito; espécies; fato gerador (hipótese de incidência); sujeitos ativo e passivo; solidariedade; capacidade tributária; domicílio tributário."
+        },
+        {
+          "topic_number": "5.7",
+          "topic_text": "7 Responsabilidade tributária. Responsabilidade dos Sucessores. Solidariedade e sucessão. Responsabilidade pessoal e de terceiros. Responsabilidade por infrações. Responsabilidade supletiva."
+        },
+        {
+          "topic_number": "5.8",
+          "topic_text": "8 Crédito tributário: conceito; natureza; lançamento e suas modalidades; revisão, suspensão, extinção e exclusão; prescrição e decadência; repetição do indébito."
+        },
+        {
+          "topic_number": "5.9",
+          "topic_text": "9 Garantias e privilégios do crédito tributário."
+        },
+        {
+          "topic_number": "5.10",
+          "topic_text": "10 Administração Tributária. Fiscalização. Sigilo Fiscal. Dívida Ativa. Certidões Negativas."
+        },
+        {
+          "topic_number": "5.11",
+          "topic_text": "11 Lei Complementar nº 118, de 2005."
+        },
+        {
+          "topic_number": "5.12",
+          "topic_text": "12 Reforma Tributária (EC nº 132/2023 e LC nº 214/2025)."
+        }
+      ],
+      "color": "#0369A1"
+    },
+    {
+      "subject": "CONTABILIDADE GERAL",
+      "topics": [
+        {
+          "topic_number": "6.1",
+          "topic_text": "1 Conceitos, objetivos e finalidades da contabilidade."
+        },
+        {
+          "topic_number": "6.2",
+          "topic_text": "2 Patrimônio: componentes, equação fundamental do patrimônio, situação líquida, representação gráfica."
+        },
+        {
+          "topic_number": "6.3",
+          "topic_text": "3 Atos e fatos administrativos: conceitos, fatos permutativos, modificativos e mistos."
+        },
+        {
+          "topic_number": "6.4",
+          "topic_text": "4 Contas: conceitos, contas de débitos, contas de créditos e saldos."
+        },
+        {
+          "topic_number": "6.5",
+          "topic_text": "5 Plano de contas: conceitos, elenco de contas, função e funcionamento das contas."
+        },
+        {
+          "topic_number": "6.6",
+          "topic_text": "6 Escrituração: conceitos, lançamentos contábeis, elementos essenciais, fórmulas de lançamentos, livros de escrituração, métodos e processos, regime de competência e regime de caixa."
+        },
+        {
+          "topic_number": "6.7",
+          "topic_text": "7 Contabilização de operações contábeis diversas: juros, descontos, tributos, aluguéis, variação monetária/cambial, folha de pagamento, compras, vendas e provisões, depreciações e baixa de bens."
+        },
+        {
+          "topic_number": "6.8",
+          "topic_text": "8 Balancete de verificação: conceitos, modelos e técnicas de elaboração."
+        },
+        {
+          "topic_number": "6.9",
+          "topic_text": "9 Balanço patrimonial: conceitos, objetivo, composição."
+        },
+        {
+          "topic_number": "6.10",
+          "topic_text": "10 Demonstração de resultado de exercício: conceito, objetivo, composição."
+        },
+        {
+          "topic_number": "6.11",
+          "topic_text": "11 Normas Brasileiras de Contabilidade."
+        }
+      ],
+      "color": "#14B8A6"
+    },
+    {
+      "subject": "CONTABILIDADE DE CUSTOS",
+      "topics": [
+        {
+          "topic_number": "7.1",
+          "topic_text": "1 Conceitos gerais e terminologia aplicável à contabilidade de custos."
+        },
+        {
+          "topic_number": "7.2",
+          "topic_text": "2 Conceitos e classificação dos custos."
+        },
+        {
+          "topic_number": "7.3",
+          "topic_text": "3 Apropriação dos custos à produção. 3.1 Conceito e critérios de atribuição dos custos."
+        },
+        {
+          "topic_number": "7.4",
+          "topic_text": "4 Departamentalização. 4.1 Conceito, tratamento contábil, forma de apropriação e impacto no custo do produto."
+        },
+        {
+          "topic_number": "7.5",
+          "topic_text": "5 Tipos de custeio. Conceitos, diferenciações, apropriação dos custos, impactos nos resultados."
+        },
+        {
+          "topic_number": "7.6",
+          "topic_text": "6 Tópicos Especiais de Contabilidade Aplicada ao Setor Público."
+        },
+        {
+          "topic_number": "7.7",
+          "topic_text": "6.1 Custos no setor público: NBC TSP 34."
+        }
+      ],
+      "color": "#D97706"
+    },
+    {
+      "subject": "DIREITO ADMINISTRATIVO",
+      "topics": [
+        {
+          "topic_number": "8.1",
+          "topic_text": "1 Estado, governo e administração pública. 1.1 Conceitos. 1.2 Elementos."
+        },
+        {
+          "topic_number": "8.2",
+          "topic_text": "2 Direito administrativo. 2.1 Conceito. 2.2 Objeto. 2.3 Fontes."
+        },
+        {
+          "topic_number": "8.3",
+          "topic_text": "3 Ato administrativo. 3.1 Conceito, requisitos, atributos, classificação e espécies. 3.2 Extinção do ato administrativo.3.2.1 Cassação, anulação, revogação e convalidação. 3.3 Decadência administrativa."
+        },
+        {
+          "topic_number": "8.4",
+          "topic_text": "4 Agentes públicos. 4.1 Disposições constitucionais aplicáveis. 4.2 Disposições doutrinárias. 4.2.1 Conceito. 4.2.2 Espécies. 4.2.3 Cargo, emprego e função pública. 4.2.4 Provimento. 4.2.5 Vacância. 4.2.6 Efetividade, estabilidade e vitaliciedade. 4.2.7 Remuneração. 4.2.8 Direitos e deveres. 4.2.9 Responsabilidade. 4.2.10 Processo administrativo disciplinar."
+        },
+        {
+          "topic_number": "8.5",
+          "topic_text": "5 Poderes da administração pública. 5.1 Hierárquico, disciplinar, regulamentar e de polícia. 5.2 Uso e abuso do poder."
+        },
+        {
+          "topic_number": "8.6",
+          "topic_text": "6 Regime jurídico-administrativo. 6.1 Conceito.  6.2 Princípios expressos e implícitos da administração pública."
+        },
+        {
+          "topic_number": "8.7",
+          "topic_text": "7 Responsabilidade civil do Estado. 7.1 Evolução histórica. 7.2 Responsabilidade civil do Estado no direito brasileiro. 7.2.1 Responsabilidade por ato comissivo do Estado. 7.2.2 Responsabilidade por omissão do Estado. 7.3 Requisitos para a demonstração da responsabilidade do Estado. 7.4 Causas excludentes e atenuantes da responsabilidade do Estado. 7.5 Reparação do dano. 7.6 Direito de regresso."
+        },
+        {
+          "topic_number": "8.8",
+          "topic_text": "8 Serviços públicos. 8.1 Conceito. 8.2 Elementos constitutivos. 8.3 Formas de prestação e meios de execução. 8.4 Delegação. 8.4.1 Concessão, permissão e autorização. 8.5 Classificação. 8.6 Princípios."
+        },
+        {
+          "topic_number": "8.9",
+          "topic_text": "9 Organização administrativa. 9.1 Centralização, descentralização, concentração e desconcentração. 9.2 Administração direta e indireta. 9.3 Autarquias, fundações, empresas públicas e sociedades de economia mista. 9.4 Entidades paraestatais e terceiro setor. 9.4.1 Serviços sociais autônomos, entidades de apoio, organizações sociais, organizações da sociedade civil de interesse público."
+        },
+        {
+          "topic_number": "8.10",
+          "topic_text": "10 Controle da administração pública. 10.1 Controle exercido pela administração pública. 10.2 Controle judicial. 10.3 Controle legislativo. 10.4 Improbidade administrativa. 10.4.1 Lei nº 8.429/1992 e suas alterações."
+        },
+        {
+          "topic_number": "8.11",
+          "topic_text": "11 Processo administrativo. 11.1 Lei Complementar Estadual nº 33/96 e suas alterações."
+        },
+        {
+          "topic_number": "8.12",
+          "topic_text": "12 Licitações e contratos administrativos. 12.1 Legislação pertinente. 12.1.1 Lei nº 14.133/2021. 12.1.2 Decreto nº 11.462/2013 e suas alterações (sistema de registro de preços). 12.2 Fundamentos constitucionais. 12.3 Elaboração e fiscalização de contratos. 12.4 Elaboração de projetos básicos para contratação de bens e serviços. 12.5 Critérios de remuneração por esforço versus produto. 12.6 Cláusulas e indicadores de nível de serviço. 12.7 Papel do fiscalizador do contrato. 12.8 Acompanhamento da execução contratual. 12.9 Definição e aplicação de penalidades e sanções administrativas."
+        },
+        {
+          "topic_number": "8.13",
+          "topic_text": "13 Lei Estadual nº 9.640/2025, Código de Conduta e Integridade da Secretaria de Estado da Fazenda de Sergipe."
+        }
+      ],
+      "color": "#B91C1C"
+    },
+    {
+      "subject": "DIREITO CONSTITUCIONAL",
+      "topics": [
+        {
+          "topic_number": "9.1",
+          "topic_text": "1 Constituição da República Federativa do Brasil de 1988."
+        },
+        {
+          "topic_number": "9.2",
+          "topic_text": "2 Aplicabilidade das normas constitucionais. 2.1 Normas de eficácia plena, contida e limitada. 2.2 Normas programáticas."
+        },
+        {
+          "topic_number": "9.3",
+          "topic_text": "3 Direitos e garantias fundamentais. 3.1 Direitos e deveres individuais e coletivos, direitos sociais, direitos de nacionalidade, direitos políticos, partidos políticos."
+        },
+        {
+          "topic_number": "9.4",
+          "topic_text": "4 Organização político-administrativa do Estado. 4.1 Estado federal brasileiro, União, estados, Distrito Federal, municípios e territórios."
+        },
+        {
+          "topic_number": "9.5",
+          "topic_text": "5 Administração pública. 5.1 Disposições gerais, servidores públicos."
+        },
+        {
+          "topic_number": "9.6",
+          "topic_text": "6 Poder Executivo. 6.1 Atribuições e responsabilidades do presidente da República."
+        },
+        {
+          "topic_number": "9.7",
+          "topic_text": "7 Poder Legislativo. 7.1 Estrutura. 7.2 Funcionamento e atribuições. 7.3 Processo legislativo. 7.3.1 Processo legislativo federal: conceito, espécies normativas, modalidades, fases. 7.3.2 Processo legislativo estadual, distrital e municipal: normas constitucionais federais aplicáveis. 7.4 Fiscalização contábil, financeira e orçamentária. 7.5 Comissões parlamentares de inquérito."
+        },
+        {
+          "topic_number": "9.8",
+          "topic_text": "8 Poder Judiciário. 8.1 Disposições gerais."
+        },
+        {
+          "topic_number": "9.9",
+          "topic_text": "9 Funções essenciais à justiça. 9.1 Ministério Público, advocacia pública. 9.2 Advocacia privada e Defensoria Pública."
+        },
+        {
+          "topic_number": "9.10",
+          "topic_text": "10 Controle de constitucionalidade. 10.1 Controle judicial de constitucionalidade: conceito, histórico, sistemas, pressupostos, modalidades, órgãos competentes, sujeitos legitimados, objetos de controle, tipos de inconstitucionalidade, parâmetros de controle, formalidades, procedimentos, julgamentos, decisões, efeitos das decisões, técnicas de decisão, segurança e estabilidade das decisões. 10.2 Súmula vinculante. 10.3 Reclamação constitucional. 10.4 Controle não judicial de constitucionalidade: órgãos, institutos e procedimentos. 10.5 Controle de constitucionalidade nos estados e no Distrito Federal."
+        },
+        {
+          "topic_number": "9.11",
+          "topic_text": "11 Ordem econômica e financeira."
+        },
+        {
+          "topic_number": "9.12",
+          "topic_text": "12 Finanças públicas."
+        },
+        {
+          "topic_number": "9.13",
+          "topic_text": "13 Constituição do Estado de Sergipe."
+        }
+      ],
+      "color": "#FBBF24"
+    },
+    {
+      "subject": "DIREITO EMPRESARIAL",
+      "topics": [
+        {
+          "topic_number": "10.1",
+          "topic_text": "1 Fundamentos do direito empresarial. 1.1 Origem e evolução histórica, autonomia, fontes e características. 1.2 Teoria da empresa. 1.3 Empresário: conceito, caracterização, inscrição, capacidade; empresário individual; pequeno empresário. 1.4 Lei Complementar nº 123/2006 e suas alterações (microempresa e empresa de pequeno porte). 1.5 Prepostos do empresário. 1.6 Institutos complementares: nome empresarial, estabelecimento empresarial, escrituração."
+        },
+        {
+          "topic_number": "10.2",
+          "topic_text": "2 Registro de empresa. 2.1 Órgãos de registro de empresa. 2.2 Atos de registro de empresa. 2.3 Processo decisório do registro de empresa. 2.4 Inatividade da empresa. 2.5 Empresário irregular. 2.6 Lei nº 8.934/1994 e suas alterações."
+        },
+        {
+          "topic_number": "10.3",
+          "topic_text": "3 Direito societário. 3.1 Sociedade empresária: conceito, terminologia, ato constitutivo. 3.2 Sociedades simples e empresárias. 3.3 Personalização da sociedade empresária. 3.4 Classificação das sociedades empresárias. 3.5 Sociedade irregular. 3.6 Teoria da desconsideração da personalidade jurídica. 3.7 Desconsideração inversa. 3.8 Regime jurídico dos sócios. 3.9 Sociedade limitada. 3.10 Sociedade anônima. 3.11 Lei nº 6.404/1976 e suas alterações. 3.12 Sociedade em nome coletivo. 3.13 Sociedade em comandita simples. 3.14 Sociedade em comandita por ações. 3.15 Operações societárias: transformação, incorporação, fusão e cisão. 3.16 Relações entre sociedades: coligações de sociedades, grupos societários, consórcios, sociedade subsidiária integral, sociedade de propósito específico. 3.17 Dissolução, liquidação e extinção das sociedades."
+        }
+      ],
+      "color": "#F472B6"
+    },
+    {
+      "subject": "DIREITO CIVIL",
+      "topics": [
+        {
+          "topic_number": "11.1",
+          "topic_text": "1 Lei de Introdução às Normas do Direito Brasileiro. 1.1 Vigência, aplicação, obrigatoriedade, interpretação e integração das leis. 1.2 Conflito das leis no tempo. 1.3 Eficácia das leis no espaço."
+        },
+        {
+          "topic_number": "11.2",
+          "topic_text": "2 Pessoas naturais. 2.1 Conceito. 2.2 Existência da pessoa natural. 2.3 Personalidade. 2.4 Capacidade. 2.5 Direitos da personalidade. 2.6 Nome civil. 2.7 Estado civil. 2.8 Domicílio. 2.9 Ausência."
+        },
+        {
+          "topic_number": "11.3",
+          "topic_text": "3 Pessoas jurídicas. 3.1 Disposições gerais. 3.2 Conceito e elementos caracterizadores. 3.3 Constituição. 3.4 Extinção. 3.5 Capacidade e direitos da personalidade. 3.6 Sociedades de fato. 3.7 Associações. 3.8 Sociedades. 3.9 Fundações. 3.10 Entes despersonalizados. 3.11 Desconsideração da personalidade jurídica. 3.12 Responsabilidade da pessoa jurídica e dos sócios."
+        },
+        {
+          "topic_number": "11.4",
+          "topic_text": "4 Domicílio."
+        },
+        {
+          "topic_number": "11.5",
+          "topic_text": "5 Bens. 5.1 Diferentes classes. 5.2 Bens corpóreos e incorpóreos. 5.3 Bens no comércio e fora do comércio. 5.4 Bens considerados em si mesmos. 5.5 Bens reciprocamente considerados. 5.6 Bens públicos."
+        },
+        {
+          "topic_number": "11.6",
+          "topic_text": "6 Fato jurídico."
+        },
+        {
+          "topic_number": "11.7",
+          "topic_text": "7 Negócio jurídico. 7.1 Disposições gerais. 7.2 Classificação e interpretação. 7.3 Elementos. 7.4 Representação. 7.5 Condição, termo e encargo. 7.6 Defeitos do negócio jurídico. 7.7 Existência, validade, eficácia. 7.8 Invalidade do negócio jurídico. 7.9 Simulação."
+        },
+        {
+          "topic_number": "11.8",
+          "topic_text": "8 Atos jurídicos lícitos e ilícitos."
+        },
+        {
+          "topic_number": "11.9",
+          "topic_text": "9 Prescrição e decadência."
+        },
+        {
+          "topic_number": "11.10",
+          "topic_text": "10 Prova do fato jurídico."
+        },
+        {
+          "topic_number": "11.11",
+          "topic_text": "11 Direito de família. 11.1 Direito pessoal. 11.2 Direito patrimonial. 11.3 União estável. 11.4 Tutela e curatela."
+        },
+        {
+          "topic_number": "11.12",
+          "topic_text": "12 Direito das sucessões. 12.1 Sucessão em geral. 12.2 Sucessão legítima. 12.3 Sucessão testamentária."
+        }
+      ],
+      "color": "#0284C7"
+    },
+    {
+      "subject": "DIREITO PENAL",
+      "topics": [
+        {
+          "topic_number": "12.1",
+          "topic_text": "1 Princípios aplicáveis ao direito penal."
+        },
+        {
+          "topic_number": "12.2",
+          "topic_text": "2 Aplicação da lei penal. 2.1 A lei penal no tempo e no espaço. 2.2 Tempo e lugar do crime."
+        },
+        {
+          "topic_number": "12.3",
+          "topic_text": "2.3 Interpretação da lei penal. 2.4 Analogia. 2.5 Irretroatividade da lei penal. 2.6 Conflito aparente de normas penais."
+        },
+        {
+          "topic_number": "12.4",
+          "topic_text": "3 Ilicitude."
+        },
+        {
+          "topic_number": "12.5",
+          "topic_text": "4 Culpabilidade."
+        },
+        {
+          "topic_number": "12.6",
+          "topic_text": "5 Punibilidade e causas de extinção."
+        },
+        {
+          "topic_number": "12.7",
+          "topic_text": "6 Crimes contra a administração pública."
+        },
+        {
+          "topic_number": "12.8",
+          "topic_text": "7 Lei nº 13.869/2019 (abuso de autoridade)."
+        },
+        {
+          "topic_number": "12.9",
+          "topic_text": "8 Disposições constitucionais aplicáveis ao direito penal."
+        },
+        {
+          "topic_number": "12.10",
+          "topic_text": "9 Crimes contra a ordem tributária."
+        }
+      ],
+      "color": "#FB923C"
+    },
+    {
+      "subject": "LEGISLAÇÃO TRIBUTÁRIA ESTADUAL",
+      "topics": [
+        {
+          "topic_number": "13.1",
+          "topic_text": "1 Lei Estadual nº 3.796/1996 e Decreto Estadual nº 21.400/2002 e anexos (Regulamento do ICMS)."
+        },
+        {
+          "topic_number": "13.2",
+          "topic_text": "2 Lei Estadual nº 7.651/2013 e Decreto Estadual nº 29.803/2014 (processo administrativo fiscal)."
+        },
+        {
+          "topic_number": "13.3",
+          "topic_text": "3 Programa Sergipano de Desenvolvimento Industrial – PSDI (Lei Estadual nº 3.140/1991 e suas alterações) e Decreto Estadual nº 29.935/2014."
+        },
+        {
+          "topic_number": "13.4",
+          "topic_text": "4 Fundo Estadual de Equilíbrio Fiscal (FEEF): Lei nº 8.180/2016 e Decreto nº 30.479/2017 (regulamento do FEEF)."
+        },
+        {
+          "topic_number": "13.5",
+          "topic_text": "5 Lei Estadual nº 7.655/2013 e Decreto Estadual nº 29.684/2014 (regulamento do IPVA)."
+        },
+        {
+          "topic_number": "13.6",
+          "topic_text": "6 Lei Estadual nº 7.724/2013 e Decreto Estadual nº 29.994/2015 (regulamento do ITCMD)."
+        },
+        {
+          "topic_number": "13.7",
+          "topic_text": "7 Lei Estadual nº 8.638/2019 (Taxa Estadual de Fiscalização e Serviços Diversos - TFSD)."
+        },
+        {
+          "topic_number": "13.8",
+          "topic_text": "8 Lei nº 4.731/2002 (Dispõe sobre o Fundo Estadual de Combate e Erradicação da Pobreza de Sergipe e sobre a adição de pontos percentuais a alíquotas do ICMS incidentes em determinadas operações e prestações com determinados produtos e serviços, com a correspondente arrecadação vinculada ao mesmo Fundo, e dá providências correlatas)."
+        }
+      ],
+      "color": "#DB2777"
+    },
+    {
+      "subject": "AUDITORIA FISCAL",
+      "topics": [
+        {
+          "topic_number": "14.1",
+          "topic_text": "1 Normas Brasileiras de Contabilidade de Auditoria – NBC TA e NBC PA."
+        },
+        {
+          "topic_number": "14.2",
+          "topic_text": "2 Amostragem em Auditoria. NBC TA 530, aprovada pela Resolução CFC nº 1.222/2009."
+        },
+        {
+          "topic_number": "14.3",
+          "topic_text": "3 Testes de observância."
+        },
+        {
+          "topic_number": "14.4",
+          "topic_text": "4 Testes substantivos."
+        },
+        {
+          "topic_number": "14.5",
+          "topic_text": "5 Testes para subavaliação e testes para superavaliação."
+        },
+        {
+          "topic_number": "14.6",
+          "topic_text": "6 Evidências de auditoria."
+        },
+        {
+          "topic_number": "14.7",
+          "topic_text": "7 Procedimentos de auditoria."
+        },
+        {
+          "topic_number": "14.8",
+          "topic_text": "8 Identificação de fraudes na escrita contábil."
+        },
+        {
+          "topic_number": "14.9",
+          "topic_text": "9 Demonstrações contábeis sujeitas a auditoria."
+        },
+        {
+          "topic_number": "14.10",
+          "topic_text": "10 Auditoria no ativo circulante."
+        },
+        {
+          "topic_number": "14.11",
+          "topic_text": "10.1 Recomposição contábil do fluxo de caixa da empresa."
+        },
+        {
+          "topic_number": "14.12",
+          "topic_text": "11 Identificação de saldo credor na conta caixa por falta de emissão de documentos fiscais."
+        },
+        {
+          "topic_number": "14.13",
+          "topic_text": "12 Suprimento das disponibilidades sem que haja comprovação quanto à efetiva entrega dos recursos financeiros: aumento do capital social, adiantamentos de clientes, empréstimos de sócios ou de terceiros, operações, prestações ou recebimentos sem origem, alienação de investimentos e bens do ativo imobilizado."
+        },
+        {
+          "topic_number": "14.14",
+          "topic_text": "13 Aquisições de mercadorias, bens, serviços e outros ativos não contabilizados e sem comprovação da origem do numerário."
+        },
+        {
+          "topic_number": "14.15",
+          "topic_text": "14 Baixa fictícia de títulos não recebidos."
+        },
+        {
+          "topic_number": "14.16",
+          "topic_text": "15 Cotejamento de recebíveis com os registros contábeis de receitas."
+        },
+        {
+          "topic_number": "14.17",
+          "topic_text": "16 Auditoria no ativo não circulante."
+        },
+        {
+          "topic_number": "14.18",
+          "topic_text": "16.1 Superavaliação na formação dos custos de estoque."
+        },
+        {
+          "topic_number": "14.19",
+          "topic_text": "17 Auditoria no ativo realizável a longo prazo."
+        },
+        {
+          "topic_number": "14.20",
+          "topic_text": "17.1 Identificação de origens de recursos fictícias."
+        },
+        {
+          "topic_number": "14.21",
+          "topic_text": "18 Auditoria em investimentos."
+        },
+        {
+          "topic_number": "14.22",
+          "topic_text": "19 Auditoria no ativo imobilizado."
+        },
+        {
+          "topic_number": "14.23",
+          "topic_text": "19.1 Ativos ocultos."
+        },
+        {
+          "topic_number": "14.24",
+          "topic_text": "20 Alienação fictícia de bens."
+        },
+        {
+          "topic_number": "14.25",
+          "topic_text": "21 Auditoria no ativo intangível."
+        },
+        {
+          "topic_number": "14.26",
+          "topic_text": "22 Auditoria no passivo circulante."
+        },
+        {
+          "topic_number": "14.27",
+          "topic_text": "22.1 Falta de registro contábil dos passivos de curto prazo."
+        },
+        {
+          "topic_number": "14.28",
+          "topic_text": "23 Passivos fictícios."
+        },
+        {
+          "topic_number": "14.29",
+          "topic_text": "24 Identificação de passivos já pagos e não baixados."
+        },
+        {
+          "topic_number": "14.30",
+          "topic_text": "25 Auditoria no passivo não circulante."
+        },
+        {
+          "topic_number": "14.31",
+          "topic_text": "26 Auditoria no patrimônio líquido."
+        },
+        {
+          "topic_number": "14.32",
+          "topic_text": "27 Aumento do capital social sem comprovação quanto à efetiva entrega dos recursos financeiros."
+        },
+        {
+          "topic_number": "14.33",
+          "topic_text": "28 Contabilização de reservas."
+        },
+        {
+          "topic_number": "14.34",
+          "topic_text": "29 Subvenções."
+        },
+        {
+          "topic_number": "14.35",
+          "topic_text": "30 Auditoria em contas de resultado."
+        },
+        {
+          "topic_number": "14.36",
+          "topic_text": "31 Registro de receitas e despesas."
+        },
+        {
+          "topic_number": "14.37",
+          "topic_text": "32 Ocultação de receitas."
+        },
+        {
+          "topic_number": "14.38",
+          "topic_text": "33 Superavaliação de custos e despesas."
+        },
+        {
+          "topic_number": "14.39",
+          "topic_text": "34 Identificação de fraudes e erros na escrita fiscal."
+        },
+        {
+          "topic_number": "14.40",
+          "topic_text": "35 Auditoria na escrita fiscal digital (EFD) e na nota fiscal eletrônica (NFe)."
+        },
+        {
+          "topic_number": "14.41",
+          "topic_text": "36 Testes de auditoria nos registros da NFe e nos registros de entradas, saídas, inventário, apuração do ICMS, da produção e do estoque e do documento controle de crédito de ICMS do ativo permanente (CIAP), modelos “C” ou “D” (ajuste SINIEF 2/2010)."
+        },
+        {
+          "topic_number": "14.42",
+          "topic_text": "37 Lei Complementar nº 105/2001 (dispõe sobre sigilo das operações de instituições financeiras e dá outras providências)."
+        }
+      ],
+      "color": "#15803D"
+    },
+    {
+      "subject": "ANÁLISE DE DADOS",
+      "topics": [
+        {
+          "topic_number": "15.1",
+          "topic_text": "1 Dado, informação, conhecimento e inteligência.  1.1 Dados estruturados e não estruturados. 1.2 Dados abertos. 1.3 Coleta, tratamento, armazenamento, integração e recuperação de dados."
+        },
+        {
+          "topic_number": "15.2",
+          "topic_text": "2 Banco de dados relacionais. 2.1 Conceitos e características. 2.2 Metadados. 2.3 Tabelas, visões (views) e índices. 2.4 Chaves e relacionamentos."
+        },
+        {
+          "topic_number": "15.3",
+          "topic_text": "3 Modelagem dimensional. 3.1 Conceito e aplicações."
+        },
+        {
+          "topic_number": "15.4",
+          "topic_text": "4 Mineração de dados. 4.1 Modelo de referência CRISP-DM."
+        },
+        {
+          "topic_number": "15.5",
+          "topic_text": "4.2 Técnicas para pré-processamento de dados. 4.3 Técnicas e tarefas de mineração de dados. 4.4 Classificação. 4.5 Regras de associação. 4.6 Análise de agrupamentos (clusterização). 4.7 Detecção de anomalias. 4.8 Modelagem preditiva. 4.9 Aprendizado de máquina. 4.10 Mineração de texto."
+        },
+        {
+          "topic_number": "15.6",
+          "topic_text": "5 Big Data. 5.1 Conceito, premissas e aplicação."
+        },
+        {
+          "topic_number": "15.7",
+          "topic_text": "6 Visualização e análise exploratória de dados."
+        },
+        {
+          "topic_number": "15.8",
+          "topic_text": "7 Planilhas e SQL."
+        }
+      ],
+      "color": "#3B82F6"
+    },
+    {
+      "subject": "ESTATÍSTICA",
+      "topics": [
+        {
+          "topic_number": "16.1",
+          "topic_text": "1 Estatística descritiva e análise exploratória de dados. 1.1 Gráficos, diagramas, tabelas, medidas descritivas (posição, dispersão, assimetria e curtose)."
+        },
+        {
+          "topic_number": "16.2",
+          "topic_text": "2 Probabilidade. 2.1 Definições básicas e axiomas. 2.2 Probabilidade condicional e independência. 2.3 Variáveis aleatórias discretas e contínuas. 2.4 Distribuição de probabilidades. 2.5 Função de probabilidade. 2.6 Função densidade de probabilidade. 2.7 Esperança e momentos. 2.8 Distribuições especiais. 2.9 Distribuições condicionais e independência. 2.10 Transformação de variáveis. 2.11 Leis dos grandes números. 2.12 Teorema central do limite. 2.13 Amostras aleatórias. 2.14 Distribuições amostrais."
+        },
+        {
+          "topic_number": "16.3",
+          "topic_text": "3 Inferência estatística. 3.1 Estimação pontual. 3.1.1 Métodos de estimação, propriedades dos estimadores, suficiência. 3.2 Estimação intervalar. 3.2.1 Intervalos de confiança, intervalos de credibilidade. 3.3 Testes de hipóteses. 3.3.1 Hipóteses simples e compostas, níveis de significância e potência de um teste, teste t de Student, teste qui-quadrado."
+        },
+        {
+          "topic_number": "16.4",
+          "topic_text": "4 Análise de regressão linear. 4.1 Critérios de mínimos quadrados e de máxima verossimilhança. 4.2 Modelos de regressão linear."
+        },
+        {
+          "topic_number": "16.5",
+          "topic_text": "5 Técnicas de amostragem. 5.1 Amostragem aleatória simples, estratificada, sistemática e por conglomerados. 5.2 Tamanho amostral."
+        }
+      ],
+      "color": "#7E22CE"
+    },
+    {
+      "subject": "CONHECIMENTOS SOBRE O ESTADO DE SERGIPE",
+      "topics": [
+        {
+          "topic_number": "17.1",
+          "topic_text": "1 Indígenas em Sergipe."
+        },
+        {
+          "topic_number": "17.2",
+          "topic_text": "2 Processo de ocupação e povoamento do território sergipano."
+        },
+        {
+          "topic_number": "17.3",
+          "topic_text": "3 Economias fundadoras."
+        },
+        {
+          "topic_number": "17.4",
+          "topic_text": "4 Regiões geoeconômicas."
+        },
+        {
+          "topic_number": "17.5",
+          "topic_text": "5 Estrutura do poder e a sociedade colonial sergipana."
+        },
+        {
+          "topic_number": "17.6",
+          "topic_text": "6 Sergipe nas sucessivas fases da República Brasileira."
+        },
+        {
+          "topic_number": "17.7",
+          "topic_text": "7 Condicionantes geoambientais (clima, recursos minerais, relevo e solo, recursos hídricos, vegetação)."
+        },
+        {
+          "topic_number": "17.8",
+          "topic_text": "8 Dinâmica populacional."
+        },
+        {
+          "topic_number": "17.9",
+          "topic_text": "9 Rede urbana e organização do espaço."
+        },
+        {
+          "topic_number": "17.10",
+          "topic_text": "10 Formação metropolitana de Aracaju."
+        },
+        {
+          "topic_number": "17.11",
+          "topic_text": "11 Política, sociedade e economia no Sergipe contemporâneo."
+        },
+        {
+          "topic_number": "17.12",
+          "topic_text": "12 Potencialidades e perspectivas para o desenvolvimento econômico e social."
+        },
+        {
+          "topic_number": "17.13",
+          "topic_text": "13 Formação e expressão da cultura sergipana."
+        },
+        {
+          "topic_number": "17.14",
+          "topic_text": "14 Educação em Sergipe."
+        }
+      ],
+      "color": "#C2410C"
+    }
+  ],
+  "records": [],
+  "reviewRecords": [],
+  "iconUrl": "/plan-icons/sefaz-se-1755443506767.png"
+}

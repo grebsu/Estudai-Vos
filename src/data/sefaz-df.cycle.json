@@ -1,0 +1,144 @@
+{
+  "studyCycle": [
+    {
+      "id": "1755389320258-ADMINISTRAÇÃO PÚBLICA-0",
+      "subject": "ADMINISTRAÇÃO PÚBLICA",
+      "duration": 86,
+      "color": "#FB923C"
+    },
+    {
+      "id": "1755389320258-AUDITORIA FISCAL DO ICMS E DO ISS-1",
+      "subject": "AUDITORIA FISCAL DO ICMS E DO ISS",
+      "duration": 86,
+      "color": "#7C3AED"
+    },
+    {
+      "id": "1755389320258-CONHECIMENTOS SOBRE O DISTRITO FEDERAL-2",
+      "subject": "CONHECIMENTOS SOBRE O DISTRITO FEDERAL",
+      "duration": 86,
+      "color": "#0284C7"
+    },
+    {
+      "id": "1755389320258-CONTABILIDADE DE CUSTOS-3",
+      "subject": "CONTABILIDADE DE CUSTOS",
+      "duration": 86,
+      "color": "#7C3AED"
+    },
+    {
+      "id": "1755389320259-CONTABILIDADE GERAL-4",
+      "subject": "CONTABILIDADE GERAL",
+      "duration": 86,
+      "color": "#2DD4BF"
+    },
+    {
+      "id": "1755389320259-CONTABILIDADE PÚBLICA-5",
+      "subject": "CONTABILIDADE PÚBLICA",
+      "duration": 86,
+      "color": "#C084FC"
+    },
+    {
+      "id": "1755389320259-DIREITO ADMINISTRATIVO-6",
+      "subject": "DIREITO ADMINISTRATIVO",
+      "duration": 86,
+      "color": "#B91C1C"
+    },
+    {
+      "id": "1755389320259-DIREITO CIVIL-7",
+      "subject": "DIREITO CIVIL",
+      "duration": 86,
+      "color": "#38BDF8"
+    },
+    {
+      "id": "1755389320259-DIREITO CONSTITUCIONAL-8",
+      "subject": "DIREITO CONSTITUCIONAL",
+      "duration": 86,
+      "color": "#84CC16"
+    },
+    {
+      "id": "1755389320259-DIREITO EMPRESARIAL-9",
+      "subject": "DIREITO EMPRESARIAL",
+      "duration": 86,
+      "color": "#FBBF24"
+    },
+    {
+      "id": "1755389320259-DIREITO FINANCEIRO-10",
+      "subject": "DIREITO FINANCEIRO",
+      "duration": 86,
+      "color": "#15803D"
+    },
+    {
+      "id": "1755389320259-DIREITO PENAL-11",
+      "subject": "DIREITO PENAL",
+      "duration": 86,
+      "color": "#F97316"
+    },
+    {
+      "id": "1755389320259-DIREITO TRIBUTÁRIO-12",
+      "subject": "DIREITO TRIBUTÁRIO",
+      "duration": 86,
+      "color": "#EC4899"
+    },
+    {
+      "id": "1755389320259-ECONOMIA-13",
+      "subject": "ECONOMIA",
+      "duration": 86,
+      "color": "#22C55E"
+    },
+    {
+      "id": "1755389320259-ESTATÍSTICA-14",
+      "subject": "ESTATÍSTICA",
+      "duration": 86,
+      "color": "#38BDF8"
+    },
+    {
+      "id": "1755389320259-FINANÇAS PÚBLICAS-15",
+      "subject": "FINANÇAS PÚBLICAS",
+      "duration": 85,
+      "color": "#A78BFA"
+    },
+    {
+      "id": "1755389320259-LEGISLAÇÃO TRIBUTÁRIA-16",
+      "subject": "LEGISLAÇÃO TRIBUTÁRIA",
+      "duration": 85,
+      "color": "#F472B6"
+    },
+    {
+      "id": "1755389320259-LÍNGUA PORTUGUESA-17",
+      "subject": "LÍNGUA PORTUGUESA",
+      "duration": 85,
+      "color": "#EF4444"
+    },
+    {
+      "id": "1755389320259-MATEMÁTICA FINANCEIRA-18",
+      "subject": "MATEMÁTICA FINANCEIRA",
+      "duration": 85,
+      "color": "#65A30D"
+    },
+    {
+      "id": "1755389320259-RACIOCÍNIO LÓGICO-19",
+      "subject": "RACIOCÍNIO LÓGICO",
+      "duration": 85,
+      "color": "#16A34A"
+    },
+    {
+      "id": "1755389320259-TECNOLOGIA DA INFORMAÇÃO-20",
+      "subject": "TECNOLOGIA DA INFORMAÇÃO",
+      "duration": 85,
+      "color": "#0D9488"
+    }
+  ],
+  "studyHours": "30",
+  "weeklyQuestionsGoal": "250",
+  "currentProgressMinutes": 0,
+  "sessionProgressMap": {},
+  "reminderNotes": [],
+  "studyDays": [
+    "Segunda",
+    "Quarta",
+    "Quinta",
+    "Sexta",
+    "Domingo",
+    "Sábado"
+  ],
+  "completedCycles": 0
+}

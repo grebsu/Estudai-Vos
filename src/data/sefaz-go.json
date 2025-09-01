@@ -1,0 +1,1641 @@
+{
+  "name": "SEFAZ-GO",
+  "observations": "",
+  "cargo": "Auditor Fiscal",
+  "edital": "",
+  "subjects": [
+    {
+      "subject": "Português",
+      "topics": [
+        {
+          "topic_number": "1.1",
+          "topic_text": "1. Interpretação de texto.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "1.2",
+          "topic_text": "2. Ortografia oficial.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "1.3",
+          "topic_text": "3. Acentuação gráfica.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "1.4",
+          "topic_text": "4. Pontuação.",
+          "userWeight": 4
+        },
+        {
+          "topic_number": "1.5",
+          "topic_text": "5. Classes de palavras: substantivo, adjetivo, numeral, pronome, verbo, advérbio, preposição e conjunção: emprego e sentido que imprimem às relações que estabelecem.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "1.6",
+          "topic_text": "6. Vozes verbais."
+        },
+        {
+          "topic_number": "1.7",
+          "topic_text": "7. Concordância verbal e nominal.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "1.8",
+          "topic_text": "8. Regência verbal e nominal.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "1.9",
+          "topic_text": "9. Sintaxe: processos de coordenação e subordinação.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "1.10",
+          "topic_text": "10. Ocorrência de crase."
+        },
+        {
+          "topic_number": "1.11",
+          "topic_text": "11. Sinônimos e antônimos."
+        },
+        {
+          "topic_number": "1.12",
+          "topic_text": "12. Sentido próprio e figurado das palavras."
+        },
+        {
+          "topic_number": "1.13",
+          "topic_text": "13. Reorganização de orações e períodos; equivalência e transformação de estruturas."
+        },
+        {
+          "topic_number": "1.14",
+          "topic_text": "14. Redação (reconhecimento de frases corretas e incorretas)."
+        }
+      ],
+      "color": "#EF4444"
+    },
+    {
+      "subject": "Raciocínio Lógico",
+      "topics": [
+        {
+          "topic_number": "2.1",
+          "topic_text": "1. Estrutura lógica de relações arbitrárias entre pessoas, lugares, objetos ou eventos fictícios; deduzir novas informações das relações fornecidas e avaliar as condições usadas para estabelecer a estrutura daquelas relações."
+        },
+        {
+          "topic_number": "2.2",
+          "topic_text": "2. Compreensão e elaboração da lógica das situações por meio de: raciocínio verbal, raciocínio matemático, raciocínio sequencial, orientação espacial e temporal, formação de conceitos, discriminação de elementos."
+        },
+        {
+          "topic_number": "2.3",
+          "topic_text": "3. Compreensão do processo lógico que, a partir de um conjunto de hipóteses, conduz, de forma válida, a conclusões determinadas."
+        }
+      ],
+      "color": "#16A34A"
+    },
+    {
+      "subject": "Matemática Financeira",
+      "topics": [
+        {
+          "topic_number": "3.1",
+          "topic_text": "1. Juros simples. 1.1 Montante e juros. 1.2 Taxa real e taxa efetiva. 1.3 Taxas equivalentes. 1.4 Capitais equivalentes.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "3.2",
+          "topic_text": "2. Juros compostos. 2.1 Montante e juros. 2.2 Taxa real e taxa efetiva. 2.3 Taxas equivalentes. 2.4 Capitais equivalentes. 2.5 Capitalização contínua.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "3.3",
+          "topic_text": "3. Descontos: simples, composto. 3.1 Desconto racional e desconto comercial.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "3.4",
+          "topic_text": "4. Amortizações. 4.1 Sistema francês. 4.2 Sistema de amortização constante. 4.3 Sistema misto.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "3.5",
+          "topic_text": "5. Fluxo de caixa. 5.1 Valor atual. 5.2 Taxa interna de retorno.",
+          "userWeight": 3
+        }
+      ],
+      "color": "#A3E635"
+    },
+    {
+      "subject": "Estatística",
+      "topics": [
+        {
+          "topic_number": "4.1",
+          "topic_text": "1. Estatística descritiva e análise exploratória de dados: gráficos, diagramas, tabelas, medidas descritivas (posição, dispersão, assimetria e curtose)."
+        },
+        {
+          "topic_number": "4.2",
+          "topic_text": "2. Probabilidade. 2.1 Definições básicas e axiomas. 2.2 Probabilidade condicional e independência."
+        },
+        {
+          "topic_number": "4.3",
+          "topic_text": "3. Variáveis aleatórias discretas e contínuas e suas distribuições (densidades) de probabilidade. 3.1 Distribuições especiais: geométrica, binomial, exponencial, uniforme discreta e contínua, normal, t-student e Qui-quadrado."
+        },
+        {
+          "topic_number": "4.4",
+          "topic_text": "4. Esperança e variância de uma variável aleatória."
+        },
+        {
+          "topic_number": "4.5",
+          "topic_text": "5. Distribuições conjuntas, covariância e correlação linear entre duas variáveis aleatórias."
+        },
+        {
+          "topic_number": "4.6",
+          "topic_text": "6. Noção de amostra aleatória e distribuição amostral."
+        },
+        {
+          "topic_number": "4.7",
+          "topic_text": "7. Noções de estimação pontual e intervalar de parâmetros."
+        },
+        {
+          "topic_number": "4.8",
+          "topic_text": "8. Noções de teste de hipótese, nível de significância, teste t de Student, testes qui-quadrado."
+        }
+      ],
+      "color": "#4D7C0F"
+    },
+    {
+      "subject": "Direito Constitucional",
+      "topics": [
+        {
+          "topic_number": "5.1",
+          "topic_text": "1. Constituição da República Federativa do Brasil de 1988.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "5.2",
+          "topic_text": "2. Aplicabilidade das normas constitucionais. 2.1 Normas de eficácia plena, contida e limitada. 2.2 Normas programáticas.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "5.3",
+          "topic_text": "3. Direitos e garantias fundamentais. 3.1 Direitos e deveres individuais e coletivos, direitos sociais, direitos de nacionalidade, direitos políticos, partidos políticos.",
+          "userWeight": 4
+        },
+        {
+          "topic_number": "5.4",
+          "topic_text": "4. Organização político-administrativa do Estado. 4.1 Estado federal brasileiro, União, Estados, Distrito Federal, Municípios e Territórios.",
+          "userWeight": 4
+        },
+        {
+          "topic_number": "5.5",
+          "topic_text": "5. Administração Pública. 5.1 Disposições gerais, servidores públicos.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "5.6",
+          "topic_text": "6. Poder Executivo. 6.1 Atribuições e responsabilidades do Presidente da República.",
+          "userWeight": 2
+        },
+        {
+          "topic_number": "5.7",
+          "topic_text": "7. Poder Legislativo. 7.1 Estrutura. 7.2 Funcionamento e atribuições. 7.3 Processo legislativo. 7.3.1 Processo legislativo federal: conceito, espécies normativas, modalidades, fases. 7.3.2 Processo legislativo estadual, distrital e municipal: normas constitucionais federais aplicáveis. 7.4 Fiscalização contábil, financeira e orçamentária. 7.5 Comissões parlamentares de inquérito.",
+          "userWeight": 4
+        },
+        {
+          "topic_number": "5.8",
+          "topic_text": "8. Poder Judiciário. 8.1 Disposições gerais."
+        },
+        {
+          "topic_number": "5.9",
+          "topic_text": "9. Funções essenciais à Justiça. 9.1 Ministério Público, advocacia pública."
+        },
+        {
+          "topic_number": "5.10",
+          "topic_text": "10. Controle de constitucionalidade. 10.1 Controle judicial de constitucionalidade: conceito, histórico, sistemas, pressupostos, modalidades, órgãos competentes, sujeitos legitimados, objetos de controle, tipos de inconstitucionalidade, parâmetros de controle, formalidades, procedimentos, julgamentos, decisões, efeitos das decisões, técnicas de decisão, segurança e estabilidade das decisões. 10.2 Súmula vinculante. 10.3 Reclamação constitucional. 10.4 Controle não judicial de constitucionalidade: órgãos, institutos e procedimentos. 10.5 Controle de constitucionalidade nos estados e no Distrito Federal.",
+          "userWeight": 4
+        },
+        {
+          "topic_number": "5.11",
+          "topic_text": "11. Ordem econômica e financeira."
+        },
+        {
+          "topic_number": "5.12",
+          "topic_text": "12. Constituição do Estado de Goiás. 12.1. Da Organização do Estado: Poder Legislativo, Poder Executivo, Poder Judiciário. 12.2. Da Ordem Econômica e Social: Da Política de Desenvolvimento.",
+          "userWeight": 3
+        }
+      ],
+      "color": "#0284C7"
+    },
+    {
+      "subject": "Direito Administrativo",
+      "topics": [
+        {
+          "topic_number": "6.1",
+          "topic_text": "1. Estado, Governo e Administração Pública. 1.1 Conceitos. 1.2 Elementos.",
+          "userWeight": 2
+        },
+        {
+          "topic_number": "6.2",
+          "topic_text": "2. Direito Administrativo. 2.1 Conceito. 2.2 Objeto. 2.3 Fontes.",
+          "userWeight": 2
+        },
+        {
+          "topic_number": "6.3",
+          "topic_text": "3. Ato administrativo. 3.1 Conceito, requisitos, atributos, classificação e espécies. 3.2 Extinção do ato administrativo. 3.2.1 Cassação, anulação, revogação e convalidação. 3.3 Decadência administrativa.",
+          "userWeight": 4
+        },
+        {
+          "topic_number": "6.4",
+          "topic_text": "4. Agentes públicos. 4.1 Disposições constitucionais aplicáveis. 4.2 Disposições doutrinárias. 4.2.1 Conceito. 4.2.2 Espécies. 4.2.3 Cargo, emprego e função pública. 4.2.4 Provimento. 4.2.5 Vacância. 4.2.6 Efetividade, estabilidade e vitaliciedade. 4.2.7 Remuneração. 4.2.8 Direitos e deveres. 4.2.9 Responsabilidade. 4.2.10 Processo administrativo disciplinar. 4.3. Estatuto dos servidores públicos civis do Estado de Goiás (Lei n. 20.756, de 28 de janeiro de 2020): Título V, Capítulos I, II, IV e V. 4.4 Lei que institui a carreira do fisco da Secretaria da Fazenda do Estado de Goiás (Lei 13.266, de 16 de abril de 1998).",
+          "userWeight": 5
+        },
+        {
+          "topic_number": "6.5",
+          "topic_text": "5. Poderes da Administração Pública. 5.1 Hierárquico, disciplinar, regulamentar e de polícia. 5.2 Uso e abuso do poder.",
+          "userWeight": 4
+        },
+        {
+          "topic_number": "6.6",
+          "topic_text": "6. Regime jurídico-administrativo. 6.1 Conceito. 6.2 Princípios expressos e implícitos da administração pública.",
+          "userWeight": 4
+        },
+        {
+          "topic_number": "6.7",
+          "topic_text": "7. Responsabilidade civil do Estado. 7.1 Evolução histórica. 7.2 Responsabilidade civil do Estado no direito brasileiro. 7.2.1 Responsabilidade por ato comissivo do Estado. 7.2.2 Responsabilidade por omissão do Estado. 7.3 Requisitos para a demonstração da responsabilidade do Estado. 7.4 Causas excludentes e atenuantes da responsabilidade do Estado. 7.5 Reparação do dano. 7.6 Direito de regresso.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "6.8",
+          "topic_text": "8. Serviços Públicos. 8.1 Conceito. 8.2 Elementos constitutivos. 8.3 Formas de prestação e meios de execução. 8.4 Delegação. 8.4.1 Concessão, permissão e autorização. 8.5 Classificação. 8.6 Princípios. 8.7. Lei nº 8.987/1995. 8.8. Parceria Público-Privada (Lei nº 11.079/2004).",
+          "userWeight": 4
+        },
+        {
+          "topic_number": "6.9",
+          "topic_text": "9. Organização Administrativa. 9.1 Centralização, descentralização, concentração e desconcentração. 9.2 Administração direta e indireta. 9.3 Autarquias, fundações, empresas públicas e sociedades de economia mista. 9.4 Entidades paraestatais e terceiro setor. 9.4.1 Serviços sociais autônomos, entidades de apoio, organizações sociais, organizações da sociedade civil de interesse público. 9.5. Contratos de Gestão.",
+          "userWeight": 4
+        },
+        {
+          "topic_number": "6.10",
+          "topic_text": "10. Controle da Administração Pública. 10.1. Controle externo e controle interno. 10.1.1 Controle exercido pela administração pública. 10.1.2 Controle judicial. 10.1.3 Controle legislativo e pelos Tribunais de Contas.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "6.11",
+          "topic_text": "11. Improbidade administrativa: Lei nº 8.429/1992 e alterações. Lei nº 14.230/2021.",
+          "userWeight": 4
+        },
+        {
+          "topic_number": "6.12",
+          "topic_text": "12. Lei nº 12.846/2013 e alterações (Lei Anticorrupção)."
+        },
+        {
+          "topic_number": "6.13",
+          "topic_text": "13. Licitações e contratos administrativos. 13.1 Lei nº 14.133/2021 (Nova Lei de Licitações e Contratos Administrativos).",
+          "userWeight": 5
+        },
+        {
+          "topic_number": "6.14",
+          "topic_text": "14. Bens Públicos. Bens públicos: regime jurídico, classificação, administração, aquisição e alienação, formas de utilização por terceiros.",
+          "userWeight": 4
+        },
+        {
+          "topic_number": "6.15",
+          "topic_text": "15. Lei de acesso à informação. (Lei nº 12.527/2011).",
+          "userWeight": 4
+        },
+        {
+          "topic_number": "6.16",
+          "topic_text": "16. Lei Geral de Proteção de Dados (Lei nº 13.709/2018)."
+        }
+      ],
+      "color": "#7C3AED"
+    },
+    {
+      "subject": "Direito Financeiro",
+      "topics": [
+        {
+          "topic_number": "7.1",
+          "topic_text": "1. Orçamento na Constituição de 1988: Plano Plurianual (PPA), Lei de Diretrizes Orçamentárias (LDO), Lei Orçamentária Anual (LOA). 1.1. Créditos Adicionais. 1.2. Emendas parlamentares ao Orçamento. Plano Plurianual (PPA). estrutura, base legal, objetivos, conteúdo, tipos de programas. 1.3. Lei de Diretrizes Orçamentárias (LDO): objetivos, estrutura, base legal e conteúdo, Anexos de Metas Fiscais, Anexos de Riscos Fiscais, critérios para limitação de empenho."
+        },
+        {
+          "topic_number": "7.2",
+          "topic_text": "2. Lei Complementar nº 101/2000: Capítulo II - Planejamento; Capítulo III — Da Receita Pública; Capítulo IV — Da Despesa Pública; Capítulo V — Das Transferências Voluntárias; Capítulo VI — Da Destinação de Recursos para o Setor Privado; Capítulo VII — Da Dívida e do Endividamento; Capítulo VIII — Da Gestão Patrimonial."
+        },
+        {
+          "topic_number": "7.3",
+          "topic_text": "3. Lei nº 4320/1964."
+        }
+      ],
+      "color": "#DB2777"
+    },
+    {
+      "subject": "Direito Civil",
+      "topics": [
+        {
+          "topic_number": "8.1",
+          "topic_text": "1. Lei de Introdução às Normas do Direito Brasileiro. 1.1 Vigência, aplicação, obrigatoriedade, interpretação e integração das leis. 1.2 Conflito das leis no tempo. 1.3 Eficácia das leis no espaço."
+        },
+        {
+          "topic_number": "8.2",
+          "topic_text": "2. Pessoas naturais. 2.1 Conceito. 2.2 Início da pessoa natural. 2.3 Personalidade. 2.4 Capacidade. 2.5 Direitos da personalidade. 2.6 Domicílio."
+        },
+        {
+          "topic_number": "8.3",
+          "topic_text": "3. Pessoas jurídicas. 3.1 Disposições gerais. 3.2 Associações. 3.3 Fundações.",
+          "userWeight": 4
+        },
+        {
+          "topic_number": "8.4",
+          "topic_text": "4. Bens imóveis, móveis e públicos.",
+          "userWeight": 4
+        },
+        {
+          "topic_number": "8.5",
+          "topic_text": "5. Fato jurídico.",
+          "userWeight": 5
+        },
+        {
+          "topic_number": "8.6",
+          "topic_text": "6. Negócio jurídico. 6.1 Disposições gerais. 6.2 Invalidade.",
+          "userWeight": 4
+        },
+        {
+          "topic_number": "8.7",
+          "topic_text": "7. Prescrição. 7.1 Disposições gerais.",
+          "userWeight": 4
+        },
+        {
+          "topic_number": "8.8",
+          "topic_text": "8. Decadência.",
+          "userWeight": 4
+        },
+        {
+          "topic_number": "8.9",
+          "topic_text": "9. Obrigações. 9.1 Características. 9.2 Adimplemento pelo pagamento. 9.3 Inadimplemento das obrigações — disposições gerais e mora."
+        },
+        {
+          "topic_number": "8.10",
+          "topic_text": "10. Contratos. 10.1 Princípios. 10.2 Contratos em geral. 10.3 Disposições gerais.",
+          "userWeight": 4
+        },
+        {
+          "topic_number": "8.11",
+          "topic_text": "11. Responsabilidade civil objetiva e subjetiva."
+        },
+        {
+          "topic_number": "8.12",
+          "topic_text": "12. Formas de direito de exploração de propriedades (posse, usufruto, contratos de compra e venda, comodato, arrendamento, inventários)."
+        }
+      ],
+      "color": "#2DD4BF"
+    },
+    {
+      "subject": "Direito Penal",
+      "topics": [
+        {
+          "topic_number": "9.1",
+          "topic_text": "1. Aplicação da lei penal."
+        },
+        {
+          "topic_number": "9.2",
+          "topic_text": "2. Princípios da legalidade e da anterioridade."
+        },
+        {
+          "topic_number": "9.3",
+          "topic_text": "3. Lei penal no tempo e no espaço."
+        },
+        {
+          "topic_number": "9.4",
+          "topic_text": "4. Tempo e lugar do crime."
+        },
+        {
+          "topic_number": "9.5",
+          "topic_text": "5. Crime: conceito, elementos, relação de causalidade, tipo e tipicidade, antijuridicidade, culpabilidade, dolo e culpa, excludentes da culpabilidade e extinção da punibilidade."
+        },
+        {
+          "topic_number": "9.6",
+          "topic_text": "6. Crimes contra a Fé Pública: falsidade de títulos e outros papeis públicos; falsidade documental."
+        },
+        {
+          "topic_number": "9.7",
+          "topic_text": "7. Crimes contra a Administração Pública: crimes praticados por funcionário público e por particular contra a Administração Pública; crimes contra as finanças públicas."
+        },
+        {
+          "topic_number": "9.8",
+          "topic_text": "8. Lei Federal nº 8.137/1990 (crimes contra a ordem tributária)."
+        },
+        {
+          "topic_number": "9.9",
+          "topic_text": "9. Lei Federal nº 13.869/2019 (crimes de abuso de autoridade)."
+        }
+      ],
+      "color": "#B45309"
+    },
+    {
+      "subject": "Direito Empresarial",
+      "topics": [
+        {
+          "topic_number": "10.1",
+          "topic_text": "1. Fundamentos do direito empresarial. 1.1 Origem e evolução histórica, autonomia, fontes e características. 1.2 Teoria da empresa. 1.3 Empresário. 1.3.1 Conceito, caracterização, inscrição, capacidade; empresário individual; pequeno empresário. 1.4 Lei Complementar nº 123/2006 e suas alterações (microempresa e empresa de pequeno porte)."
+        },
+        {
+          "topic_number": "10.2",
+          "topic_text": "2. Registro de empresa. 2.1 Órgãos de registro de empresas. 2.2 Atos de registro de empresa. 2.3 Processo decisório do registro de empresa. 2.4 Inatividade da empresa. 2.5 Empresário irregular.",
+          "userWeight": 4
+        },
+        {
+          "topic_number": "10.3",
+          "topic_text": "3. Direito societário. 3.1 Sociedade empresária. 3.1.1 Conceito, terminologia, ato constitutivo. 3.2 Sociedades simples e empresárias. 3.3 Personalização da sociedade empresária. 3.4 Classificação das sociedades empresárias. 3.5 Sociedade irregular. 3.6 Teoria da desconsideração da personalidade jurídica. 3.7 Desconsideração inversa. 3.8 Sociedade limitada. 3.9 Sociedade anônima. 3.10 Lei nº 6.404/1976 e suas alterações. 3.11 Operações societárias. 3.11.1 Transformação, incorporação, fusão e cisão. 3.12 Relações entre sociedades. 3.12.1 Coligações de sociedades, grupos societários, consórcios, sociedade subsidiária integral, sociedade de propósito específico. 3.13 Dissolução, liquidação e extinção das sociedades. 3.14 Responsabilização objetiva e subjetiva de pessoa jurídica.",
+          "userWeight": 5
+        },
+        {
+          "topic_number": "10.4",
+          "topic_text": "4. Falência e recuperação judicial e extrajudicial.",
+          "userWeight": 4
+        }
+      ],
+      "color": "#2563EB"
+    },
+    {
+      "subject": "Economia",
+      "topics": [
+        {
+          "topic_number": "11.1",
+          "topic_text": "1. Conceitos fundamentais de economia."
+        },
+        {
+          "topic_number": "11.2",
+          "topic_text": "2. Teoria elementar de equilíbrio do mercado."
+        },
+        {
+          "topic_number": "11.3",
+          "topic_text": "3. Fatores que influenciam a oferta e a procura por bens e serviços."
+        },
+        {
+          "topic_number": "11.4",
+          "topic_text": "4. Efeitos de deslocamentos das curvas de procura e oferta."
+        },
+        {
+          "topic_number": "11.5",
+          "topic_text": "5. Elasticidades – preço da procura e da oferta."
+        },
+        {
+          "topic_number": "11.6",
+          "topic_text": "6. Equilíbrio da firma no curto prazo nas estruturas de mercado: concorrência perfeita, concorrência monopolística, oligopólio e monopólio."
+        },
+        {
+          "topic_number": "11.7",
+          "topic_text": "7. A necessidade econômica da tributação. Formas de Tributação: Impostos, taxas e contribuições de melhoria."
+        },
+        {
+          "topic_number": "11.8",
+          "topic_text": "8. Classificação dos impostos: Impostos indiretos (Impostos *Ad Valorem* e impostos específicos, impostos sobre valor adicionado, impostos únicos – *excise tax*)."
+        },
+        {
+          "topic_number": "11.9",
+          "topic_text": "9. Tributação e eficiência: conceituação econômica de eficiência (eficiência de Pareto)."
+        },
+        {
+          "topic_number": "11.10",
+          "topic_text": "10. O peso morto da tributação. Determinantes do Peso Morto: elasticidades de oferta e demanda."
+        },
+        {
+          "topic_number": "11.11",
+          "topic_text": "11. Tributação ótima sobre mercadorias: a regra de Ramsey. Curva de Laffer."
+        },
+        {
+          "topic_number": "11.12",
+          "topic_text": "12. Tributação e equidade: o *trade-off* entre eficiência e equidade. Implicações da regra de Ramsey sobre a equidade. Critérios de equidade: capacidade contributiva, critério do benefício."
+        },
+        {
+          "topic_number": "11.13",
+          "topic_text": "13. Efeitos distributivos dos impostos: incidência econômica dos tributos."
+        },
+        {
+          "topic_number": "11.14",
+          "topic_text": "14. Tributação e estruturas de mercado: incidência de impostos em concorrência perfeita e monopólio."
+        },
+        {
+          "topic_number": "11.15",
+          "topic_text": "15. Política tributária: como os impostos influem nas decisões de consumo, poupança e gasto."
+        },
+        {
+          "topic_number": "11.16",
+          "topic_text": "16. Fluxo Circular da Renda. Contabilidade nacional."
+        },
+        {
+          "topic_number": "11.17",
+          "topic_text": "17. Mensurando a Renda Nacional: os agregados macroeconômicos (consumo, investimento, gastos do governo, exportações líquidas)."
+        },
+        {
+          "topic_number": "11.18",
+          "topic_text": "18. Determinação do produto de equilíbrio: investimento e poupança. A curva IS."
+        },
+        {
+          "topic_number": "11.19",
+          "topic_text": "19. Política monetária, taxa de juros e a curva LM."
+        },
+        {
+          "topic_number": "11.20",
+          "topic_text": "20. PIB real vs. PIB nominal. Deflator do PIB."
+        },
+        {
+          "topic_number": "11.21",
+          "topic_text": "21. Inflação: conceitos e formas de mensuração. Correção monetária utilizando índices de inflação."
+        },
+        {
+          "topic_number": "11.22",
+          "topic_text": "22. Contas nacionais do Brasil."
+        },
+        {
+          "topic_number": "11.23",
+          "topic_text": "23. Balanço de Pagamentos e relações com o resto do mundo."
+        },
+        {
+          "topic_number": "11.24",
+          "topic_text": "24. Noções sobre economia do setor público."
+        },
+        {
+          "topic_number": "11.25",
+          "topic_text": "25. Políticas fiscal, monetária e cambial."
+        },
+        {
+          "topic_number": "11.26",
+          "topic_text": "26. Efeitos da atuação do Estado na economia."
+        },
+        {
+          "topic_number": "11.27",
+          "topic_text": "27. Sistema Tributário como instrumento de distribuição de renda."
+        },
+        {
+          "topic_number": "11.28",
+          "topic_text": "Se precisar de ajustes ou formatação adicional, é só avisar!"
+        }
+      ],
+      "color": "#8B5CF6"
+    },
+    {
+      "subject": "Contabilidade Geral",
+      "topics": [
+        {
+          "topic_number": "12.1",
+          "topic_text": "1. Conceito, objeto, objetivos, campo de atuação e usuários da informação contábil."
+        },
+        {
+          "topic_number": "12.2",
+          "topic_text": "2. Princípios e Normas Brasileiras de Contabilidade emanadas pelo Conselho Federal de Contabilidade (CFC)."
+        },
+        {
+          "topic_number": "12.3",
+          "topic_text": "3. Itens patrimoniais do ativo, do passivo e do patrimônio líquido: conteúdo, conceitos e estrutura; classificações, avaliações e ajustes dos itens patrimoniais exigidos pelas novas práticas contábeis adotadas no Brasil trazidas pela Lei Federal nº 11.638/2007 e Lei Federal nº 11.941/2009; conceito e contabilização de receitas e despesa, regime de competência e apuração do resultado."
+        },
+        {
+          "topic_number": "12.4",
+          "topic_text": "4. Estoques: tipos de inventários; critérios e métodos de avaliação; componentes do custo do estoque; tratamento contábil dos tributos incidentes em operações de compras e vendas; apuração do custo das mercadorias vendidas."
+        },
+        {
+          "topic_number": "12.5",
+          "topic_text": "5. Ativo Imobilizado: mensuração inicial e componentes do custo; mensuração subsequente; tratamento da depreciação e resultado na venda e na baixa."
+        },
+        {
+          "topic_number": "12.6",
+          "topic_text": "6. Ativo Intangível: mensuração inicial; mensuração subsequente: vida útil definida ou indefinida; tratamento da amortização."
+        },
+        {
+          "topic_number": "12.7",
+          "topic_text": "7. Redução ao valor recuperável: mensuração, registro contábil e reversão."
+        },
+        {
+          "topic_number": "12.8",
+          "topic_text": "8. Estimativa de perdas em ativos e provisões: tratamento das contingências ativas e passivas."
+        },
+        {
+          "topic_number": "12.9",
+          "topic_text": "9. Demonstrações contábeis: balanço patrimonial; demonstração do resultado do exercício; demonstração das mutações do patrimônio líquido e demonstração de lucros ou prejuízos acumulados."
+        }
+      ],
+      "color": "#C084FC"
+    },
+    {
+      "subject": "Realidade de Goiás",
+      "topics": [
+        {
+          "topic_number": "13.1",
+          "topic_text": "1. Formação econômica de Goiás: a mineração no século XVIII, a agropecuária nos séculos XIX e XX, a estrada de ferro e a modernização da economia goiana, as transformações econômicas com a construção de Goiânia e Brasília, industrialização, infraestrutura e planejamento."
+        },
+        {
+          "topic_number": "13.2",
+          "topic_text": "2. Modernização da agricultura e urbanização do território goiano."
+        },
+        {
+          "topic_number": "13.3",
+          "topic_text": "3. População goiana: movimentos migratórios."
+        },
+        {
+          "topic_number": "13.4",
+          "topic_text": "4. Economia goiana: industrialização e infraestrutura de transportes e comunicação."
+        },
+        {
+          "topic_number": "13.5",
+          "topic_text": "5. As regiões goianas e as desigualdades regionais."
+        },
+        {
+          "topic_number": "13.6",
+          "topic_text": "6. Aspectos físicos do território goiano: vegetação, hidrografia, clima e relevo."
+        },
+        {
+          "topic_number": "13.7",
+          "topic_text": "7. Aspectos da história política de Goiás: a independência em Goiás, o coronelismo na República Velha, as oligarquias, a Revolução de 1930, a administração política de 1930 até os dias atuais."
+        },
+        {
+          "topic_number": "13.8",
+          "topic_text": "8. Aspectos da História Social de Goiás: o povoamento branco, os grupos indígenas, a escravidão e cultura negra, crescimento e estrutura da população, os movimentos sociais no campo e a cultura popular."
+        },
+        {
+          "topic_number": "13.9",
+          "topic_text": "9. Atualidades econômicas, políticas e sociais do Brasil, especialmente do Estado de Goiás."
+        }
+      ],
+      "color": "#4D7C0F"
+    },
+    {
+      "subject": "T.I.",
+      "topics": [
+        {
+          "topic_number": "14.1",
+          "topic_text": "1. Fundamentos de Banco de Dados: linguagens de definição e manipulação de dados em SGBDs relacionais (SQL, T-SQL, PL/pgSQL, PL/SQL)."
+        },
+        {
+          "topic_number": "14.2",
+          "topic_text": "2. Modelagem de dados: modelos relacional e multidimensional."
+        },
+        {
+          "topic_number": "14.3",
+          "topic_text": "3. Administração de banco de dados relacionais: projeto e implantação de SGBDs relacionais; administração de usuários e perfis de acesso; controle de proteção, integridade e concorrência; backup e restauração de dados; monitoramento e otimização de desempenho."
+        },
+        {
+          "topic_number": "14.4",
+          "topic_text": "4. Pipeline de Dados: fundamentos, orquestração, integração, ETL, ELT e ferramentas."
+        },
+        {
+          "topic_number": "14.5",
+          "topic_text": "5. OLAP: conceitos e aplicações."
+        },
+        {
+          "topic_number": "14.6",
+          "topic_text": "6. Modelagem e Otimização de Bases Multidimensionais: técnicas de modelagem e otimização."
+        },
+        {
+          "topic_number": "14.7",
+          "topic_text": "7. Pré-processamento de Dados: técnicas para preparação e transformação de dados."
+        },
+        {
+          "topic_number": "14.8",
+          "topic_text": "8. Data Lake: conceito e aplicações."
+        },
+        {
+          "topic_number": "14.9",
+          "topic_text": "9. Data Mining e Data Warehouse: conceitos, arquiteturas, técnicas e tarefas."
+        },
+        {
+          "topic_number": "14.10",
+          "topic_text": "10. Big Data: conceitos, premissas, análise de dados e aplicações."
+        },
+        {
+          "topic_number": "14.11",
+          "topic_text": "11. Bancos de Dados Não Relacionais: fundamentos, administração, desempenho e configuração; tipos (chave-valor, orientados a documentos e grafos); bancos NoSQL (MongoDB, Redis e Neo4j)."
+        },
+        {
+          "topic_number": "14.12",
+          "topic_text": "12. Gerenciamento de Projetos (PMBOK 7ª edição): projetos e a organização; princípios fundamentais e domínios de desempenho."
+        },
+        {
+          "topic_number": "14.13",
+          "topic_text": "13. Metodologias Ágeis: Scrum, Modelagem Ágil, Scrumban, Kanban, Extreme Programming (XP), Lean e Guia de Prática Ágil do PMI."
+        },
+        {
+          "topic_number": "14.14",
+          "topic_text": "14. Análise de Agrupamentos (Clusterização): medidas de distância ou de semelhança; esquemas de aglomeração (hierárquicos e não hierárquicos)."
+        },
+        {
+          "topic_number": "14.15",
+          "topic_text": "15. Análise Fatorial por Componentes Principais: correlação linear de Pearson."
+        },
+        {
+          "topic_number": "14.16",
+          "topic_text": "16. Análise de Correspondência: análise de correspondência simples e múltipla."
+        },
+        {
+          "topic_number": "14.17",
+          "topic_text": "17. Modelos Lineares de Regressão: regressão linear simples e múltipla; avaliação de modelos de regressão."
+        },
+        {
+          "topic_number": "14.18",
+          "topic_text": "18. Modelos de Regressão Logística: regressão logística binária e multinomial."
+        },
+        {
+          "topic_number": "14.19",
+          "topic_text": "19. Modelos de Regressão para Dados de Contagem: modelo de regressão de Poisson e binomial negativa."
+        },
+        {
+          "topic_number": "14.20",
+          "topic_text": "20. Redes Neurais Artificiais e Machine Learning: noções de redes neurais artificiais; aprendizado supervisionado e não supervisionado; noções de Python, TensorFlow e PyTorch."
+        },
+        {
+          "topic_number": "14.21",
+          "topic_text": "21. Visualização e Análise Exploratória de Dados."
+        },
+        {
+          "topic_number": "14.22",
+          "topic_text": "22. Business Intelligence: processo de coleta, organização, análise e compartilhamento de informações; ferramentas de criação de dashboards (Power BI); elaboração de relatórios analíticos."
+        },
+        {
+          "topic_number": "14.23",
+          "topic_text": "23. Séries Temporais: conceitos básicos de séries temporais; sazonalidade, tendência e estacionariedade; modelos univariados de previsão (autorregressivos, médias móveis, ARMA, ARIMA e ETS); avaliação de modelos de previsão; aplicações de séries temporais na previsão de arrecadação dos entes públicos."
+        }
+      ],
+      "color": "#60A5FA"
+    },
+    {
+      "subject": "Auditoria",
+      "topics": [
+        {
+          "topic_number": "15.1",
+          "topic_text": "1. Planejamento de Auditoria."
+        },
+        {
+          "topic_number": "15.2",
+          "topic_text": "2. Amostragem em Auditoria."
+        },
+        {
+          "topic_number": "15.3",
+          "topic_text": "3. Testes de observância."
+        },
+        {
+          "topic_number": "15.4",
+          "topic_text": "4. Testes substantivos."
+        },
+        {
+          "topic_number": "15.5",
+          "topic_text": "5. Testes para subavaliação e testes para superavaliação."
+        },
+        {
+          "topic_number": "15.6",
+          "topic_text": "6. Evidências de auditoria."
+        },
+        {
+          "topic_number": "15.7",
+          "topic_text": "7. Procedimentos de auditoria."
+        },
+        {
+          "topic_number": "15.8",
+          "topic_text": "8. Identificação de fraudes na escrita contábil."
+        },
+        {
+          "topic_number": "15.9",
+          "topic_text": "9. Auditoria no ativo circulante."
+        },
+        {
+          "topic_number": "15.10",
+          "topic_text": "10. Recomposição contábil do fluxo de caixa da empresa."
+        },
+        {
+          "topic_number": "15.11",
+          "topic_text": "11. Auditoria nas contas de resultado."
+        },
+        {
+          "topic_number": "15.12",
+          "topic_text": "12. Irregularidades frequentemente apuradas. 12.1. Ocultação de ativos, origem fictícia de bens e alienações simuladas. 12.2. Existência de saldo credor na conta caixa por falta de emissão de documentos fiscais. 12.3. Suprimento das disponibilidades sem comprovação quanto à efetiva entrega dos recursos financeiros: aumento do capital social, adiantamentos de clientes, empréstimos de sócios ou de terceiros, operações, prestações ou recebimentos sem origem, alienação de investimentos e bens do ativo imobilizado. 12.4. Aquisições de mercadorias, bens, serviços e outros ativos não contabilizados e sem comprovação da origem do numerário. 12.5. Falta de registro contábil dos passivos de curto prazo. 12.6. Superavaliação na formação dos custos de estoque e outras despesas."
+        },
+        {
+          "topic_number": "15.13",
+          "topic_text": "13. Conhecimento básico da estrutura da EFD ICMS/IPI (Guia Prático EFD ICMS IPI — v. 3.1.7) e do arquivo XML da NF-e (Manual de Orientação do Contribuinte — NFe — Versão 7.0)."
+        },
+        {
+          "topic_number": "15.14",
+          "topic_text": "14. Noções de relacionamento entre registros da EFD ICMS/IPl e da NFe: EFD REGISTROS 0000, 0150, 0200, 0220, C100, C170, C176, C195, C197, C400, C405, C420, C425 e registros dos Blocos E e H e Grupos de informações da NF-e: B, C, D, H, I, M, N e W."
+        },
+        {
+          "topic_number": "15.15",
+          "topic_text": "15. Normas Brasileiras de Contabilidade de Auditoria — NBC TA e NBC PA."
+        }
+      ],
+      "color": "#D97706"
+    },
+    {
+      "subject": "Contabilidade Avançada",
+      "topics": [
+        {
+          "topic_number": "16.1",
+          "topic_text": "1. Políticas Contábeis, Mudança de Estimativa e Retificação de Erro."
+        },
+        {
+          "topic_number": "16.2",
+          "topic_text": "2. Mensuração a Valor justo: conceitos envolvidos, cálculos e tratamento contábil."
+        },
+        {
+          "topic_number": "16.3",
+          "topic_text": "3. Ajuste a valor presente: objetivo, alcance, definições, procedimentos e tratamento contábil."
+        },
+        {
+          "topic_number": "16.4",
+          "topic_text": "4. Instrumentos financeiros: conceito, avaliação e tratamento contábil. 4.1 Valores a receber de clientes. 4.2 Aplicações financeiras. 4.3 Empréstimos. 4.4 Debêntures."
+        },
+        {
+          "topic_number": "16.5",
+          "topic_text": "5. Propriedade para Investimento: conceito e tratamento contábil."
+        },
+        {
+          "topic_number": "16.6",
+          "topic_text": "6. Tratamento contábil de operações de arrendamento mercantil."
+        },
+        {
+          "topic_number": "16.7",
+          "topic_text": "7. Participações Societárias. 7.1 Conceito de coligadas e controladas. 7.2 Definição de influência significativa e controle. 7.3 Métodos de avaliação, cálculos, apuração do resultado de equivalência patrimonial, tratamento dos lucros não realizados. 7.4 Tratamento contábil do recebimento de lucros ou dividendos de coligadas e controladas."
+        },
+        {
+          "topic_number": "16.8",
+          "topic_text": "8. Reorganização e reestruturação de empresas. 8.1 Incorporação, fusão, cisão e extinção de empresas: aspectos contábeis, fiscais, e societários da reestruturação social. 8.2 Apuração e tratamento contábil da mais valia, do “goodwill” e do deságio: amortizações e forma de evidenciação."
+        },
+        {
+          "topic_number": "16.9",
+          "topic_text": "9. Subvenção e Assistência governamentais: conceitos, tratamento contábil, avaliação e evidenciação."
+        },
+        {
+          "topic_number": "16.10",
+          "topic_text": "10. Conversão de demonstrações contábeis e tratamento dos efeitos das mudanças nas taxas de câmbio: objetivo, alcance, definições, procedimentos e contabilização."
+        },
+        {
+          "topic_number": "16.11",
+          "topic_text": "11. Demonstrações contábeis. 11.1 Demonstração dos Fluxos de Caixa. 11.2 Demonstração do Valor Adicionado."
+        }
+      ],
+      "color": "#FBBF24"
+    },
+    {
+      "subject": "Contabilidade de Custo",
+      "topics": [
+        {
+          "topic_number": "17.1",
+          "topic_text": "1. Conceitos gerais e terminologia aplicável à contabilidade de custos."
+        },
+        {
+          "topic_number": "17.2",
+          "topic_text": "2. Conceitos e classificação dos custos."
+        },
+        {
+          "topic_number": "17.3",
+          "topic_text": "3. Apropriação dos custos à produção. 3.1 Conceito e critérios de atribuição dos custos."
+        },
+        {
+          "topic_number": "17.4",
+          "topic_text": "4. Departamentalização. 4.1 Conceito, tratamento contábil, forma de apropriação e impacto no custo do produto."
+        },
+        {
+          "topic_number": "17.5",
+          "topic_text": "5. Taxa de aplicação dos custos indiretos de produção."
+        },
+        {
+          "topic_number": "17.6",
+          "topic_text": "6. Apuração da produção acabada, dos produtos em elaboração e dos produtos vendidos."
+        },
+        {
+          "topic_number": "17.7",
+          "topic_text": "7. Utilização de equivalentes de produção."
+        },
+        {
+          "topic_number": "17.8",
+          "topic_text": "8. Tipos de produção. 8.1 Conceito, aplicabilidade, tratamento contábil e apropriação dos custos. 8.2 Produção por ordem, produção contínua, produção conjunta."
+        },
+        {
+          "topic_number": "17.9",
+          "topic_text": "9. Tipos de custeio. Conceitos, diferenciações, apropriação dos custos, impactos nos resultados."
+        },
+        {
+          "topic_number": "17.10",
+          "topic_text": "10. Formas de controle dos custos."
+        },
+        {
+          "topic_number": "17.11",
+          "topic_text": "11. Custos estimados. 11.1 Conceito, tratamento contábil, análise das variações."
+        },
+        {
+          "topic_number": "17.12",
+          "topic_text": "12. Custos controláveis. 12.1 Conceito, tratamento contábil e aplicação."
+        },
+        {
+          "topic_number": "17.13",
+          "topic_text": "13. Custo padrão. 13.1 Conceito, tratamento contábil, aplicação e análises das variações."
+        },
+        {
+          "topic_number": "17.14",
+          "topic_text": "14. Margem de contribuição. 14.1 Conceito, cálculos e aplicação."
+        },
+        {
+          "topic_number": "17.15",
+          "topic_text": "15. Análise da Contabilidade de Custos custo x volume x lucro."
+        },
+        {
+          "topic_number": "17.16",
+          "topic_text": "16. Variações do ponto de equilíbrio."
+        },
+        {
+          "topic_number": "17.17",
+          "topic_text": "17. Grau de alavancagem operacional."
+        },
+        {
+          "topic_number": "17.18",
+          "topic_text": "18. Margem de segurança."
+        }
+      ],
+      "color": "#F59E0B"
+    },
+    {
+      "subject": "Direito Tributário I",
+      "topics": [
+        {
+          "topic_number": "18.1",
+          "topic_text": "1. Sistema Tributário Nacional na Constituição Federal.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "18.2",
+          "topic_text": "2. Dos Princípios Gerais."
+        },
+        {
+          "topic_number": "18.3",
+          "topic_text": "3. Espécies tributárias na Constituição: impostos, taxas, empréstimos compulsórios, contribuições."
+        },
+        {
+          "topic_number": "18.4",
+          "topic_text": "4. Das Limitações do Poder de Tributar. Princípios constitucionais tributários. Imunidades."
+        },
+        {
+          "topic_number": "18.5",
+          "topic_text": "5. Dos Impostos da União."
+        },
+        {
+          "topic_number": "18.6",
+          "topic_text": "6. Dos Impostos dos Estados e do Distrito Federal."
+        },
+        {
+          "topic_number": "18.7",
+          "topic_text": "7. Dos Impostos dos Municípios."
+        },
+        {
+          "topic_number": "18.8",
+          "topic_text": "8. Da Repartição das Receitas Tributárias."
+        },
+        {
+          "topic_number": "18.9",
+          "topic_text": "9. Código Tributário Nacional (Lei nº 5.172/1966 atualizada): Sistema Tributário Nacional no CTN. Disposições Gerais. Competência Tributária: Disposições Gerais; Limitações da Competência Tributária: Disposições Gerais, Disposições Especiais."
+        },
+        {
+          "topic_number": "18.10",
+          "topic_text": "10. Impostos: definição - Disposições Gerais. Taxas. Contribuição de Melhoria. Normas Gerais de Direito Tributário."
+        },
+        {
+          "topic_number": "18.11",
+          "topic_text": "11. Legislação Tributária: Disposições Gerais: disposição preliminar; leis, tratados e convenções internacionais e decretos; Normas Complementares. Vigência da Legislação Tributária."
+        },
+        {
+          "topic_number": "18.12",
+          "topic_text": "12. Aplicação da Legislação Tributária. Interpretação e Integração da Legislação Tributária."
+        },
+        {
+          "topic_number": "18.13",
+          "topic_text": "13. Obrigação Tributária: Disposições Gerais, Fato Gerador, Sujeito Ativo. Sujeito Passivo: disposições gerais, solidariedade, capacidade tributária, domicílio tributário."
+        },
+        {
+          "topic_number": "18.14",
+          "topic_text": "14. Responsabilidade Tributária: disposição geral, responsabilidade dos sucessores, responsabilidade de terceiros, responsabilidade por infrações."
+        },
+        {
+          "topic_number": "18.15",
+          "topic_text": "15. Crédito Tributário: Disposições Gerais. Constituição de Crédito Tributário: lançamento, modalidades de lançamento."
+        },
+        {
+          "topic_number": "18.16",
+          "topic_text": "16. Suspensão da exigibilidade do Crédito Tributário. Extinção do Crédito Tributário: modalidades de extinção, pagamento, pagamento indevido, demais modalidades de extinção."
+        },
+        {
+          "topic_number": "18.17",
+          "topic_text": "17. Exclusão de Crédito Tributário: disposições gerais, isenção, anistia."
+        },
+        {
+          "topic_number": "18.18",
+          "topic_text": "18. Garantias e Privilégios do Crédito Tributário: disposições gerais, preferências."
+        },
+        {
+          "topic_number": "18.19",
+          "topic_text": "19. Administração Tributária: Fiscalização, Dívida Ativa, Protesto de Certidões de Dívida Ativa. Certidões Negativas. Disposições Finais e Transitórias."
+        },
+        {
+          "topic_number": "18.20",
+          "topic_text": "20. Lei Complementar Federal nº 24/1975, que dispõe sobre os convênios para a concessão de isenções do imposto sobre operações relativas à circulação de mercadorias, e dá outras providências.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "18.21",
+          "topic_text": "21. Lei Complementar Federal nº 87/1996, que dispõe sobre o imposto dos Estados e do Distrito Federal sobre operações relativas à circulação de mercadorias e sobre prestações de serviços de transporte interestadual e intermunicipal e de comunicação, e dá outras providências (Lei Kandir)."
+        },
+        {
+          "topic_number": "18.22",
+          "topic_text": "22. Lei Complementar Federal nº 105/2001, que dispõe sobre o sigilo das operações de instituições financeiras e dá outras providências."
+        },
+        {
+          "topic_number": "18.23",
+          "topic_text": "23. Lei Complementar Federal nº 116/2003, que dispõe sobre o Imposto Sobre Serviços de Qualquer Natureza, de competência dos Municípios e do Distrito Federal, e dá outras providências."
+        },
+        {
+          "topic_number": "18.24",
+          "topic_text": "24. Lei Complementar Federal nº 123/2006, que institui o Regime Especial Unificado de Arrecadação de Tributos e Contribuições devidos pelas Microempresas e Empresas de Pequeno Porte — Simples Nacional."
+        },
+        {
+          "topic_number": "18.25",
+          "topic_text": "25. Lei Complementar nº 192, de 11 de março de 2022, que define os combustíveis sobre os quais incidirá uma única vez o Imposto sobre Operações Relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação (ICMS)."
+        },
+        {
+          "topic_number": "18.26",
+          "topic_text": "26. Súmulas Vinculantes do Supremo Tribunal Federal em matéria tributária."
+        }
+      ],
+      "color": "#F87171"
+    },
+    {
+      "subject": "Direito Tributário II - (Reforma Tributária)",
+      "topics": [
+        {
+          "topic_number": "19.1",
+          "topic_text": "1. Emenda Constitucional nº 132/2023.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "19.2",
+          "topic_text": "2. Lei Complementar nº 214/2025 - Livro I: Normas Gerais do IBS e da CBS"
+        },
+        {
+          "topic_number": "19.3",
+          "topic_text": "2.1. Título I"
+        },
+        {
+          "topic_number": "19.4",
+          "topic_text": "2.1.1. Capítulo I - Disposições Preliminares"
+        },
+        {
+          "topic_number": "19.5",
+          "topic_text": "2.1.2. Capítulo II - IBS e CBS sobre operações com bens e serviços",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "19.6",
+          "topic_text": "2.1.3. Capítulo III - Operacionalização do IBS e da CBS",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "19.7",
+          "topic_text": "2.1.4. Capítulo IV - IBS e CBS sobre importações",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "19.8",
+          "topic_text": "2.1.5. Capítulo V - IBS e CBS sobre exportações"
+        },
+        {
+          "topic_number": "19.9",
+          "topic_text": "2.2. Título II"
+        },
+        {
+          "topic_number": "19.10",
+          "topic_text": "2.2.1. Capítulo III - Regimes de Bens de Capitais",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "19.11",
+          "topic_text": "2.2.1.1. Seção IV - Desoneração da aquisição de bens de capital",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "19.12",
+          "topic_text": "2.3. Título III - Devolução Personalizada do IBS e da CBS (Cashback) e Cesta Básica Nacional de Alimentos"
+        },
+        {
+          "topic_number": "19.13",
+          "topic_text": "2.4. Título IV - Regimes Diferenciados do IBS e da CBS"
+        },
+        {
+          "topic_number": "19.14",
+          "topic_text": "2.4.1. Capítulo I - Disposições Gerais",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "19.15",
+          "topic_text": "2.4.2. Capítulo II - Redução de 30% das alíquotas do IBS e da CBS",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "19.16",
+          "topic_text": "2.4.3. Capítulo III - Redução de 60% das alíquotas do IBS e da CBS"
+        },
+        {
+          "topic_number": "19.17",
+          "topic_text": "2.4.3.1. Seção I - Disposições Gerais",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "19.18",
+          "topic_text": "2.4.4. Capítulo IV - Redução a zero das alíquotas do IBS e da CBS"
+        },
+        {
+          "topic_number": "19.19",
+          "topic_text": "2.4.4.1. Seção I - Disposições Gerais"
+        },
+        {
+          "topic_number": "19.20",
+          "topic_text": "2.4.5. Capítulo VII - Produtor Rural e Produtor Rural Integrado não contribuintes"
+        },
+        {
+          "topic_number": "19.21",
+          "topic_text": "2.4.6. Capítulo VIII - Transportador Autônomo de Carga Pessoa Física Não Contribuinte"
+        },
+        {
+          "topic_number": "19.22",
+          "topic_text": "2.4.7. Capítulo X - Bens Móveis Usados Adquiridos de Pessoa Física Não Contribuinte para Revenda"
+        },
+        {
+          "topic_number": "19.23",
+          "topic_text": "2.5. Título V - Regimes Específicos do IBS e da CBS",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "19.24",
+          "topic_text": "2.5.1. Capítulo I - Combustíveis"
+        },
+        {
+          "topic_number": "19.25",
+          "topic_text": "2.5.1.1. Seção I - Disposições Gerais"
+        },
+        {
+          "topic_number": "19.26",
+          "topic_text": "2.5.1.2. Seção II - Base de Cálculo"
+        },
+        {
+          "topic_number": "19.27",
+          "topic_text": "2.5.1.3. Seção IV - Sujeição Passiva"
+        },
+        {
+          "topic_number": "19.28",
+          "topic_text": "2.5.1.4. Seção V - Operações com Etanol Anidro Combustível (EAC)"
+        },
+        {
+          "topic_number": "19.29",
+          "topic_text": "2.5.1.5. Seção VI - Créditos na aquisição de combustíveis submetidos ao regime de tributação monofásica"
+        },
+        {
+          "topic_number": "19.30",
+          "topic_text": "2.5.2. Capítulo II - Serviços Financeiros"
+        },
+        {
+          "topic_number": "19.31",
+          "topic_text": "2.5.2.1. Seção I - Disposições Gerais"
+        },
+        {
+          "topic_number": "19.32",
+          "topic_text": "2.5.2.2. Seção II - Disposições Comuns aos Serviços Financeiros"
+        },
+        {
+          "topic_number": "19.33",
+          "topic_text": "2.5.3. Capítulo III - Planos de Assistência à Saúde"
+        },
+        {
+          "topic_number": "19.34",
+          "topic_text": "2.5.4. Capítulo IV - Concursos de Prognósticos"
+        },
+        {
+          "topic_number": "19.35",
+          "topic_text": "2.5.4.1. Seção I - Disposições Gerais"
+        },
+        {
+          "topic_number": "19.36",
+          "topic_text": "2.5.4.2. Seção II - Importação de serviços de concursos de prognósticos"
+        },
+        {
+          "topic_number": "19.37",
+          "topic_text": "2.5.4.3. Seção III - Exportação de serviços de concursos de prognósticos"
+        },
+        {
+          "topic_number": "19.38",
+          "topic_text": "2.5.5. Capítulo V - Bens Imóveis"
+        },
+        {
+          "topic_number": "19.39",
+          "topic_text": "2.5.5.1. Seção I - Disposições Gerais"
+        },
+        {
+          "topic_number": "19.40",
+          "topic_text": "2.5.5.2. Seção II - Momento da ocorrência do fato gerador"
+        },
+        {
+          "topic_number": "19.41",
+          "topic_text": "2.5.5.3. Seção III - Base de Cálculo"
+        },
+        {
+          "topic_number": "19.42",
+          "topic_text": "2.5.5.3.1. Subseção I - Disposições Gerais"
+        },
+        {
+          "topic_number": "19.43",
+          "topic_text": "2.5.5.3.2. Subseção II - Redutor de Ajuste"
+        },
+        {
+          "topic_number": "19.44",
+          "topic_text": "2.5.5.3.3. Subseção III - Redutor Social"
+        },
+        {
+          "topic_number": "19.45",
+          "topic_text": "2.5.5.4. Seção IV - Alíquota"
+        },
+        {
+          "topic_number": "19.46",
+          "topic_text": "2.5.5.5. Seção VI - Sujeição Passiva"
+        },
+        {
+          "topic_number": "19.47",
+          "topic_text": "2.5.6. Capítulo VI - Sociedades Cooperativas"
+        },
+        {
+          "topic_number": "19.48",
+          "topic_text": "2.5.7. Capítulo VII - Bares, Restaurantes, Hotelaria, Parques de Diversão e Parques Temáticos"
+        },
+        {
+          "topic_number": "19.49",
+          "topic_text": "2.5.7.1. Seção I - Bares e Restaurantes"
+        },
+        {
+          "topic_number": "19.50",
+          "topic_text": "2.5.7.2. Seção II - Hotelaria, Parques de Diversão e Parques Temáticos"
+        },
+        {
+          "topic_number": "19.51",
+          "topic_text": "2.6. Título VII - Administração do IBS e da CBS"
+        },
+        {
+          "topic_number": "19.52",
+          "topic_text": "3. Livro III - Demais Disposições"
+        },
+        {
+          "topic_number": "19.53",
+          "topic_text": "3.1. Capítulo I - Avaliação Quinquenal"
+        },
+        {
+          "topic_number": "19.54",
+          "topic_text": "3.2. Capítulo II - Compensação de eventual redução do montante entregue nos termos do art. 159, incisos I e II, da Constituição Federal, em razão da substituição do IPI pelo Imposto Seletivo"
+        },
+        {
+          "topic_number": "19.55",
+          "topic_text": "3.3. Capítulo III - Comitê Gestor do IBS"
+        }
+      ],
+      "color": "#22C55E"
+    },
+    {
+      "subject": "Legislação Tributária de Goiás",
+      "topics": [
+        {
+          "topic_number": "20.1",
+          "topic_text": "1. Lei nº 11.651, de 26 de dezembro de 1991, que institui o Código Tributário do Estado de Goiás.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "20.2",
+          "topic_text": "2. Livro I, Título V, Capítulo IV-A e Livro II, Título II, do Decreto nº 4.852, de 29 de dezembro de 1997, que regulamenta a Lei Estadual nº 11.651/91.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "20.3",
+          "topic_text": "3. Lei nº 16.469/09, que regulamenta o processo administrativo tributário e dispõe sobre os órgãos vinculados ao julgamento administrativo de questões de natureza tributária.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "20.4",
+          "topic_text": "4. Títulos I, II, III, IV, V e VI, capítulo I, seção I do Anexo VIII do Decreto nº 4.852/97, que trata da substituição tributária do ICMS.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "20.5",
+          "topic_text": "5. Capítulo I e V do Anexo IX do Decreto nº 4852/97, que trata dos benefícios fiscais.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "20.6",
+          "topic_text": "6. Capítulos I, II, IV, VII, VIII, X, XI, XIII, XV, XVI e XVII do Anexo XII do Decreto nº 4852/97, que cuida das obrigações específicas.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "20.7",
+          "topic_text": "7. Anexo XV do Decreto nº 4.852/97, que trata das operações e prestações que destinem mercadoria, bem ou serviço a consumidor final não contribuinte, localizado no Estado de Goiás.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "20.8",
+          "topic_text": "8. Anexo XVIII do Decreto nº 4852/97, que trata do fornecimento de informações prestadas por instituições e intermediadores financeiros e de pagamento e por intermediadores de serviços e negócios."
+        },
+        {
+          "topic_number": "20.9",
+          "topic_text": "9. Anexo XX do Decreto nº 4852/97, exceto Apêndices - Da Apuração e do pagamento do ICMS DIFAL-SN.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "20.10",
+          "topic_text": "10. Ajuste SINIEF nº 07/05, que Institui a Nota Fiscal Eletrônica e o Documento Auxiliar da Nota Fiscal Eletrônica, Cláusulas I, II, II-A, III, VI, VII, IX, XI, XII, XII-A, XIII, XIV-A, XV-A.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "20.11",
+          "topic_text": "11. Ajuste SINIEF nº 19/16, que institui a Nota Fiscal de Consumidor Eletrônica, modelo 65, e o Documento Auxiliar da Nota Fiscal de Consumidor Eletrônica, Cláusulas I a XI.",
+          "userWeight": 3
+        },
+        {
+          "topic_number": "20.12",
+          "topic_text": "12. Ajuste SINIEF 21/10, que institui o Manifesto Eletrônico de Documentos Fiscais MDF-e, Cláusulas I, II, III, III-A, IV, VII, IX, XI."
+        },
+        {
+          "topic_number": "20.13",
+          "topic_text": "13. Lei nº 20.787/2020, que institui o programa de desenvolvimento regional - ProGoiás."
+        },
+        {
+          "topic_number": "20.14",
+          "topic_text": "14. Art. 5º da Lei nº 21.670/22, que dispõe sobre a criação do Fundo Estadual de Infraestrutura - FUNDEINFRA e cria o Programa de Parcerias Institucionais para o Progresso e o Desenvolvimento Econômico do Estado de Goiás e o Decreto nº 10.187, de 30 de dezembro de 2022."
+        },
+        {
+          "topic_number": "20.15",
+          "topic_text": "15. Instrução Normativa Nº 199/2022-SRE, que dispõe sobre a autorregularização, pelo contribuinte, de irregularidades decorrentes de divergências ou inconsistências identificadas em malhas fiscais."
+        },
+        {
+          "topic_number": "20.16",
+          "topic_text": "16. Lei Complementar estadual nº 104, de 09 de outubro de 2013, que institui o Código de Direitos, Garantias e Obrigações do Contribuinte no Estado de Goiás."
+        },
+        {
+          "topic_number": "20.17",
+          "topic_text": "17. Lei Nº 9.489/1984, Cria o Fundo de Participação e Fomento à Industrialização do Estado de Goiás - FOMENTAR."
+        },
+        {
+          "topic_number": "20.18",
+          "topic_text": "18. Lei Nº 11.180/1990. Estabelece modificações no Fundo de Participação e Fomento do Estado de Goiás (FOMENTAR) e dá outras providências."
+        },
+        {
+          "topic_number": "20.19",
+          "topic_text": "19. Lei nº 13.591/2000. Institui o Programa de Desenvolvimento Industrial de Goiás - PRODUZIR e o Fundo de Desenvolvimento de Atividades Industriais - FUNPRODUZIR e dá outras providências."
+        }
+      ],
+      "color": "#DB2777"
+    }
+  ],
+  "records": [
+    {
+      "id": "1755006232613-zcy7hkw",
+      "date": "2025-08-12",
+      "subject": "Auditoria",
+      "topic": "1. Planejamento de Auditoria.",
+      "studyTime": 3600000,
+      "questions": {
+        "correct": 15,
+        "total": 18
+      },
+      "notes": "",
+      "category": "teoria",
+      "teoriaFinalizada": true,
+      "countInPlanning": true,
+      "pages": [],
+      "videos": [],
+      "material": "Reta Final SEFAZ GO Pós-Edital: Auditoria - Prof. Guilherme Sant'Anna"
+    },
+    {
+      "id": "1755014738512-49ecwg9",
+      "date": "2025-08-12",
+      "subject": "Contabilidade Avançada",
+      "topic": "1. Políticas Contábeis, Mudança de Estimativa e Retificação de Erro.",
+      "studyTime": 3600000,
+      "questions": {
+        "correct": 12,
+        "total": 16
+      },
+      "notes": "",
+      "category": "questoes",
+      "teoriaFinalizada": true,
+      "countInPlanning": true,
+      "pages": [],
+      "videos": [],
+      "material": "tecconcursos"
+    },
+    {
+      "id": "1755118050826-mt5oo71",
+      "date": "2025-08-13",
+      "subject": "Contabilidade de Custo",
+      "topic": "1. Conceitos gerais e terminologia aplicável à contabilidade de custos.",
+      "studyTime": 3600000,
+      "questions": {
+        "correct": 4,
+        "total": 5
+      },
+      "notes": "",
+      "category": "teoria",
+      "teoriaFinalizada": true,
+      "countInPlanning": true,
+      "pages": [
+        {
+          "start": 1,
+          "end": 21
+        }
+      ],
+      "videos": [],
+      "material": "Aula 00"
+    },
+    {
+      "id": "1755118068167-khjc9aj",
+      "date": "2025-08-13",
+      "subject": "Contabilidade de Custo",
+      "topic": "2. Conceitos e classificação dos custos.",
+      "studyTime": 3600000,
+      "questions": {
+        "correct": 14,
+        "total": 19
+      },
+      "notes": "",
+      "category": "teoria",
+      "teoriaFinalizada": true,
+      "countInPlanning": false,
+      "pages": [],
+      "videos": [],
+      "material": "Aula 00"
+    },
+    {
+      "id": "1755118135418-hdar2mt",
+      "date": "2025-08-10",
+      "subject": "Contabilidade de Custo",
+      "topic": "2. Conceitos e classificação dos custos.",
+      "studyTime": 3600000,
+      "questions": {
+        "correct": 14,
+        "total": 19
+      },
+      "notes": "",
+      "category": "questoes",
+      "teoriaFinalizada": true,
+      "countInPlanning": false,
+      "pages": [],
+      "videos": [],
+      "material": "Aula 00"
+    },
+    {
+      "id": "1755202038901-mspovcy",
+      "date": "2025-08-14",
+      "subject": "Contabilidade Geral",
+      "topic": "3. Itens patrimoniais do ativo, do passivo e do patrimônio líquido: conteúdo, conceitos e estrutura; classificações, avaliações e ajustes dos itens patrimoniais exigidos pelas novas práticas contábeis adotadas no Brasil trazidas pela Lei Federal nº 11.638/2007 e Lei Federal nº 11.941/2009; conceito e contabilização de receitas e despesa, regime de competência e apuração do resultado.",
+      "studyTime": 3600000,
+      "questions": {
+        "correct": 3,
+        "total": 5
+      },
+      "notes": "Estudo cronometrado.",
+      "category": "teoria",
+      "teoriaFinalizada": true,
+      "countInPlanning": true,
+      "pages": [
+        {
+          "start": 25,
+          "end": 29
+        }
+      ],
+      "videos": [],
+      "material": "Aula 01"
+    },
+    {
+      "date": "2025-08-14",
+      "subject": "Direito Administrativo",
+      "topic": "4. Agentes públicos. 4.1 Disposições constitucionais aplicáveis. 4.2 Disposições doutrinárias. 4.2.1 Conceito. 4.2.2 Espécies. 4.2.3 Cargo, emprego e função pública. 4.2.4 Provimento. 4.2.5 Vacância. 4.2.6 Efetividade, estabilidade e vitaliciedade. 4.2.7 Remuneração. 4.2.8 Direitos e deveres. 4.2.9 Responsabilidade. 4.2.10 Processo administrativo disciplinar. 4.3. Estatuto dos servidores públicos civis do Estado de Goiás (Lei n. 20.756, de 28 de janeiro de 2020): Título V, Capítulos I, II, IV e V. 4.4 Lei que institui a carreira do fisco da Secretaria da Fazenda do Estado de Goiás (Lei 13.266, de 16 de abril de 1998).",
+      "studyTime": 3600000,
+      "questions": {
+        "correct": 0,
+        "total": 0
+      },
+      "notes": "Estudo cronometrado.",
+      "category": "teoria",
+      "teoriaFinalizada": false,
+      "countInPlanning": false,
+      "pages": [],
+      "videos": [],
+      "material": "",
+      "id": "1755212006199-gr3805g"
+    },
+    {
+      "id": "1755220154202-rxlmjq8",
+      "date": "2025-08-15",
+      "subject": "Direito Administrativo",
+      "topic": "13. Licitações e contratos administrativos. 13.1 Lei nº 14.133/2021 (Nova Lei de Licitações e Contratos Administrativos).",
+      "studyTime": 3600000,
+      "questions": {
+        "correct": 0,
+        "total": 0
+      },
+      "notes": "Estudo cronometrado.",
+      "category": "teoria",
+      "reviewPeriods": [
+        "1d",
+        "7d",
+        "30d"
+      ],
+      "teoriaFinalizada": false,
+      "countInPlanning": true,
+      "pages": [
+        {
+          "start": 1,
+          "end": 12
+        }
+      ],
+      "videos": [],
+      "material": "Aula 07"
+    },
+    {
+      "id": "1755256784613-9t7afx4",
+      "date": "2025-08-15",
+      "subject": "Direito Civil",
+      "topic": "5. Fato jurídico.",
+      "studyTime": 3600000,
+      "questions": {
+        "correct": 0,
+        "total": 0
+      },
+      "notes": "",
+      "category": "teoria",
+      "teoriaFinalizada": false,
+      "countInPlanning": true,
+      "pages": [
+        {
+          "start": 1,
+          "end": 12
+        }
+      ],
+      "videos": [],
+      "material": "Aula 04"
+    },
+    {
+      "id": "1755291819642-cwilabt",
+      "date": "2025-08-15",
+      "subject": "Direito Constitucional",
+      "topic": "3. Direitos e garantias fundamentais. 3.1 Direitos e deveres individuais e coletivos, direitos sociais, direitos de nacionalidade, direitos políticos, partidos políticos.",
+      "studyTime": 3600000,
+      "questions": {
+        "correct": 15,
+        "total": 20
+      },
+      "notes": "Estudo cronometrado.",
+      "category": "questoes",
+      "teoriaFinalizada": false,
+      "countInPlanning": true,
+      "pages": [
+        {
+          "start": 54,
+          "end": 79
+        }
+      ],
+      "videos": [],
+      "material": "Aula 02"
+    }
+  ],
+  "reviewRecords": [
+    {
+      "id": "1755220154202-rxlmjq8-1d",
+      "studyRecordId": "1755220154202-rxlmjq8",
+      "scheduledDate": "2025-08-16",
+      "status": "pending",
+      "originalDate": "2025-08-15",
+      "subject": "Direito Administrativo",
+      "topic": "13. Licitações e contratos administrativos. 13.1 Lei nº 14.133/2021 (Nova Lei de Licitações e Contratos Administrativos).",
+      "reviewPeriod": "1d",
+      "ignored": false
+    },
+    {
+      "id": "1755220154202-rxlmjq8-7d",
+      "studyRecordId": "1755220154202-rxlmjq8",
+      "scheduledDate": "2025-08-22",
+      "status": "pending",
+      "originalDate": "2025-08-15",
+      "subject": "Direito Administrativo",
+      "topic": "13. Licitações e contratos administrativos. 13.1 Lei nº 14.133/2021 (Nova Lei de Licitações e Contratos Administrativos).",
+      "reviewPeriod": "7d",
+      "ignored": false
+    },
+    {
+      "id": "1755220154202-rxlmjq8-30d",
+      "studyRecordId": "1755220154202-rxlmjq8",
+      "scheduledDate": "2025-09-14",
+      "status": "pending",
+      "originalDate": "2025-08-15",
+      "subject": "Direito Administrativo",
+      "topic": "13. Licitações e contratos administrativos. 13.1 Lei nº 14.133/2021 (Nova Lei de Licitações e Contratos Administrativos).",
+      "reviewPeriod": "30d",
+      "ignored": false
+    }
+  ],
+  "iconUrl": "/plan-icons/SEFAZ-GO-1752457623427.png",
+  "simuladoRecords": []
+}
