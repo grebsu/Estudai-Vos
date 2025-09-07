@@ -1,6 +1,6 @@
-# Estudai Vós
+# Ouroboros
 
-O Estudai Vós é uma aplicação completa para planejamento de estudos, projetada para ajudar estudantes a organizar seus horários, acompanhar o progresso e gerenciar revisões de forma eficaz.
+O Ouroboros é uma aplicação completa para planejamento de estudos, projetada para ajudar estudantes a organizar seus horários, acompanhar o progresso e gerenciar revisões de forma eficaz.
 
 ## 🎥 Demonstração em Vídeo
 
@@ -43,11 +43,11 @@ Siga estas instruções para obter uma cópia do projeto e executá-lo em sua m�
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/grebsu/Estudai-Vos.git
+   git clone https://github.com/grebsu/Ouroboros.git
    ```
 2. Navegue até o diretório do projeto:
    ```bash
-   cd Estudai-Vos
+   cd Ouroboros
    ```
 3. Instale as dependências:
    ```bash
@@ -80,7 +80,7 @@ Para uma implantação robusta que reinicia com o sistema, recomendamos o uso do
 
 3.  **Inicie a aplicação com o pm2:**
     ```bash
-    pm2 start npm --name "Estudai-Vos" -- run start
+    pm2 start npm --name "Ouroboros" -- run start
     ```
 
 4.  **Configure o pm2 para iniciar com o sistema:**
