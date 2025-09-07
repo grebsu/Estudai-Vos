@@ -92,11 +92,11 @@ const StudyConsistencyTracker = ({
     if (!day.active) return 'bg-gray-200';
     switch (day.status) {
       case 'studied':
-        return 'bg-teal-500';
+        return 'bg-amber-500';
       case 'failed':
         return 'bg-red-200';
       case 'rest':
-        return 'bg-green-500 relative'; // Verde para dia de folga
+        return 'bg-yellow-100 relative';
       default:
         return 'bg-gray-200';
     }
@@ -107,7 +107,7 @@ const StudyConsistencyTracker = ({
       <div className="flex justify-between items-center mb-4">
         <div>
           <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100">CONSTÂNCIA NOS ESTUDOS</h2>
-          <p className="text-gray-600 dark:text-gray-300">Você está há <span className="font-bold text-teal-500">{consecutiveDays}</span> dias sem falhar!</p>
+          <p className="text-gray-600 dark:text-gray-300">Você está há <span className="font-bold text-amber-500">{consecutiveDays}</span> dias sem falhar!</p>
         </div>
         <div className="flex items-center space-x-2">
           <button onClick={onPrev} disabled={false} className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors dark:bg-gray-700 dark:hover:bg-gray-600">
@@ -149,18 +149,27 @@ const WeeklyStudyGoals = ({ currentHours, goalHours, currentQuestions, goalQuest
     return `${hours}h${String(minutes).padStart(2, '0')}min`;
   };
 
-  const getBarColor = (percentage) => {
-    if (percentage >= 100) return 'bg-green-500';
-    if (percentage > 80) return 'bg-teal-500';
-    if (percentage > 40) return 'bg-yellow-500';
+  // New function for hours bar color
+  const getBarColorForHours = (percentage) => {
+    if (percentage >= 100) return 'bg-amber-500';
+    if (percentage > 80) return 'bg-amber-400';
+    if (percentage > 40) return 'bg-orange-400';
+    return 'bg-red-500';
+  };
+
+  // New function for questions bar color
+  const getBarColorForQuestions = (percentage) => {
+    if (percentage >= 100) return 'bg-yellow-500';
+    if (percentage > 80) return 'bg-yellow-400';
+    if (percentage > 40) return 'bg-orange-300';
     return 'bg-red-500';
   };
 
   const hoursPercentage = goalHours > 0 ? (currentHours / goalHours) * 100 : 0;
   const questionsPercentage = goalQuestions > 0 ? (currentQuestions / goalQuestions) * 100 : 0;
 
-  const hoursBarColor = getBarColor(hoursPercentage);
-  const questionsBarColor = getBarColor(questionsPercentage);
+  const hoursBarColor = getBarColorForHours(hoursPercentage); // Use new function
+  const questionsBarColor = getBarColorForQuestions(questionsPercentage); // Use new function
 
   return (
     <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
@@ -227,10 +236,13 @@ export default function DashboardPage() {
           <div className="flex items-center space-x-4">
             <button 
               onClick={handleAddClick} 
-              className="flex items-center px-4 py-2 bg-teal-500 text-white rounded-full shadow-lg hover:bg-teal-600 transition-all duration-300 text-base font-semibold"
+              className="relative flex items-center px-4 py-2 bg-amber-500 text-white rounded-full shadow-lg hover:bg-amber-600 transition-all duration-300 text-base font-semibold overflow-hidden group"
             >
-              <BsPlusCircleFill className="mr-2 text-lg" />
-              Adicionar
+              <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-amber-300 to-transparent opacity-80 transform -skew-x-30 transition-all duration-700 ease-in-out group-hover:left-[100%]"></span>
+              <span className="relative flex items-center">
+                <BsPlusCircleFill className="mr-2 text-lg" />
+                Adicionar
+              </span>
             </button>
             </div>
         </header>
@@ -239,44 +251,48 @@ export default function DashboardPage() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
         {/* Card: Tempo de Estudo */}
-        <div className="bg-teal-500 shadow-lg rounded-xl p-6 flex items-center space-x-6 transition-all duration-300 hover:shadow-xl hover:scale-105">
-          <div className="bg-white dark:bg-gray-700 p-4 rounded-full shadow-md dark:shadow-lg">
-            <FaClock className="text-3xl text-teal-500" />
+        <div className="relative bg-amber-500 shadow-lg rounded-xl p-6 flex items-center space-x-6 transition-all duration-300 hover:shadow-xl hover:scale-105 overflow-hidden group">
+          <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-amber-300 to-transparent opacity-80 transform -skew-x-30 transition-all duration-700 ease-in-out group-hover:left-[100%]"></span>
+          <div className="relative bg-white dark:bg-gray-700 p-4 rounded-full shadow-md dark:shadow-lg">
+            <FaClock className="text-3xl text-amber-500" />
           </div>
-          <div>
+          <div className="relative">
             <h2 className="text-lg font-semibold text-white">Tempo de Estudo</h2>
             <p className="text-3xl font-bold text-white">{formatTime(stats.totalStudyTime)}</p>
           </div>
         </div>
 
         {/* Card: Média Diária */}
-        <div className="bg-teal-500 shadow-lg rounded-xl p-6 flex items-center space-x-6 transition-all duration-300 hover:shadow-xl hover:scale-105">
-          <div className="bg-white dark:bg-gray-700 p-4 rounded-full shadow-md dark:shadow-lg">
-            <FaCalendarDay className="text-3xl text-blue-500" />
+        <div className="relative bg-amber-500 shadow-lg rounded-xl p-6 flex items-center space-x-6 transition-all duration-300 hover:shadow-xl hover:scale-105 overflow-hidden group">
+          <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-amber-300 to-transparent opacity-80 transform -skew-x-30 transition-all duration-700 ease-in-out group-hover:left-[100%]"></span>
+          <div className="relative bg-white dark:bg-gray-700 p-4 rounded-full shadow-md dark:shadow-lg">
+            <FaCalendarDay className="text-3xl text-amber-500" />
           </div>
-          <div>
+          <div className="relative">
             <h2 className="text-lg font-semibold text-white">Média Diária</h2>
             <p className="text-3xl font-bold text-white">{formatTime(stats.totalStudyTime / stats.uniqueStudyDays || 0)}</p>
           </div>
         </div>
 
         {/* Card: Desempenho */}
-        <div className="bg-teal-500 shadow-lg rounded-xl p-6 flex items-center space-x-6 transition-all duration-300 hover:shadow-xl hover:scale-105">
-          <div className="bg-white dark:bg-gray-700 p-4 rounded-full shadow-md dark:shadow-lg">
-            <FaBullseye className="text-3xl text-red-500" />
+        <div className="relative bg-amber-500 shadow-lg rounded-xl p-6 flex items-center space-x-6 transition-all duration-300 hover:shadow-xl hover:scale-105 overflow-hidden group">
+          <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-amber-300 to-transparent opacity-80 transform -skew-x-30 transition-all duration-700 ease-in-out group-hover:left-[100%]"></span>
+          <div className="relative bg-white dark:bg-gray-700 p-4 rounded-full shadow-md dark:shadow-lg">
+            <FaBullseye className="text-3xl text-amber-500" />
           </div>
-          <div>
+          <div className="relative">
             <h2 className="text-lg font-semibold text-white">Desempenho</h2>
             <p className="text-3xl font-bold text-white">{overallPerformance.toFixed(1)}%</p>
           </div>
         </div>
 
         {/* Card: Progresso no Edital */}
-        <div className="bg-teal-500 shadow-lg rounded-xl p-6 flex items-center space-x-6 transition-all duration-300 hover:shadow-xl hover:scale-105">
-          <div className="bg-white dark:bg-gray-700 p-4 rounded-full shadow-md dark:shadow-lg">
-            <FaFileAlt className="text-3xl text-purple-500" />
+        <div className="relative bg-amber-500 shadow-lg rounded-xl p-6 flex items-center space-x-6 transition-all duration-300 hover:shadow-xl hover:scale-105 overflow-hidden group">
+          <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-amber-300 to-transparent opacity-80 transform -skew-x-30 transition-all duration-700 ease-in-out group-hover:left-[100%]"></span>
+          <div className="relative bg-white dark:bg-gray-700 p-4 rounded-full shadow-md dark:shadow-lg">
+            <FaFileAlt className="text-3xl text-amber-500" />
           </div>
-          <div>
+          <div className="relative">
             <h2 className="text-lg font-semibold text-white">Progresso Edital</h2>
             <p className="text-3xl font-bold text-white">{stats.overallEditalProgress.toFixed(1)}%</p>
           </div>
@@ -303,10 +319,10 @@ export default function DashboardPage() {
             <table className="min-w-full bg-white dark:bg-gray-800">
               <thead className="bg-gray-100 dark:bg-gray-900">
                 <tr>
-                  <th className="py-3 px-4 text-left text-sm font-semibold text-gray-600 dark:text-teal-200 uppercase tracking-wider">Disciplina</th>
-                  <th className="py-3 px-4 text-center text-sm font-semibold text-gray-600 dark:text-teal-200 uppercase tracking-wider">Tempo</th>
-                  <th className="py-3 px-4 text-center text-sm font-semibold text-gray-600 dark:text-teal-200 uppercase tracking-wider">Questões</th>
-                  <th className="py-3 px-4 text-center text-sm font-semibold text-gray-600 dark:text-teal-200 uppercase tracking-wider" style={{width: '25%'}}>Acerto %</th>
+                  <th className="py-3 px-4 text-left text-sm font-semibold text-gray-600 dark:text-amber-200 uppercase tracking-wider">Disciplina</th>
+                  <th className="py-3 px-4 text-center text-sm font-semibold text-gray-600 dark:text-amber-200 uppercase tracking-wider">Tempo</th>
+                  <th className="py-3 px-4 text-center text-sm font-semibold text-gray-600 dark:text-amber-200 uppercase tracking-wider">Questões</th>
+                  <th className="py-3 px-4 text-center text-sm font-semibold text-gray-600 dark:text-amber-200 uppercase tracking-wider" style={{width: '25%'}}>Acerto %</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -315,7 +331,7 @@ export default function DashboardPage() {
                   
                   const getBarColor = (percentage) => {
                     if (percentage >= 85) return 'bg-green-500';
-                    if (percentage >= 70) return 'bg-teal-500';
+                    if (percentage >= 70) return 'bg-amber-500';
                     if (percentage >= 50) return 'bg-yellow-500';
                     return 'bg-red-500';
                   };

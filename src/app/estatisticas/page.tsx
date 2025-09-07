@@ -73,7 +73,7 @@ export default function Estatisticas() {
         label: 'Acertos Diários',
         data: Object.keys(stats.dailyQuestionStats ?? {}).sort((a, b) => new Date(a).getTime() - new Date(b).getTime()).map(date => (stats.dailyQuestionStats ?? {})[date].correct),
         fill: false,
-        borderColor: 'rgb(75, 192, 192)',
+        borderColor: 'rgb(245, 158, 11)',
         tension: 0.1,
       },
       {
@@ -209,9 +209,9 @@ export default function Estatisticas() {
   }, [stats.topicPerformance, sortColumn, sortDirection]);
 
   const getPerformancePillColor = (p: number) => {
-    if (p >= 80) return 'bg-green-100 text-green-700';
-    if (p >= 60) return 'bg-yellow-100 text-yellow-700';
-    return 'bg-red-100 text-red-700';
+    if (p >= 80) return 'bg-gradient-to-r from-amber-400 to-amber-200 text-amber-900 font-bold animate-pulse';
+    if (p >= 60) return 'bg-yellow-200 text-yellow-800';
+    return 'bg-red-200 text-red-800';
   };
 
   return (
@@ -224,18 +224,24 @@ export default function Estatisticas() {
           <div className="flex items-center space-x-4">
             <button 
               onClick={handleAddStudyClick} 
-              className="flex items-center px-4 py-2 bg-teal-500 text-white rounded-full shadow-lg hover:bg-teal-600 transition-all duration-300 text-base font-semibold"
+              className="relative flex items-center px-4 py-2 bg-amber-500 text-white rounded-full shadow-lg hover:bg-amber-600 transition-all duration-300 text-base font-semibold overflow-hidden group"
             >
-              <BsPlusCircleFill className="mr-2 text-lg" />
-              Adicionar Estudo
+              <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-amber-300 to-transparent opacity-80 transform -skew-x-30 transition-all duration-700 ease-in-out group-hover:left-[100%]"></span>
+              <span className="relative flex items-center">
+                <BsPlusCircleFill className="mr-2 text-lg" />
+                Adicionar Estudo
+              </span>
             </button>
             
             <button 
               onClick={() => setIsFilterModalOpen(true)} 
-              className="flex items-center px-4 py-2 bg-teal-500 text-white rounded-full shadow-lg hover:bg-teal-600 transition-all duration-300 text-base font-semibold"
+              className="relative flex items-center px-4 py-2 bg-amber-500 text-white rounded-full shadow-lg hover:bg-amber-600 transition-all duration-300 text-base font-semibold overflow-hidden group"
             >
-              <BsFunnel className="mr-2" />
-              Filtros
+              <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-amber-300 to-transparent opacity-80 transform -skew-x-30 transition-all duration-700 ease-in-out group-hover:left-[100%]"></span>
+              <span className="relative flex items-center">
+                <BsFunnel className="mr-2" />
+                Filtros
+              </span>
             </button>
           </div>
         </header>
@@ -254,19 +260,19 @@ export default function Estatisticas() {
         <div className="col-span-1 flex flex-col gap-4">
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md min-h-[200px] flex flex-col items-start">
             <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-100 mb-2 text-left">Tempo Total de Estudo</h2>
-            <p className="text-3xl font-bold text-teal-500">{formatTime(stats.totalStudyTime)}</p>
+            <p className="text-3xl font-bold text-amber-500">{formatTime(stats.totalStudyTime)}</p>
             <p className="text-gray-600 dark:text-gray-300 mt-2">{formatTime(stats.totalStudyTime / stats.uniqueStudyDays || 0)} por dia estudado (média)</p>
             <p className="text-gray-600 dark:text-gray-300">Total de {stats.uniqueStudyDays} dias estudados</p>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md min-h-[200px] flex flex-col items-start">
               <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-100 mb-2 text-left">Páginas Lidas</h2>
-              <p className="text-3xl font-bold text-teal-500">{stats.totalPagesRead}</p>
+              <p className="text-3xl font-bold text-amber-500">{stats.totalPagesRead}</p>
               <p className="text-gray-600 dark:text-gray-300 mt-2">{stats.pagesPerHour.toFixed(1)} páginas/hora</p>
             </div>
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md min-h-[200px] flex flex-col items-start">
               <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-100 mb-2 text-left">Tempo Total de Videoaulas</h2>
-              <p className="text-3xl font-bold text-teal-500">{formatTime(stats.totalVideoTime)}</p>
+              <p className="text-3xl font-bold text-amber-500">{formatTime(stats.totalVideoTime)}</p>
             </div>
           </div>
         </div>
@@ -275,13 +281,13 @@ export default function Estatisticas() {
         <div className="col-span-1 flex flex-col gap-4">
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md min-h-[200px] flex flex-col items-start">
             <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-100 mb-2 text-left">Constância nos Estudos</h2>
-            <p className="text-3xl font-bold text-teal-500">{stats.studyConsistencyPercentage.toFixed(1)}%</p>
+            <p className="text-3xl font-bold text-amber-500">{stats.studyConsistencyPercentage.toFixed(1)}%</p>
             <p className="text-gray-600 dark:text-gray-300 mt-2">{stats.uniqueStudyDays} dias estudados de {stats.totalDaysSinceFirstRecord} dias</p>
             <p className="text-gray-600 dark:text-gray-300">({stats.failedStudyDays} dias falhados)</p>
           </div>
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md min-h-[200px] flex flex-col items-start">
             <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-100 mb-2 text-left">Progresso no Edital</h2>
-            <p className="text-3xl font-bold text-teal-500">{stats.overallEditalProgress.toFixed(1)}%</p>
+            <p className="text-3xl font-bold text-amber-500">{stats.overallEditalProgress.toFixed(1)}%</p>
             <p className="text-gray-600 dark:text-gray-300 mt-2">{stats.completedTopics} tópicos concluídos de {stats.totalTopics}</p>
             <p className="text-gray-600 dark:text-gray-300">({stats.pendingTopics} tópicos pendentes)</p>
           </div>
@@ -322,8 +328,8 @@ export default function Estatisticas() {
                   datasets: [{
                     label: 'Horas de Estudo',
                     data: Object.keys(stats.dailyStudyHours ?? {}).sort((a, b) => new Date(a).getTime() - new Date(b).getTime()).map(date => (stats.dailyStudyHours ?? {})[date]),
-                    backgroundColor: '#26A69A',
-                    borderColor: '#26A69A',
+                    backgroundColor: 'rgb(245, 158, 11)',
+                    borderColor: 'rgb(245, 158, 11)',
                     borderWidth: 1
                   }]
                 }}
@@ -354,7 +360,7 @@ export default function Estatisticas() {
                     datalabels: {
                       anchor: 'end',
                       align: 'top',
-                      color: '#26A69A',
+                      color: 'rgb(245, 158, 11)',
                       font: { size: 12 },
                       formatter: (value: number) => value > 0 ? `${value.toFixed(1)}h` : ''
                     }
@@ -381,8 +387,8 @@ export default function Estatisticas() {
                     datasets: [{
                       label: 'Horas de Estudo',
                       data: Object.keys(stats.subjectStudyHours ?? {}).sort().map(subject => (stats.subjectStudyHours ?? {})[subject]),
-                      backgroundColor: '#26A69A',
-                      borderColor: '#26A69A',
+                      backgroundColor: 'rgb(245, 158, 11)',
+                      borderColor: 'rgb(245, 158, 11)',
                       borderWidth: 1,
                       barPercentage: 0.8,
                       categoryPercentage: 0.8
@@ -416,7 +422,7 @@ export default function Estatisticas() {
                       datalabels: {
                         anchor: 'end',
                         align: 'right',
-                        color: '#26A69A',
+                        color: 'rgb(245, 158, 11)',
                         font: { size: 12 },
                         formatter: (value: number) => {
                           const hours = Math.floor(value);
@@ -452,7 +458,7 @@ export default function Estatisticas() {
                       {
                         label: 'Acertos',
                         data: Object.keys(stats.subjectPerformance ?? {}).sort().map(subject => parseFloat(((stats.subjectPerformance ?? {})[subject]?.correctPercentage || 0).toFixed(1))),
-                        backgroundColor: '#26A69A',
+                        backgroundColor: 'rgb(245, 158, 11)',
                       },
                       {
                         label: 'Erros',
@@ -488,7 +494,7 @@ export default function Estatisticas() {
                       datalabels: {
                         anchor: 'end',
                         align: 'top',
-                        color: '#26A69A',
+                        color: 'rgb(245, 158, 11)',
                         font: { size: 12 },
                         formatter: (value: number) => value > 0 ? `${value.toFixed(1)}%` : ''
                       }
@@ -507,9 +513,9 @@ export default function Estatisticas() {
             ) : (
               chartJsLoaded && (
                 <table className="divide-y divide-gray-200 dark:divide-gray-700">
-                  <thead className="bg-teal-50 dark:bg-teal-900">
+                  <thead className="bg-amber-50 dark:bg-amber-900">
                     <tr>
-                      <th scope="col" className="w-1/5 px-6 py-3 text-left text-xs font-medium text-teal-700 dark:text-teal-300 uppercase tracking-wider cursor-pointer break-words border-r border-teal-200 dark:border-teal-700" onClick={() => handleSort('subject')}>
+                      <th scope="col" className="w-1/5 px-6 py-3 text-left text-xs font-medium text-amber-700 dark:text-amber-300 uppercase tracking-wider cursor-pointer break-words border-r border-amber-200 dark:border-amber-700" onClick={() => handleSort('subject')}>
                         <div className="flex items-center justify-between">
                           Disciplina
                           <span className="ml-2 flex-none rounded bg-gray-200 text-gray-900 group-hover:bg-gray-300">
@@ -517,7 +523,7 @@ export default function Estatisticas() {
                           </span>
                         </div>
                       </th>
-                      <th scope="col" className="w-2/5 px-6 py-3 text-left text-xs font-medium text-teal-700 dark:text-teal-300 uppercase tracking-wider cursor-pointer break-words border-r border-teal-200 dark:border-teal-700" onClick={() => handleSort('topic')}>
+                      <th scope="col" className="w-2/5 px-6 py-3 text-left text-xs font-medium text-amber-700 dark:text-amber-300 uppercase tracking-wider cursor-pointer break-words border-r border-amber-200 dark:border-amber-700" onClick={() => handleSort('topic')}>
                         <div className="flex items-center justify-between">
                           Tópico
                           <span className="ml-2 flex-none rounded bg-gray-200 text-gray-900 group-hover:bg-gray-300">
@@ -525,7 +531,7 @@ export default function Estatisticas() {
                           </span>
                         </div>
                       </th>
-                      <th scope="col" className="w-1/10 px-6 py-3 text-left text-xs font-medium text-teal-700 dark:text-teal-300 uppercase tracking-wider cursor-pointer break-words border-r border-teal-200 dark:border-teal-700" onClick={() => handleSort('correctQuestions')}>
+                      <th scope="col" className="w-1/10 px-6 py-3 text-left text-xs font-medium text-amber-700 dark:text-amber-300 uppercase tracking-wider cursor-pointer break-words border-r border-amber-200 dark:border-amber-700" onClick={() => handleSort('correctQuestions')}>
                         <div className="flex items-center justify-between">
                           Acertos
                           <span className="ml-2 flex-none rounded bg-gray-200 text-gray-900 group-hover:bg-gray-300">
@@ -533,7 +539,7 @@ export default function Estatisticas() {
                           </span>
                         </div>
                       </th>
-                      <th scope="col" className="w-1/10 px-6 py-3 text-left text-xs font-medium text-teal-700 dark:text-teal-300 uppercase tracking-wider cursor-pointer break-words border-r border-teal-200 dark:border-teal-700" onClick={() => handleSort('incorrectQuestions')}>
+                      <th scope="col" className="w-1/10 px-6 py-3 text-left text-xs font-medium text-amber-700 dark:text-amber-300 uppercase tracking-wider cursor-pointer break-words border-r border-amber-200 dark:border-amber-700" onClick={() => handleSort('incorrectQuestions')}>
                         <div className="flex items-center justify-between">
                           Erros
                           <span className="ml-2 flex-none rounded bg-gray-200 text-gray-900 group-hover:bg-gray-300">
@@ -541,7 +547,7 @@ export default function Estatisticas() {
                           </span>
                         </div>
                       </th>
-                      <th scope="col" className="w-1/10 px-6 py-3 text-left text-xs font-medium text-teal-700 dark:text-teal-300 uppercase tracking-wider cursor-pointer break-words border-r border-teal-200 dark:border-teal-700" onClick={() => handleSort('totalQuestions')}>
+                      <th scope="col" className="w-1/10 px-6 py-3 text-left text-xs font-medium text-amber-700 dark:text-amber-300 uppercase tracking-wider cursor-pointer break-words border-r border-amber-200 dark:border-amber-700" onClick={() => handleSort('totalQuestions')}>
                         <div className="flex items-center justify-between">
                           Total
                           <span className="ml-2 flex-none rounded bg-gray-200 text-gray-900 group-hover:bg-gray-300">
@@ -549,7 +555,7 @@ export default function Estatisticas() {
                           </span>
                         </div>
                       </th>
-                      <th scope="col" className="w-1/10 px-6 py-3 text-left text-xs font-medium text-teal-700 dark:text-teal-300 uppercase tracking-wider cursor-pointer break-words" onClick={() => handleSort('performance')}>
+                      <th scope="col" className="w-1/10 px-6 py-3 text-left text-xs font-medium text-amber-700 dark:text-amber-300 uppercase tracking-wider cursor-pointer break-words" onClick={() => handleSort('performance')}>
                         <div className="flex items-center justify-between">
                           Desempenho
                           <span className="ml-2 flex-none rounded bg-gray-200 text-gray-900 group-hover:bg-gray-300">
@@ -561,13 +567,13 @@ export default function Estatisticas() {
                   </thead>
                   <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                     {sortedTopicPerformance.map((topicPerf: TopicPerformance, index: number) => (
-                      <tr key={index} className={`${getPerformancePillColor(Math.round(topicPerf.performance))} bg-opacity-20`}>
-                        <td className="w-1/5 px-6 py-4 text-sm font-medium text-teal-900 dark:text-teal-200 break-words border-r border-teal-200 dark:border-teal-700">{topicPerf.subject}</td>
-                        <td className="w-2/5 px-6 py-4 text-sm text-teal-700 dark:text-teal-300 break-words border-r border-teal-200 dark:border-teal-700">{topicPerf.topic}</td>
-                        <td className="w-1/10 px-6 py-4 text-sm text-teal-700 dark:text-teal-300 break-words text-center border-r border-teal-200 dark:border-teal-700">{topicPerf.correctQuestions}</td>
-                        <td className="w-1/10 px-6 py-4 text-sm text-teal-700 dark:text-teal-300 break-words text-center border-r border-teal-200 dark:border-teal-700">{topicPerf.incorrectQuestions}</td>
-                        <td className="w-1/10 px-6 py-4 text-sm text-teal-700 dark:text-teal-300 break-words text-center border-r border-teal-200 dark:border-teal-700">{topicPerf.totalQuestions}</td>
-                        <td className="w-1/10 px-6 py-4 whitespace-nowrap text-sm text-center border-r border-teal-200 dark:border-teal-700 ${getPerformancePillColor(Math.round(topicPerf.performance))}">{topicPerf.performance.toFixed(1)}%</td>
+                      <tr key={index} className={getPerformancePillColor(Math.round(topicPerf.performance))}>
+                        <td className="w-1/5 px-6 py-4 text-sm font-medium break-words border-r border-gray-200 dark:border-gray-700">{topicPerf.subject}</td>
+                        <td className="w-2/5 px-6 py-4 text-sm break-words border-r border-gray-200 dark:border-gray-700">{topicPerf.topic}</td>
+                        <td className="w-1/10 px-6 py-4 text-sm break-words text-center border-r border-gray-200 dark:border-gray-700">{topicPerf.correctQuestions}</td>
+                        <td className="w-1/10 px-6 py-4 text-sm break-words text-center border-r border-gray-200 dark:border-gray-700">{topicPerf.incorrectQuestions}</td>
+                        <td className="w-1/10 px-6 py-4 text-sm break-words text-center border-r border-gray-200 dark:border-gray-700">{topicPerf.totalQuestions}</td>
+                        <td className="w-1/10 px-6 py-4 whitespace-nowrap text-sm text-center">{topicPerf.performance.toFixed(1)}%</td>
                       </tr>
                     ))}
                   </tbody>

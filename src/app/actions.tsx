@@ -650,6 +650,22 @@ export async function restoreFullBackupAction(backupData: { plans: { fileName: s
   }
 }
 
+export async function clearAllDataAction(): Promise<{ success: boolean; error?: string }> {
+  const dataDir = getDataDirectory();
+  try {
+    const existingFiles = await fs.readdir(dataDir);
+    for (const file of existingFiles) {
+      if (file.endsWith('.json') || file.endsWith('.cycle.json')) { // Ensure .cycle.json files are also deleted
+        await fs.unlink(path.join(dataDir, file));
+      }
+    }
+    return { success: true };
+  } catch (error: any) {
+    console.error('Error clearing all data:', error);
+    return { success: false, error: error.message || 'Failed to clear all data.' };
+  }
+}
+
 export async function exportAllDataAction(): Promise<any> {
   const dataDir = getDataDirectory();
   const planFiles = await getJsonFiles();

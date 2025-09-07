@@ -85,10 +85,13 @@ export default function SimuladosPage() {
             <div className="flex items-center space-x-2 sm:space-x-4">
               <button 
                 onClick={handleOpenModal}
-                className="bg-teal-500 text-white font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-teal-600 transition-colors duration-300 flex items-center"
+                className="relative flex items-center px-4 py-2 bg-amber-500 text-white rounded-full shadow-lg hover:bg-amber-600 transition-all duration-300 text-base font-semibold overflow-hidden group"
               >
-                <FaPlus className="mr-2" />
-                Novo Simulado
+                <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-amber-300 to-transparent opacity-80 transform -skew-x-30 transition-all duration-700 ease-in-out group-hover:left-[100%]"></span>
+                <span className="relative flex items-center">
+                  <FaPlus className="mr-2" />
+                  Novo Simulado
+                </span>
               </button>
               
             </div>
@@ -102,7 +105,7 @@ export default function SimuladosPage() {
                 {/* Simulados Realizados */}
                 <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 text-center">
                   <h2 className="text-lg font-semibold text-gray-600 dark:text-gray-300 mb-2">Simulados Realizados</h2>
-                  <p className="text-4xl font-bold text-teal-500">{realizadosCount}</p>
+                  <p className="text-4xl font-bold text-amber-500">{realizadosCount}</p>
                 </div>
 
                 {/* Último Simulado */}
@@ -139,13 +142,15 @@ export default function SimuladosPage() {
                     <div className="absolute top-4 right-4 flex flex-col space-y-2 z-10">
                       <button
                         onClick={() => setChartType('desempenho')}
-                        className={`px-4 py-2 rounded-lg text-sm font-medium ${chartType === 'desempenho' ? 'bg-teal-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-600 dark:text-gray-200 dark:hover:bg-gray-500'} transition-colors`}>
-                        Desempenho
+                        className={`relative overflow-hidden group px-4 py-2 rounded-lg text-sm font-medium ${chartType === 'desempenho' ? 'bg-amber-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-600 dark:text-gray-200 dark:hover:bg-gray-500'} transition-colors`}>
+                        <span className={`absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-amber-300 to-transparent opacity-80 transform -skew-x-30 transition-all duration-700 ease-in-out ${chartType === 'desempenho' ? 'group-hover:left-[100%]' : ''}`}></span>
+                        <span className="relative">Desempenho</span>
                       </button>
                       <button
                         onClick={() => setChartType('pontuacao')}
-                        className={`px-4 py-2 rounded-lg text-sm font-medium ${chartType === 'pontuacao' ? 'bg-teal-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-600 dark:text-gray-200 dark:hover:bg-gray-500'} transition-colors`}>
-                        Pontuação
+                        className={`relative overflow-hidden group px-4 py-2 rounded-lg text-sm font-medium ${chartType === 'pontuacao' ? 'bg-yellow-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-600 dark:text-gray-200 dark:hover:bg-gray-500'} transition-colors`}>
+                        <span className={`absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-yellow-300 to-transparent opacity-80 transform -skew-x-30 transition-all duration-700 ease-in-out ${chartType === 'pontuacao' ? 'group-hover:left-[100%]' : ''}`}></span>
+                        <span className="relative">Pontuação</span>
                       </button>
                     </div>
                   )}
@@ -181,7 +186,7 @@ export default function SimuladosPage() {
                 <p className="text-gray-500 dark:text-gray-300 mb-6">Que tal começar agora para acompanhar seu progresso?</p>
                 <button 
                   onClick={handleOpenModal}
-                  className="bg-teal-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-teal-600 transition-transform transform hover:scale-105 duration-300 flex items-center mx-auto"
+                  className="bg-amber-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-amber-600 transition-transform transform hover:scale-105 duration-300 flex items-center mx-auto"
                 >
                   <FaPlus className="mr-2" />
                   Registrar Novo Simulado

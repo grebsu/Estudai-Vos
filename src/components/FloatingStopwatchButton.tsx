@@ -7,7 +7,11 @@ import StopwatchModal from './StopwatchModal';
 import StudyRegisterModal from './StudyRegisterModal';
 import { FaStopwatch } from 'react-icons/fa';
 
-const FloatingStopwatchButton = () => {
+interface FloatingStopwatchButtonProps {
+  isVisible?: boolean;
+}
+
+const FloatingStopwatchButton: React.FC<FloatingStopwatchButtonProps> = ({ isVisible = true }) => {
   const { addStudyRecord } = useData();
 
   const [showStopwatchModal, setShowStopwatchModal] = useState(false);
@@ -53,10 +57,19 @@ const FloatingStopwatchButton = () => {
 
   return (
     <>
+      <style jsx>{`
+        @keyframes float {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-5px); }
+          100% { transform: translateY(0px); }
+        }
+      `}</style>
       {/* Floating Action Button */}
-      <button onClick={openStopwatchModal} className="fixed bottom-4 right-4 bg-teal-500 hover:bg-teal-600 text-white p-4 rounded-full shadow-lg z-50">
-        <FaStopwatch className="h-6 w-6" />
-      </button>
+      {isVisible && (
+        <button onClick={openStopwatchModal} className="fixed bottom-4 right-4 bg-amber-500 hover:bg-amber-600 text-white p-4 rounded-full shadow-lg z-50 animate-float">
+          <FaStopwatch className="h-6 w-6" />
+        </button>
+      )}
 
       {/* Modals */}
       {showStopwatchModal && (

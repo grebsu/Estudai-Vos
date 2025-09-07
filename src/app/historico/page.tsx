@@ -182,7 +182,7 @@ const HistoricoPage = () => {
           <div className="flex items-center space-x-4">
             <button
               onClick={handleAddClick}
-              className="flex items-center px-4 py-2 bg-teal-500 text-white rounded-full shadow-lg hover:bg-teal-600 transition-all duration-300 text-base font-semibold"
+              className="flex items-center px-4 py-2 bg-amber-500 text-white rounded-full shadow-lg hover:bg-amber-600 transition-all duration-300 text-base font-semibold"
             >
               <BsPlusCircleFill className="mr-2 text-lg" />
               Adicionar Estudo
@@ -190,7 +190,7 @@ const HistoricoPage = () => {
             
             <button
               onClick={() => setIsFilterModalOpen(true)}
-              className="flex items-center px-4 py-2 bg-teal-500 text-white rounded-full shadow-lg hover:bg-teal-600 transition-all duration-300 text-base font-semibold"
+              className="flex items-center px-4 py-2 bg-amber-500 text-white rounded-full shadow-lg hover:bg-amber-600 transition-all duration-300 text-base font-semibold"
             >
               <BsFunnel className="mr-2" />
               Filtros

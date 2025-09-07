@@ -66,8 +66,8 @@ const WeeklyStudyChart = ({ dailyStudyHours, dailyQuestionStats }) => {
       {
         label: 'Horas de Estudo',
         data: processChartData(dailyStudyHours, 'hours'),
-        backgroundColor: '#86efac',
-        borderColor: '#22c55e',
+        backgroundColor: '#fbbf24',
+        borderColor: '#f59e0b',
         borderWidth: 1,
       },
     ],
@@ -79,8 +79,8 @@ const WeeklyStudyChart = ({ dailyStudyHours, dailyQuestionStats }) => {
       {
         label: 'Questões Resolvidas',
         data: processChartData(dailyQuestionStats, 'total'), 
-        backgroundColor: '#a78bfa',
-        borderColor: '#8b5cf6',
+        backgroundColor: '#fcd34d',
+        borderColor: '#eab308',
         borderWidth: 1,
       },
     ],
@@ -142,23 +142,23 @@ const WeeklyStudyChart = ({ dailyStudyHours, dailyQuestionStats }) => {
         <div className="flex space-x-2">
           <button
             onClick={() => setViewMode('time')}
-            className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors duration-300 ${
+            className={`relative overflow-hidden group px-4 py-2 rounded-full text-sm font-semibold transition-colors duration-300 ${
               viewMode === 'time'
-                ? 'bg-teal-500 text-white'
+                ? 'bg-gold-500 text-white'
                 : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
-            }`}
-          >
-            TEMPO
+            }`}>
+            <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-gold-300 to-transparent opacity-80 transform -skew-x-30 transition-all duration-700 ease-in-out group-hover:left-[100%]"></span>
+            <span className="relative">TEMPO</span>
           </button>
           <button
             onClick={() => setViewMode('questions')}
-            className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors duration-300 ${
+            className={`relative overflow-hidden group px-4 py-2 rounded-full text-sm font-semibold transition-colors duration-300 ${
               viewMode === 'questions'
-                ? 'bg-teal-500 text-white'
+                ? 'bg-gold-500 text-white'
                 : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
-            }`}
-          >
-            QUESTÕES
+            }`}>
+            <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-gold-300 to-transparent opacity-80 transform -skew-x-30 transition-all duration-700 ease-in-out group-hover:left-[100%]"></span>
+            <span className="relative">QUESTÕES</span>
           </button>
         </div>
       </div>

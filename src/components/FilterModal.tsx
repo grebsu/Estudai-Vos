@@ -121,8 +121,8 @@ const FilterModal: React.FC<FilterModalProps> = ({
     <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50 p-4">
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl w-full max-w-4xl h-[95vh] flex flex-col animate-scale-in">
         {/* Header */}
-        <div className="flex justify-between items-center p-4 border-b border-teal-200 dark:border-teal-700">
-          <h2 className="text-2xl font-bold text-teal-700 dark:text-teal-300">Filtros Avançados</h2>
+        <div className="flex justify-between items-center p-4 border-b border-amber-200 dark:border-amber-700">
+          <h2 className="text-2xl font-bold text-amber-700 dark:text-amber-300">Filtros Avançados</h2>
           <button onClick={onClose} className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition-transform duration-200 hover:scale-125">
             <FaTimes size={24} />
           </button>
@@ -143,7 +143,7 @@ const FilterModal: React.FC<FilterModalProps> = ({
                   startDate={startDate}
                   endDate={endDate}
                   placeholderText="Data de Início"
-                  className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+                  className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
                   dateFormat="dd/MM/yyyy"
                   wrapperClassName="w-full"
                   withPortal
@@ -156,7 +156,7 @@ const FilterModal: React.FC<FilterModalProps> = ({
                   endDate={endDate}
                   minDate={startDate}
                   placeholderText="Data de Fim"
-                  className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+                  className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
                   dateFormat="dd/MM/yyyy"
                   wrapperClassName="w-full"
                   withPortal
@@ -173,14 +173,14 @@ const FilterModal: React.FC<FilterModalProps> = ({
                   placeholder="Mínimo"
                   value={minDuration}
                   onChange={(e) => setMinDuration(e.target.value)}
-                  className="mt-1 block w-full border border-gray-300 dark:border-gray-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm"
+                  className="mt-1 block w-full border border-gray-300 dark:border-gray-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-amber-500 focus:border-amber-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm"
                 />
                 <input
                   type="number"
                   placeholder="Máximo"
                   value={maxDuration}
                   onChange={(e) => setMaxDuration(e.target.value)}
-                  className="mt-1 block w-full border border-gray-300 dark:border-gray-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm"
+                  className="mt-1 block w-full border border-gray-300 dark:border-gray-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-amber-500 focus:border-amber-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm"
                 />
               </div>
             </section>
@@ -194,14 +194,14 @@ const FilterModal: React.FC<FilterModalProps> = ({
                   placeholder="Mínimo"
                   value={minPerformance}
                   onChange={(e) => setMinPerformance(e.target.value)}
-                  className="mt-1 block w-full border border-gray-300 dark:border-gray-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm"
+                  className="mt-1 block w-full border border-gray-300 dark:border-gray-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-amber-500 focus:border-amber-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm"
                 />
                 <input
                   type="number"
                   placeholder="Máximo"
                   value={maxPerformance}
                   onChange={(e) => setMaxPerformance(e.target.value)}
-                  className="mt-1 block w-full border border-gray-300 dark:border-gray-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm"
+                  className="mt-1 block w-full border border-gray-300 dark:border-gray-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-amber-500 focus:border-amber-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm"
                 />
               </div>
             </section>
@@ -217,7 +217,7 @@ const FilterModal: React.FC<FilterModalProps> = ({
                         onClick={() => handleCategoryChange(category)}
                         className={`flex items-center justify-center p-4 rounded-lg font-semibold text-base transition-all duration-200 border-2
                         ${selectedCategories.includes(category)
-                            ? 'bg-teal-500 border-teal-600 text-white shadow-lg scale-105'
+                            ? 'bg-amber-500 border-amber-600 text-white shadow-lg scale-105'
                             : 'bg-gray-100 border-gray-200 text-gray-700 hover:bg-gray-200 hover:border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-600'
                         }`}
                     >
@@ -256,11 +256,11 @@ const FilterModal: React.FC<FilterModalProps> = ({
         </div>
 
         {/* Footer */}
-        <div className="flex justify-end p-4 border-t border-teal-200 bg-teal-50/50 space-x-4 dark:border-teal-700 dark:bg-teal-900/50">
+        <div className="flex justify-end p-4 border-t border-amber-200 bg-amber-50/50 space-x-4 dark:border-amber-700 dark:bg-amber-900/50">
           <button onClick={handleClear} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-6 rounded-lg dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-gray-200 transition-colors duration-200">
             Limpar
           </button>
-          <button onClick={handleApply} className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-6 rounded-lg dark:bg-teal-700 dark:hover:bg-teal-800 transition-colors duration-200">
+          <button onClick={handleApply} className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-6 rounded-lg dark:bg-amber-700 dark:hover:bg-amber-800 transition-colors duration-200">
             Aplicar
           </button>
         </div>

@@ -65,7 +65,7 @@ const RevisionsSection = () => {
               const isOverdue = daysOverdue > 0;
 
               return (
-                <div key={record.id} className="bg-gray-50 dark:bg-gray-700 border-l-4 border-teal-500 dark:border-teal-600 rounded-r-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div key={record.id} className="bg-gray-50 dark:bg-gray-700 border-l-4 border-gold-500 dark:border-gold-600 rounded-r-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="flex justify-between items-start">
                     <div>
                       <p className="font-bold text-lg text-gray-800 dark:text-gray-100">{record.subject}</p>
@@ -75,7 +75,7 @@ const RevisionsSection = () => {
                       <button
                         onClick={() => handleCompleteReview(record.id)}
                         title="Marcar como concluída"
-                        className="p-2 rounded-full bg-green-100 dark:bg-green-900/50 hover:bg-green-200 text-green-700 dark:text-green-300 transition-colors"
+                        className="p-2 rounded-full bg-amber-100 dark:bg-amber-900/50 hover:bg-amber-200 text-amber-700 dark:text-amber-300 transition-colors"
                       >
                         <BsCheckCircleFill />
                       </button>

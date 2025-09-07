@@ -142,9 +142,9 @@ export default function AddSimuladoModal({ isOpen, onClose, initialSimulado }: A
     <div className="fixed inset-0 bg-black/80 flex justify-center items-center z-50 p-4 transition-opacity duration-300">
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-6xl max-h-[95vh] flex flex-col transform transition-all duration-300 scale-95 animate-in fade-in zoom-in-95">
         {/* Cabeçalho */}
-        <header className="flex justify-between items-center p-5 border-b border-teal-200 dark:border-teal-700 bg-teal-50 dark:bg-teal-900">
-          <h2 className="text-2xl font-bold text-teal-800 dark:text-teal-200">Registrar Novo Simulado</h2>
-          <button onClick={onClose} className="text-teal-600 hover:text-teal-800 dark:text-teal-400 dark:hover:text-teal-200 transition-colors rounded-full p-2">
+        <header className="flex justify-between items-center p-5 border-b border-gold-200 dark:border-gold-700 bg-gold-50 dark:bg-gold-900">
+          <h2 className="text-2xl font-bold text-gold-800 dark:text-gold-200">Registrar Novo Simulado</h2>
+          <button onClick={onClose} className="text-gold-600 hover:text-gold-800 dark:text-gold-400 dark:hover:text-gold-200 transition-colors rounded-full p-2">
             <FaTimes size={20} />
           </button>
         </header>
@@ -163,7 +163,7 @@ export default function AddSimuladoModal({ isOpen, onClose, initialSimulado }: A
                   type="date" 
                   value={selectedDate} 
                   onChange={(e) => setSelectedDate(e.target.value)}
-                  className="w-full p-2 bg-white dark:bg-gray-700 dark:text-gray-100 border border-teal-500 dark:border-teal-700 rounded-lg shadow-sm focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition" 
+                  className="w-full p-2 bg-white dark:bg-gray-700 dark:text-gray-100 border border-gold-500 dark:border-gold-700 rounded-lg shadow-sm focus:ring-2 focus:ring-gold-500 focus:border-gold-500 transition" 
                 />
                 <FaCalendarAlt className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-300 pointer-events-none" />
               </div>
@@ -172,38 +172,38 @@ export default function AddSimuladoModal({ isOpen, onClose, initialSimulado }: A
             {/* Other Fields */}
             <div>
               <label htmlFor="simulado-name" className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">Nome do Simulado</label>
-              <input id="simulado-name" type="text" placeholder="Ex: Simulado Final SEFAZ" value={simuladoName} onChange={(e) => setSimuladoName(e.target.value)} className="w-full p-2 bg-white dark:bg-gray-700 dark:text-gray-100 border border-teal-500 dark:border-teal-700 rounded-lg shadow-sm focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition" />
+              <input id="simulado-name" type="text" placeholder="Ex: Simulado Final SEFAZ" value={simuladoName} onChange={(e) => setSimuladoName(e.target.value)} className="w-full p-2 bg-white dark:bg-gray-700 dark:text-gray-100 border border-gold-500 dark:border-gold-700 rounded-lg shadow-sm focus:ring-2 focus:ring-gold-500 focus:border-gold-500 transition" />
             </div>
             <div>
               <label htmlFor="simulado-style" className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">Estilo de Prova</label>
-              <select id="simulado-style" value={examStyle} onChange={(e) => setExamStyle(e.target.value)} className="w-full p-2 bg-white dark:bg-gray-700 dark:text-gray-100 border border-teal-500 dark:border-teal-700 rounded-lg shadow-sm focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition">
+              <select id="simulado-style" value={examStyle} onChange={(e) => setExamStyle(e.target.value)} className="w-full p-2 bg-white dark:bg-gray-700 dark:text-gray-100 border border-gold-500 dark:border-gold-700 rounded-lg shadow-sm focus:ring-2 focus:ring-gold-500 focus:border-gold-500 transition">
                 <option>Múltipla Escolha</option>
                 <option>Certo/Errado</option>
               </select>
             </div>
             <div>
               <label htmlFor="simulado-banca" className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">Banca</label>
-              <input id="simulado-banca" type="text" placeholder="Ex: FGV" value={banca} onChange={(e) => setBanca(e.target.value)} className="w-full p-2 bg-white dark:bg-gray-700 dark:text-gray-100 border border-teal-500 dark:border-teal-700 rounded-lg shadow-sm focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition" />
+              <input id="simulado-banca" type="text" placeholder="Ex: FGV" value={banca} onChange={(e) => setBanca(e.target.value)} className="w-full p-2 bg-white dark:bg-gray-700 dark:text-gray-100 border border-gold-500 dark:border-gold-700 rounded-lg shadow-sm focus:ring-2 focus:ring-gold-500 focus:border-gold-500 transition" />
             </div>
             <div>
               <label htmlFor="simulado-time" className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">Tempo Gasto</label>
-              <input id="simulado-time" type="text" value={timeSpent} onChange={(e) => setTimeSpent(e.target.value)} className="w-full p-2 bg-white dark:bg-gray-700 dark:text-gray-100 border border-teal-500 dark:border-teal-700 rounded-lg shadow-sm text-center text-lg font-mono tracking-wider focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition" />
+              <input id="simulado-time" type="text" value={timeSpent} onChange={(e) => setTimeSpent(e.target.value)} className="w-full p-2 bg-white dark:bg-gray-700 dark:text-gray-100 border border-gold-500 dark:border-gold-700 rounded-lg shadow-sm text-center text-lg font-mono tracking-wider focus:ring-2 focus:ring-gold-500 focus:border-gold-500 transition" />
             </div>
           </fieldset>
 
           {/* Tabela de Disciplinas */}
-          <div className="overflow-x-auto rounded-lg border border-teal-200 dark:border-teal-700 shadow-sm">
+          <div className="overflow-x-auto rounded-lg border border-gold-200 dark:border-gold-700 shadow-sm">
             <table className="min-w-full bg-white dark:bg-gray-800">
               <thead className="bg-gray-100 dark:bg-gray-900">
                 <tr>
-                  <th className="py-3 px-4 text-left text-xs font-semibold text-teal-800 dark:text-teal-200 uppercase tracking-wider">Disciplina</th>
-                  <th className="py-3 px-4 text-center text-xs font-semibold text-teal-800 dark:text-teal-200 uppercase tracking-wider">Peso</th>
-                  <th className="py-2 px-4 border-b border-teal-200 dark:border-teal-700 text-center text-sm font-semibold text-teal-800 dark:text-teal-200"><FaPencilAlt className="inline-block mr-1" /></th>
-                  <th className="py-3 px-4 text-center text-xs font-semibold text-teal-800 dark:text-teal-200 uppercase tracking-wider" title="Acertos"><FaCheckCircle className="text-green-500 mx-auto" /></th>
-                  <th className="py-3 px-4 text-center text-xs font-semibold text-teal-800 dark:text-teal-200 uppercase tracking-wider" title="Erros"><FaTimesCircle className="text-red-500 mx-auto" /></th>
-                  <th className="py-3 px-4 text-center text-xs font-semibold text-teal-800 dark:text-teal-200 uppercase tracking-wider" title="Em Branco"><FaMinusCircle className="text-gray-400 mx-auto" /></th>
-                  <th className="py-3 px-4 text-center text-xs font-semibold text-teal-800 dark:text-teal-200 uppercase tracking-wider" title="Pontos"><FaStar className="text-yellow-500 mx-auto" /></th>
-                  <th className="py-3 px-4 text-center text-xs font-semibold text-teal-800 dark:text-teal-200 uppercase tracking-wider" title="Desempenho"><FaPercentage className="text-blue-500 mx-auto" /></th>
+                  <th className="py-3 px-4 text-left text-xs font-semibold text-gold-800 dark:text-gold-200 uppercase tracking-wider">Disciplina</th>
+                  <th className="py-3 px-4 text-center text-xs font-semibold text-gold-800 dark:text-gold-200 uppercase tracking-wider">Peso</th>
+                  <th className="py-2 px-4 border-b border-gold-200 dark:border-gold-700 text-center text-sm font-semibold text-gold-800 dark:text-gold-200"><FaPencilAlt className="inline-block mr-1" /></th>
+                  <th className="py-3 px-4 text-center text-xs font-semibold text-gold-800 dark:text-gold-200 uppercase tracking-wider" title="Acertos"><FaCheckCircle className="text-green-500 mx-auto" /></th>
+                  <th className="py-3 px-4 text-center text-xs font-semibold text-gold-800 dark:text-gold-200 uppercase tracking-wider" title="Erros"><FaTimesCircle className="text-red-500 mx-auto" /></th>
+                  <th className="py-3 px-4 text-center text-xs font-semibold text-gold-800 dark:text-gold-200 uppercase tracking-wider" title="Em Branco"><FaMinusCircle className="text-gray-400 mx-auto" /></th>
+                  <th className="py-3 px-4 text-center text-xs font-semibold text-gold-800 dark:text-gold-200 uppercase tracking-wider" title="Pontos"><FaStar className="text-yellow-500 mx-auto" /></th>
+                  <th className="py-3 px-4 text-center text-xs font-semibold text-gold-800 dark:text-gold-200 uppercase tracking-wider" title="Desempenho"><FaPercentage className="text-blue-500 mx-auto" /></th>
                   <th className="py-3 px-2 text-center text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Ação</th>
                 </tr>
               </thead>
@@ -216,10 +216,10 @@ export default function AddSimuladoModal({ isOpen, onClose, initialSimulado }: A
                   return (
                     <tr key={subject.name} className="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" style={{ borderLeft: `4px solid ${subject.color}` }}>
                       <td className="py-3 px-4 font-medium text-gray-800 dark:text-gray-200">{subject.name}</td>
-                      <td className="p-2"><input type="number" value={subject.weight} onChange={(e) => handleSubjectChange(index, 'weight', e.target.value)} className="w-20 p-2 text-center bg-gray-50 dark:bg-gray-700 dark:text-gray-100 border-teal-500 dark:border-teal-700 border rounded-md focus:ring-2 focus:ring-teal-500 focus:border-teal-500" /></td>
-                      <td className="p-2"><input type="number" value={subject.totalQuestions} onChange={(e) => handleSubjectChange(index, 'totalQuestions', e.target.value)} className="w-20 p-2 text-center bg-gray-50 dark:bg-gray-700 dark:text-gray-100 border-teal-500 dark:border-teal-700 border rounded-md focus:ring-2 focus:ring-teal-500 focus:border-teal-500" /></td>
-                      <td className="p-2"><input type="number" value={subject.correct} onChange={(e) => handleSubjectChange(index, 'correct', e.target.value)} className="w-20 p-2 text-center bg-green-50 dark:bg-green-900/50 dark:text-gray-100 border-teal-500 dark:border-teal-700 border rounded-md focus:ring-2 focus:ring-green-500 focus:border-green-500" /></td>
-                      <td className="p-2"><input type="number" value={subject.incorrect} onChange={(e) => handleSubjectChange(index, 'incorrect', e.target.value)} className="w-20 p-2 text-center bg-red-50 dark:bg-red-900/50 dark:text-gray-100 border-teal-500 dark:border-teal-700 border rounded-md focus:ring-2 focus:ring-red-500 focus:border-red-500" /></td>
+                      <td className="p-2"><input type="number" value={subject.weight} onChange={(e) => handleSubjectChange(index, 'weight', e.target.value)} className="w-20 p-2 text-center bg-gray-50 dark:bg-gray-700 dark:text-gray-100 border-gold-500 dark:border-gold-700 border rounded-md focus:ring-2 focus:ring-gold-500 focus:border-gold-500" /></td>
+                      <td className="p-2"><input type="number" value={subject.totalQuestions} onChange={(e) => handleSubjectChange(index, 'totalQuestions', e.target.value)} className="w-20 p-2 text-center bg-gray-50 dark:bg-gray-700 dark:text-gray-100 border-gold-500 dark:border-gold-700 border rounded-md focus:ring-2 focus:ring-gold-500 focus:border-gold-500" /></td>
+                      <td className="p-2"><input type="number" value={subject.correct} onChange={(e) => handleSubjectChange(index, 'correct', e.target.value)} className="w-20 p-2 text-center bg-green-50 dark:bg-green-900/50 dark:text-gray-100 border-gold-500 dark:border-gold-700 border rounded-md focus:ring-2 focus:ring-green-500 focus:border-green-500" /></td>
+                      <td className="p-2"><input type="number" value={subject.incorrect} onChange={(e) => handleSubjectChange(index, 'incorrect', e.target.value)} className="w-20 p-2 text-center bg-red-50 dark:bg-red-900/50 dark:text-gray-100 border-gold-500 dark:border-gold-700 border rounded-md focus:ring-2 focus:ring-red-500 focus:border-red-500" /></td>
                       <td className="py-3 px-4 text-center font-semibold text-gray-600 dark:text-gray-300">{blankQuestions < 0 ? 'N/A' : blankQuestions}</td>
                       <td className="py-3 px-4 text-center font-bold text-lg text-yellow-600 dark:text-yellow-400">{subjectPoints}</td>
                       <td className="py-3 px-4 text-center font-bold text-lg text-blue-600 dark:text-blue-400">{percentage}%</td>
@@ -250,16 +250,16 @@ export default function AddSimuladoModal({ isOpen, onClose, initialSimulado }: A
           {/* Comentários */}
           <div>
             <label htmlFor="simulado-comments" className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">Comentários</label>
-            <textarea id="simulado-comments" placeholder="Adicione observações sobre o simulado, pontos a melhorar, etc." rows={3} value={comments} onChange={(e) => setComments(e.target.value)} className="w-full p-3 bg-white dark:bg-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition"></textarea>
+            <textarea id="simulado-comments" placeholder="Adicione observações sobre o simulado, pontos a melhorar, etc." rows={3} value={comments} onChange={(e) => setComments(e.target.value)} className="w-full p-3 bg-white dark:bg-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:ring-2 focus:ring-gold-500 focus:border-gold-500 transition"></textarea>
           </div>
         </main>
 
         {/* Rodapé */}
-        <footer className="flex justify-end items-center p-5 bg-teal-50 dark:bg-teal-900 border-t border-teal-200 dark:border-teal-700 rounded-b-xl">
+        <footer className="flex justify-end items-center p-5 bg-gold-50 dark:bg-gold-900 border-t border-gold-200 dark:border-gold-700 rounded-b-xl">
           <button onClick={onClose} className="px-6 py-2 font-semibold text-gray-700 bg-gray-300 rounded-lg mr-2 hover:bg-gray-400 transition-colors dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-gray-200">
             Cancelar
           </button>
-          <button onClick={handleSaveSimulado} className="px-8 py-2 font-semibold text-white bg-teal-600 rounded-lg shadow-md hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition-all transform hover:scale-105 dark:bg-teal-700 dark:hover:bg-teal-800">
+          <button onClick={handleSaveSimulado} className="px-8 py-2 font-semibold text-white bg-gold-600 rounded-lg shadow-md hover:bg-gold-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gold-500 transition-all transform hover:scale-105 dark:bg-gold-700 dark:hover:bg-gold-800">
             Salvar Simulado
           </button>
         </footer>

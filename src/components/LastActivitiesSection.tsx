@@ -18,9 +18,9 @@ const LastActivitiesSection = () => {
       ) : (
         <ul className="space-y-4">
           {latestActivities.map((activity) => (
-            <li key={activity.id} className="bg-gray-50 dark:bg-gray-700 border-l-4 border-teal-500 rounded-r-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <li key={activity.id} className="bg-gray-50 dark:bg-gray-700 border-l-4 border-gold-500 rounded-r-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="flex items-center mb-1">
-                <FaBookOpen className="text-teal-600 dark:text-teal-400 mr-3 text-xl" />
+                <FaBookOpen className="text-gold-600 dark:text-gold-400 mr-3 text-xl" />
                 <p className="font-semibold text-lg text-gray-800 dark:text-gray-100">{activity.subject}</p>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400 ml-7 mb-2">{activity.topic}</p>
@@ -46,7 +46,7 @@ const LastActivitiesSection = () => {
       )}
       {studyRecords.length > 2 && (
         <div className="text-center mt-6">
-          <Link href="/historico" className="text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 font-medium text-sm">
+          <Link href="/historico" className="text-gold-600 dark:text-gold-400 hover:text-gold-700 dark:hover:text-gold-300 font-medium text-sm">
             Ver Mais ({studyRecords.length - 2} sessões restantes)
           </Link>
         </div>

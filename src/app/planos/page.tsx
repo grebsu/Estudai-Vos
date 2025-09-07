@@ -97,8 +97,8 @@ export default function Planos() {
 
       let totalTopics = 0;
       subjectsToCount.forEach(subject => {
-        totalTopics += subject.topics.length;
-        subject.topics.forEach(topic => {
+        totalTopics += (subject.topics || []).length;
+        (subject.topics || []).forEach(topic => {
           if (topic.subtopics) {
             totalTopics += topic.subtopics.length;
           }
@@ -173,7 +173,7 @@ export default function Planos() {
             <div className="flex items-center space-x-4">
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="flex items-center px-4 py-2 bg-teal-500 text-white rounded-full shadow-lg hover:bg-teal-600 transition-all duration-300 text-base font-semibold"
+                className="flex items-center px-4 py-2 bg-amber-500 text-white rounded-full shadow-lg hover:bg-amber-600 transition-all duration-300 text-base font-semibold"
                 title="Criar Novo Plano"
               >
                 <FaPlusCircle className="mr-2 text-lg" />
@@ -190,7 +190,7 @@ export default function Planos() {
               <div key={plan.fileName} className="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center p-6 group">
                 <Link href={`/planos/${plan.fileName}`} className="w-full h-full">
                   {plan.iconUrl ? (
-                    <div className="relative w-24 h-24 mb-4 rounded-full overflow-hidden border-4 border-teal-500 shadow-md mx-auto">
+                    <div className="relative w-24 h-24 mb-4 rounded-full overflow-hidden border-4 border-amber-500 shadow-md mx-auto">
                       <Image src={plan.iconUrl} alt={`Ícone do plano ${plan.name}`} layout="fill" objectFit="cover" />
                     </div>
                   ) : (
@@ -232,4 +232,3 @@ export default function Planos() {
     </>
   );
 }
-

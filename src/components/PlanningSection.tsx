@@ -32,7 +32,7 @@ const PlanningSection = () => {
           </ul>
           {hasMore && (
             <div className="mt-4 text-center">
-              <Link href="/planejamento" className="text-teal-500 hover:text-teal-600 font-semibold">
+              <Link href="/planejamento" className="text-gold-500 hover:text-gold-600 font-semibold">
                 Ver Mais ({uncompletedSessions.length - DISPLAY_LIMIT} sessões restantes)
               </Link>
             </div>

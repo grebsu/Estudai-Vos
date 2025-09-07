@@ -43,7 +43,7 @@ export default function PlanSelector() {
       <button
         type="button"
         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-        className="bg-white dark:bg-gray-800 border border-teal-500 dark:border-teal-600 rounded-full py-2 px-4 text-teal-500 dark:text-teal-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors shadow-md text-base font-medium appearance-none pr-8 w-full flex justify-between items-center"
+        className="bg-white dark:bg-gray-800 border border-gold-500 dark:border-gold-600 rounded-full py-2 px-4 text-gold-500 dark:text-gold-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors shadow-md text-base font-medium appearance-none pr-8 w-full flex justify-between items-center"
       >
         <span className="block truncate">
           {selectedDataFile ? selectedDataFile.replace('.json', '').toUpperCase() : 'Selecione o Plano'}
@@ -63,11 +63,11 @@ export default function PlanSelector() {
                 setSelectedDataFile(plan);
                 setIsDropdownOpen(false);
               }}
-              className="text-gray-900 dark:text-gray-100 cursor-pointer select-none relative py-2 pl-3 pr-9 hover:bg-teal-100 dark:hover:bg-gray-700 flex items-center justify-between"
+              className="text-gray-900 dark:text-gray-100 cursor-pointer select-none relative py-2 pl-3 pr-9 hover:bg-gold-100 dark:hover:bg-gray-700 flex items-center justify-between"
             >
               <span className="block whitespace-normal">
                 {plan.replace('.json', '').toUpperCase()}
-                {plan === selectedDataFile && <span className="ml-2 text-teal-500 dark:text-teal-400 font-semibold">(Ativo)</span>}
+                {plan === selectedDataFile && <span className="ml-2 text-gold-500 dark:text-gold-400 font-semibold">(Ativo)</span>}
               </span>
             </div>
           ))}

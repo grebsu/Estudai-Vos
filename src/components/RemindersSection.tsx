@@ -57,7 +57,7 @@ const RemindersSection = () => {
         <input
           type="text"
           placeholder="Adicionar novo lembrete..."
-          className="flex-grow p-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-teal-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-400"
+          className="flex-grow p-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-gold-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-400"
           value={newNoteText}
           onChange={(e) => setNewNoteText(e.target.value)}
           onKeyPress={(e) => {
@@ -68,7 +68,7 @@ const RemindersSection = () => {
         />
         <button
           onClick={handleAddNote}
-          className="bg-teal-500 text-white p-2 rounded-r-md hover:bg-teal-600 transition-colors flex items-center justify-center dark:bg-teal-600 dark:hover:bg-teal-700"
+          className="bg-gold-500 text-white p-2 rounded-r-md hover:bg-gold-600 transition-colors flex items-center justify-center dark:bg-gold-600 dark:hover:bg-gold-700"
         >
           <FaPlus className="text-lg" />
         </button>
@@ -83,7 +83,7 @@ const RemindersSection = () => {
                   type="checkbox"
                   checked={note.completed}
                   onChange={() => toggleReminderNote(note.id)}
-                  className="h-5 w-5 text-teal-600 focus:ring-teal-500 border-gray-300 rounded dark:bg-gray-600 dark:border-gray-500"
+                  className="h-5 w-5 text-gold-600 focus:ring-gold-500 border-gray-300 rounded dark:bg-gray-600 dark:border-gray-500"
                 />
                 {editingNoteId === note.id ? (
                   <input
@@ -92,7 +92,7 @@ const RemindersSection = () => {
                     onChange={handleEditChange}
                     onBlur={handleEditBlur}
                     onKeyPress={handleEditKeyPress}
-                    className="ml-3 flex-grow p-1 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-teal-500 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-100"
+                    className="ml-3 flex-grow p-1 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-gold-500 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-100"
                     autoFocus
                   />
                 ) : (

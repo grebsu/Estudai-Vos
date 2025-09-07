@@ -22,8 +22,8 @@ const colors = [
   // Greens
   '#84CC16', '#A3E635', '#65A30D', '#4D7C0F',
   '#22C55E', '#4ADE80', '#16A34A', '#15803D',
-  // Teals
-  '#14B8A6', '#2DD4BF', '#0D9488', '#0F766E',
+  // Golds
+  '#FFD700', '#DAA520', '#B8860B', '#A52A2A',
   // Blues
   '#0EA5E9', '#38BDF8', '#0284C7', '#0369A1',
   '#3B82F6', '#60A5FA', '#2563EB', '#1D4ED8',
@@ -133,7 +133,7 @@ const AddSubjectModal: React.FC<AddSubjectModalProps> = ({ isOpen, onClose, onSa
         
         <div className="flex flex-col md:flex-row gap-4 mb-4">
           <div className="w-full md:w-3/4">
-            <label htmlFor="subjectName" className="block text-sm font-bold text-teal-800 dark:text-teal-300 mb-2">
+            <label htmlFor="subjectName" className="block text-sm font-bold text-gold-800 dark:text-gold-300 mb-2">
               NOME DA DISCIPLINA
             </label>
             <input
@@ -142,19 +142,19 @@ const AddSubjectModal: React.FC<AddSubjectModalProps> = ({ isOpen, onClose, onSa
               value={subjectName}
               onChange={(e) => setSubjectName(e.target.value)}
               placeholder="Ex: Direito Constitucional"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-teal-400"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold-500 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-gold-400"
               autoFocus
             />
           </div>
 
           <div className="w-full md:w-1/4">
-            <label className="block text-sm font-bold text-teal-800 dark:text-teal-300 mb-2">
+            <label className="block text-sm font-bold text-gold-800 dark:text-gold-300 mb-2">
               SELECIONAR UMA COR
             </label>
             <div className="relative" ref={colorPickerRef}>
               <button
                 type="button"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 flex items-center justify-between dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-teal-400"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold-500 flex items-center justify-between dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-gold-400"
                 onClick={() => setIsColorPickerOpen(!isColorPickerOpen)}
               >
                 <div className="flex items-center gap-2">
@@ -171,7 +171,7 @@ const AddSubjectModal: React.FC<AddSubjectModalProps> = ({ isOpen, onClose, onSa
                         key={color}
                         type="button"
                         className={`w-full h-8 rounded-md border-2 ${
-                          selectedColor === color ? 'border-teal-500 ring-2 ring-teal-500' : 'border-transparent'
+                          selectedColor === color ? 'border-gold-500 ring-2 ring-gold-500' : 'border-transparent'
                         }`}
                         style={{ backgroundColor: color }}
                         onClick={() => {
@@ -202,14 +202,15 @@ const AddSubjectModal: React.FC<AddSubjectModalProps> = ({ isOpen, onClose, onSa
 
         <div className="mb-4">
           <div className="flex justify-between items-center mb-2">
-            <label className="block text-sm font-bold text-teal-800 dark:text-teal-300">
+            <label className="block text-sm font-bold text-gold-800 dark:text-gold-300">
               Tópicos
             </label>
             <button
               onClick={() => setIsAddTopicModalOpen(true)}
-              className="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-1 px-3 rounded-lg text-sm dark:bg-teal-600 dark:hover:bg-teal-700"
+              className="relative overflow-hidden group bg-gold-500 hover:bg-gold-600 text-white font-semibold py-1 px-3 rounded-lg text-sm dark:bg-gold-600 dark:hover:bg-gold-700"
             >
-              + ADICIONAR NOVO TÓPICO
+              <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-gold-300 to-transparent opacity-80 transform -skew-x-30 transition-all duration-700 ease-in-out group-hover:left-[100%]"></span>
+              <span className="relative">+ ADICIONAR NOVO TÓPICO</span>
             </button>
           </div>
           <div className="border border-gray-300 rounded-md p-2 max-h-48 overflow-y-auto dark:border-gray-600">
@@ -230,7 +231,7 @@ const AddSubjectModal: React.FC<AddSubjectModalProps> = ({ isOpen, onClose, onSa
                             handleSaveEdit();
                           }
                         }}
-                        className="flex-grow px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-teal-500 dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500 dark:focus:ring-teal-400"
+                        className="flex-grow px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gold-500 dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500 dark:focus:ring-gold-400"
                         autoFocus
                       />
                     ) : (

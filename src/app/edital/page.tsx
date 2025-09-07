@@ -138,10 +138,13 @@ const EditalPage = () => {
             <div className="flex items-center space-x-4">
               <button 
                 onClick={openRegisterModalForNew} 
-                className="flex items-center px-4 py-2 bg-teal-500 text-white rounded-full shadow-lg hover:bg-teal-600 transition-all duration-300 text-base font-semibold"
+                className="relative flex items-center px-4 py-2 bg-amber-500 text-white rounded-full shadow-lg hover:bg-amber-600 transition-all duration-300 text-base font-semibold overflow-hidden group"
               >
-                <BsPlusCircleFill className="mr-2 text-lg" />
-                Adicionar Estudo
+                <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-amber-300 to-transparent opacity-80 transform -skew-x-30 transition-all duration-700 ease-in-out group-hover:left-[100%]"></span>
+                <span className="relative flex items-center">
+                  <BsPlusCircleFill className="mr-2 text-lg" />
+                  Adicionar Estudo
+                </span>
               </button>
               
             </div>
@@ -157,7 +160,7 @@ const EditalPage = () => {
             <p className="text-gray-700 dark:text-gray-300 font-bold text-3xl">{stats.overallEditalProgress.toFixed(0)}%</p>
           </div>
           <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4">
-            <div className="bg-green-600 h-4 rounded-full transition-all duration-300" style={{ width: `${stats.overallEditalProgress}%` }}></div>
+            <div className="bg-amber-500 h-4 rounded-full transition-all duration-300" style={{ width: `${stats.overallEditalProgress}%` }}></div>
           </div>
         </div>
 
@@ -236,7 +239,7 @@ const EditalPage = () => {
                                 <td className={`p-2 text-center font-bold ${getPerformanceTextColor(percentageCorrect)}`}>{percentageCorrect}</td>
                                 <td className="p-2 text-center text-gray-900 dark:text-gray-300">{formatDate(topic.last_study)}</td>
                                 <td className="p-2 text-center">
-                                  <button onClick={() => openRegisterModalForTopic(subject.subject, topic)} className="text-teal-500 hover:text-teal-600 dark:text-teal-400 dark:hover:text-teal-500" title="Adicionar estudo a este Tópico"><BsPlusCircleFill /></button>
+                                  <button onClick={() => openRegisterModalForTopic(subject.subject, topic)} className="text-amber-500 hover:text-amber-600 dark:text-amber-400 dark:hover:text-amber-500" title="Adicionar estudo a este Tópico"><BsPlusCircleFill /></button>
                                 </td>
                               </tr>
                             );

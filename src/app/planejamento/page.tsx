@@ -86,7 +86,7 @@ const DonutChart = ({ cycle, size = 300, remainingMinutes, hoveredSession, setHo
           key: `progress-${session.id}`,
           strokeDasharray: `${progressSegmentLength} ${progressCircumference - progressSegmentLength}`,
           strokeDashoffset: progressOffset,
-          color: isCompleted ? '#14b8a6' : 'transparent',
+          color: isCompleted ? '#eab308' : 'transparent',
         },
       };
     });
@@ -133,7 +133,7 @@ const DonutChart = ({ cycle, size = 300, remainingMinutes, hoveredSession, setHo
           x={size / 2} y={size / 2} dominantBaseline="middle" textAnchor="middle"
           transform={`rotate(90 ${size / 2} ${size / 2})`}
           fontSize="24" fontWeight="bold" style={{ pointerEvents: 'none' }}
-          className="fill-gray-700 dark:fill-gray-200"
+          className="fill-gold-700 dark:fill-gold-200"
         >
           {formatMinutesToHoursMinutes(remainingMinutes)}
         </text>
@@ -449,18 +449,31 @@ export default function Planejamento() {
           <div className="flex items-center space-x-4">
             <button 
               onClick={handleGetRecommendation}
-              className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg flex items-center"
+              className="relative flex items-center px-4 py-2 bg-gold-600 text-white rounded-lg shadow-lg hover:bg-gold-700 transition-all duration-300 text-base font-semibold overflow-hidden group"
             >
-              <FaHandSparkles className="mr-2" />
-              Iniciar Próximo Estudo
+              <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-gold-300 to-transparent opacity-80 transform -skew-x-30 transition-all duration-700 ease-in-out group-hover:left-[100%]"></span>
+              <span className="relative flex items-center">
+                <FaHandSparkles className="mr-2" />
+                Iniciar Próximo Estudo
+              </span>
             </button>
             <button onClick={() => {
               const allSubjectsInCycle = studyCycle.map(s => s.subject);
               const uniqueSubjects = [...new Set(allSubjectsInCycle)];
               setSelectedSubjects(uniqueSubjects);
               setIsModalOpen(true)
-            }} className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-lg">Editar</button>
-            <button onClick={resetStudyCycle} className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg">Remover</button>
+            }} className="relative flex items-center px-4 py-2 bg-gold-500 text-white rounded-lg shadow-lg hover:bg-gold-600 transition-all duration-300 text-base font-semibold overflow-hidden group">
+              <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-gold-300 to-transparent opacity-80 transform -skew-x-30 transition-all duration-700 ease-in-out group-hover:left-[100%]"></span>
+              <span className="relative flex items-center">
+                Editar
+              </span>
+            </button>
+            <button onClick={resetStudyCycle} className="relative flex items-center px-4 py-2 bg-gold-500 text-white rounded-lg shadow-lg hover:bg-gold-600 transition-all duration-300 text-base font-semibold overflow-hidden group">
+              <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-gold-300 to-transparent opacity-80 transform -skew-x-30 transition-all duration-700 ease-in-out group-hover:left-[100%]"></span>
+              <span className="relative flex items-center">
+                Remover
+              </span>
+            </button>
           </div>
         )}
       </header>
@@ -475,8 +488,8 @@ export default function Planejamento() {
                 <svg className="transform -rotate-90" width={cycleSize} height={cycleSize} viewBox={`0 0 ${cycleSize} ${cycleSize}`}>
                   <defs>
                     <linearGradient id="cycleProgressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#2dd4bf" />
-                      <stop offset="100%" stopColor="#06b6d4" />
+                      <stop offset="0%" stopColor="#fbbf24" />
+                      <stop offset="100%" stopColor="#f97316" />
                     </linearGradient>
                   </defs>
                   <circle
@@ -494,7 +507,7 @@ export default function Planejamento() {
                   />
                 </svg>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-4xl font-bold text-teal-600 dark:text-teal-400">{completedCycles}</span>
+                  <span className="text-4xl font-bold text-gold-600 dark:text-gold-400">{completedCycles}</span>
                 </div>
               </div>
             </div>
@@ -502,7 +515,7 @@ export default function Planejamento() {
               <h2 className="text-xl font-bold text-gray-700 dark:text-gray-100 mb-2">Progresso da Semana</h2>
               <p className="text-left text-gray-600 dark:text-gray-300 mb-2">{formatMinutesToHoursMinutes(currentProgressMinutes)} / {studyHours}h</p>
               <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-6 overflow-hidden">
-                <div className="bg-gradient-to-r from-teal-400 to-cyan-500 h-6 rounded-full" style={{ width: `${weeklyProgressPercent}%`, transition: 'width 0.5s ease-in-out' }}></div>
+                <div className="bg-gradient-to-r from-gold-400 to-orange-500 h-6 rounded-full" style={{ width: `${weeklyProgressPercent}%`, transition: 'width 0.5s ease-in-out' }}></div>
               </div>
             </div>
             <div className="md:col-span-2 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col md:row-span-2 h-full">
@@ -570,7 +583,7 @@ export default function Planejamento() {
         <div className="flex flex-col items-center justify-center min-h-[calc(100vh-150px)] bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-lg text-center">
           <h2 className="text-4xl font-extrabold text-gray-900 dark:text-gray-100 mb-4">Bem-vindo ao Planejamento!</h2>
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-2xl">Crie e gerencie seus ciclos de estudos personalizados. Comece definindo suas matérias, horários e metas.</p>
-          <button onClick={() => { setIsModalOpen(true); }} className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-full shadow-xl text-lg transition-all duration-300 ease-in-out transform hover:scale-105">Começar Novo Ciclo de Estudos</button>
+          <button onClick={() => { setIsModalOpen(true); }} className="bg-gold-500 hover:bg-gold-600 text-white font-bold py-3 px-6 rounded-full shadow-xl text-lg transition-all duration-300 ease-in-out transform hover:scale-105">Começar Novo Ciclo de Estudos</button>
           {subjects.length === 0 && (
             <div className="mt-8 p-4 bg-red-100 dark:bg-red-900/50 border border-red-400 dark:border-red-700 text-red-700 dark:text-red-300 rounded-lg max-w-xl">
               <p className="font-semibold mb-2">Atenção:</p>

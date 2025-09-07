@@ -46,7 +46,7 @@ const AddReviewModal: React.FC<AddReviewModalProps> = ({ isOpen, onClose, onSave
             value={days}
             onChange={(e) => setDays(e.target.value)}
             placeholder="Ex: 7"
-            className={`w-full px-3 py-2 border ${error ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 bg-white dark:bg-gray-700 dark:text-gray-100`}
+            className={`w-full px-3 py-2 border ${error ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} rounded-md focus:outline-none focus:ring-2 focus:ring-gold-500 bg-white dark:bg-gray-700 dark:text-gray-100`}
             autoFocus
           />
           {error && <p className="mt-2 text-sm text-red-600">{error}</p>}
@@ -55,7 +55,7 @@ const AddReviewModal: React.FC<AddReviewModalProps> = ({ isOpen, onClose, onSave
           <button onClick={handleClose} className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-lg transition-colors dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-gray-200">
             Cancelar
           </button>
-          <button onClick={handleSave} className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-lg transition-colors dark:bg-teal-700 dark:hover:bg-teal-800">
+          <button onClick={handleSave} className="bg-gold-600 hover:bg-gold-700 text-white font-bold py-2 px-4 rounded-lg transition-colors dark:bg-gold-700 dark:hover:bg-gold-800">
             Salvar
           </button>
         </div>

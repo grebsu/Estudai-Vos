@@ -53,9 +53,11 @@ const ChartComponents: React.FC<ChartComponentsProps> = ({ stats }) => {
     datasets: [
       {
         data: [stats.totalCorrectQuestions, stats.totalQuestions - stats.totalCorrectQuestions],
-        backgroundColor: ['#14B8A6', '#EF4444'], // teal-500, red-500
-        borderColor: ['#14B8A6', '#EF4444'],
-        borderWidth: 1,
+                backgroundColor: ['rgb(245, 158, 11)', 'rgb(255, 99, 132)'],
+        borderColor: [
+          'rgba(245, 158, 11, 1)',
+          'rgba(234, 179, 8, 1)',
+        ],
       },
     ],
   };
@@ -89,7 +91,7 @@ const ChartComponents: React.FC<ChartComponentsProps> = ({ stats }) => {
     elements: {
       center: {
         text: `${correctPercentage}%`,
-        color: '#4B5563', // Cor para ambos os modos (cinza médio-escuro)
+        color: '#f59e0b', // amber-500
         fontStyle: 'Arial',
         fontSize: 24,
       }

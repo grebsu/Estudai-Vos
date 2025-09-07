@@ -5,7 +5,7 @@ import { FaDownload, FaUpload, FaExclamationTriangle, FaSpinner } from 'react-ic
 import { useData } from '../../context/DataContext';
 
 const BackupPage = () => {
-  const { exportAllData, importAllData } = useData();
+  const { exportAllData, importAllData, clearAllData } = useData();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
@@ -88,7 +88,7 @@ const BackupPage = () => {
         
         {/* Painel de Exportação */}
         <div className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md border dark:border-slate-700">
-          <h2 className="text-2xl font-semibold mb-4 flex items-center text-teal-600 dark:text-teal-400">
+          <h2 className="text-2xl font-semibold mb-4 flex items-center text-amber-600 dark:text-amber-400">
             <FaDownload className="mr-3" />
             Exportar Dados
           </h2>
@@ -97,7 +97,7 @@ const BackupPage = () => {
           </p>
           <button
             onClick={handleExport}
-            className="w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center"
+            className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center"
           >
             <FaDownload className="mr-2" />
             Exportar para Arquivo
@@ -106,7 +106,7 @@ const BackupPage = () => {
 
         {/* Painel de Importação */}
         <div className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md border dark:border-slate-700">
-          <h2 className="text-2xl font-semibold mb-4 flex items-center text-teal-600 dark:text-teal-400">
+          <h2 className="text-2xl font-semibold mb-4 flex items-center text-amber-600 dark:text-amber-400">
             <FaUpload className="mr-3" />
             Importar Dados
           </h2>
@@ -129,7 +129,7 @@ const BackupPage = () => {
           <button
             onClick={handleImportClick}
             disabled={isLoading}
-            className="w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center disabled:bg-gray-400 mt-4"
+            className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center disabled:bg-gray-400 mt-4"
           >
             {isLoading ? (
               <FaSpinner className="animate-spin mr-2" />
@@ -137,6 +137,74 @@ const BackupPage = () => {
               <FaUpload className="mr-2" />
             )}
             {isLoading ? 'Importando...' : 'Importar de Arquivo'}
+          </button>
+        </div>
+
+        {/* Painel de Limpeza de Dados */}
+        <div className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md border dark:border-slate-700 col-span-1 md:col-span-2">
+          <h2 className="text-2xl font-semibold mb-4 flex items-center text-red-600 dark:text-red-400">
+            <FaExclamationTriangle className="mr-3" />
+            Começar do Zero
+          </h2>
+          <div className="bg-red-100 dark:bg-red-500/20 border-l-4 border-red-500 dark:border-red-400 text-red-700 dark:text-red-300 p-4 rounded-md mb-4" role="alert">
+            <div className="flex">
+              <FaExclamationTriangle className="h-5 w-5 mr-3 mt-1" />
+              <div>
+                <p className="font-bold">ATENÇÃO: Esta ação é irreversível!</p>
+                <p>Ao clicar em "Começar do Zero", todos os seus dados de planos, estudos, revisões e simulados serão PERMANENTEMENTE apagados. Use com extrema cautela.</p>
+              </div>
+            </div>
+          </div>
+          <button
+            onClick={async () => {
+              const confirmReset = window.confirm(
+                'Tem certeza absoluta que deseja apagar TODOS os seus dados? Esta ação não pode ser desfeita!'
+              );
+              if (confirmReset) {
+                const confirmFinal = window.confirm(
+                  'ÚLTIMA CHANCE: Confirme novamente que você entende que TODOS os seus dados serão PERMANENTEMENTE apagados. Digite "APAGAR TUDO" para confirmar.'
+                );
+                if (confirmFinal) {
+                  const input = prompt('Para confirmar, digite "APAGAR TUDO" no campo abaixo:');
+                  if (input === 'APAGAR TUDO') {
+                    setIsLoading(true);
+                    setError(null);
+                    setSuccess(null);
+                    try {
+                      await clearAllData();
+                      setSuccess('Todos os dados foram apagados com sucesso! A página será recarregada.');
+                      setTimeout(() => {
+                        window.location.reload();
+                      }, 2000);
+                    } catch (err: any) {
+                      console.error(err);
+                      setError(err.message || 'Ocorreu um erro ao apagar os dados.');
+                      setSuccess(null);
+                    } finally {
+                      setIsLoading(false);
+                    }
+                  } else {
+                    setError('Confirmação inválida. Os dados NÃO foram apagados.');
+                    setSuccess(null);
+                  }
+                } else {
+                  setError('Ação cancelada. Os dados NÃO foram apagados.');
+                  setSuccess(null);
+                }
+              } else {
+                setError('Ação cancelada. Os dados NÃO foram apagados.');
+                setSuccess(null);
+              }
+            }}
+            disabled={isLoading}
+            className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center disabled:bg-gray-400 mt-4"
+          >
+            {isLoading ? (
+              <FaSpinner className="animate-spin mr-2" />
+            ) : (
+              <FaExclamationTriangle className="mr-2" />
+            )}
+            {isLoading ? 'Apagando Dados...' : 'Começar do Zero'}
           </button>
         </div>
       </div>
@@ -156,3 +224,4 @@ const BackupPage = () => {
 };
 
 export default BackupPage;
+;

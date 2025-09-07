@@ -104,7 +104,7 @@ interface CreatePlanModalProps {
             </div>
             <button 
               onClick={handleImageClick}
-              className="text-sm text-teal-600 hover:text-teal-800 font-semibold dark:text-teal-400 dark:hover:text-teal-300"
+              className="text-sm text-amber-600 hover:text-amber-800 font-semibold dark:text-amber-400 dark:hover:text-amber-300"
             >
               Alterar Imagem
             </button>
@@ -114,7 +114,7 @@ interface CreatePlanModalProps {
           <div className="flex-1">
             <form>
               <div className="mb-4">
-                <label htmlFor="planName" className="block text-sm font-bold text-teal-800 dark:text-teal-300 mb-2">
+                <label htmlFor="planName" className="block text-sm font-bold text-amber-800 dark:text-amber-300 mb-2">
                   NOME
                 </label>
                 <input
@@ -123,12 +123,12 @@ interface CreatePlanModalProps {
                   value={planName}
                   onChange={(e) => setPlanName(e.target.value)}
                   placeholder="Meu Plano"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-teal-400"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-amber-400"
                 />
               </div>
 
               <div className="mb-4">
-                <label htmlFor="cargo" className="block text-sm font-bold text-teal-800 dark:text-teal-300 mb-2">
+                <label htmlFor="cargo" className="block text-sm font-bold text-amber-800 dark:text-amber-300 mb-2">
                   CARGO (Opcional)
                 </label>
                 <input
@@ -137,12 +137,12 @@ interface CreatePlanModalProps {
                   value={cargo}
                   onChange={(e) => setCargo(e.target.value)}
                   placeholder="Ex: Analista Judiciário"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-teal-400"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-amber-400"
                 />
               </div>
 
               <div className="mb-4">
-                <label htmlFor="edital" className="block text-sm font-bold text-teal-800 dark:text-teal-300 mb-2">
+                <label htmlFor="edital" className="block text-sm font-bold text-amber-800 dark:text-amber-300 mb-2">
                   EDITAL (Opcional)
                 </label>
                 <input
@@ -151,12 +151,12 @@ interface CreatePlanModalProps {
                   value={edital}
                   onChange={(e) => setEdital(e.target.value)}
                   placeholder="Ex: Edital 2024"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-teal-400"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-amber-400"
                 />
               </div>
               
               <div className="mb-6">
-                <label htmlFor="observations" className="block text-sm font-bold text-teal-800 dark:text-teal-300 mb-2">
+                <label htmlFor="observations" className="block text-sm font-bold text-amber-800 dark:text-amber-300 mb-2">
                   OBSERVAÇÕES (Opcional)
                 </label>
                 <textarea
@@ -165,7 +165,7 @@ interface CreatePlanModalProps {
                   onChange={(e) => setObservations(e.target.value)}
                   placeholder="Aqui você pode escrever alguma observação sobre o seu plano"
                   rows={4}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-teal-400"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-amber-400"
                 />
               </div>
             </form>
@@ -182,7 +182,7 @@ interface CreatePlanModalProps {
           </button>
           <button
             onClick={handleSave}
-            className="px-6 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors dark:bg-green-600 dark:hover:bg-green-700"
+            className="px-6 py-2 bg-amber-500 text-white font-semibold rounded-lg hover:bg-amber-600 transition-colors dark:bg-amber-600 dark:hover:bg-amber-700"
           >
             Avançar
           </button>

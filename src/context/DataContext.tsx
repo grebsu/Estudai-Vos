@@ -21,7 +21,8 @@ import {
   deleteStudyCycleFile,
   deleteJsonFile,
   updateTopicWeightAction,
-  migrateStudyRecordIds
+  migrateStudyRecordIds,
+  clearAllDataAction
 } from '../app/actions';
 import { useNotification } from './NotificationContext';
 
@@ -216,17 +217,21 @@ const calculateStats = async (
   const currentPlanData = studyPlans[currentPlanIndex];
 
   if (currentPlanData) {
+    console.log("[calculateStats] currentPlanData:", currentPlanData);
     let subjectsToProcess: any[] = [];
     if (Array.isArray(currentPlanData)) {
       subjectsToProcess = currentPlanData;
     } else if (currentPlanData && typeof currentPlanData === 'object' && Array.isArray(currentPlanData.subjects)) {
       subjectsToProcess = currentPlanData.subjects;
     }
+    console.log("[calculateStats] subjectsToProcess before map:", subjectsToProcess);
 
-    editalData = subjectsToProcess.map((subject: any) => ({
+    editalData = subjectsToProcess
+      .filter((subject: any) => subject && typeof subject === 'object') // Ensure subject is a valid object
+      .map((subject: any) => ({
       subject: subject.subject,
       color: subject.color,
-      topics: subject.topics.map((topic: any) => ({
+      topics: (subject.topics || []).map((topic: any) => ({
         ...topic,
         completed: 0,
         reviewed: 0,
@@ -701,13 +706,13 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
 
   const availableCategories = useMemo(() => {
     const categories = new Set<string>();
-    studyRecords.forEach(record => categories.add(record.category));
+    studyRecords.forEach(record => categories.add(record.category.toLowerCase()));
     
     // Adicionar categorias padrão para garantir que sempre haja opções
     const defaultCategories = ['Teoria', 'Revisão', 'Leitura de Lei', 'Jurisprudência', 'Questões'];
-    defaultCategories.forEach(cat => categories.add(cat));
+    defaultCategories.forEach(cat => categories.add(cat.toLowerCase()));
 
-    return Array.from(categories).sort();
+    return Array.from(categories).sort().map(cat => cat.charAt(0).toUpperCase() + cat.slice(1));
   }, [studyRecords]);
 
   const [cycleJustCompleted, setCycleJustCompleted] = useState(false);
@@ -1265,6 +1270,32 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
     }
   }, [availablePlans, selectedDataFile, showNotification]);
 
+  const clearAllData = useCallback(async () => {
+    try {
+      await clearAllDataAction(); // Call the server action to delete all files
+
+      // Reset local state
+      setStudyRecords([]);
+      setReviewRecords([]);
+      setSimuladoRecords([]);
+      setStudyCycle(null);
+      setSessionProgressMap({});
+      setCurrentProgressMinutes(0);
+      setCompletedCycles(0);
+      setReminderNotes([]);
+      // Also reset selectedDataFile and availablePlans as all plans are gone
+      _setSelectedDataFile('');
+      setAvailablePlans([]);
+      setStudyPlans([]);
+
+      showNotification('Todos os dados foram apagados com sucesso!', 'success');
+    } catch (error) {
+      console.error("Falha ao apagar todos os dados:", error);
+      showNotification('Erro ao apagar todos os dados. Tente novamente.', 'error');
+      throw error; // Re-throw to be caught by the UI
+    }
+  }, [showNotification]);
+
   const exportAllData = useCallback(async () => {
     const serverData = await exportFullBackupAction();
     const clientData = {
@@ -1320,7 +1351,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
       weeklyQuestionsGoal, setWeeklyQuestionsGoal, studyDays, setStudyDays,
       reminderNotes, addReminderNote, toggleReminderNote, deleteReminderNote,
       updateReminderNote, exportAllData, importAllData, deletePlan,
-      topicScores, getRecommendedSession, updateTopicWeight, availableSubjects, availableCategories,
+      topicScores, getRecommendedSession, updateTopicWeight, availableSubjects, availableCategories, clearAllData,
     }}>
       {children}
     </DataContext.Provider>

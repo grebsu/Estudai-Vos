@@ -98,18 +98,18 @@ export default function MateriasPage() {
         <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div className="flex flex-col items-center">
-              <FaBookOpen className="text-3xl text-teal-500 mb-2" />
-              <span className="text-3xl font-bold text-teal-500">{formatTime(overallStats.totalStudyTime)}</span>
+              <FaBookOpen className="text-3xl text-amber-500 mb-2" />
+              <span className="text-3xl font-bold text-amber-500">{formatTime(overallStats.totalStudyTime)}</span>
               <span className="text-md text-gray-600 dark:text-gray-300">Total de Horas Estudadas</span>
             </div>
             <div className="flex flex-col items-center">
-              <FaQuestionCircle className="text-3xl text-blue-500 mb-2" />
-              <span className="text-3xl font-bold text-blue-500">{overallStats.totalQuestions}</span>
+              <FaQuestionCircle className="text-3xl text-amber-500 mb-2" />
+              <span className="text-3xl font-bold text-amber-500">{overallStats.totalQuestions}</span>
               <span className="text-md text-gray-600 dark:text-gray-300">Total de Questões Resolvidas</span>
             </div>
             <div className="flex flex-col items-center">
-              <FaChartLine className="text-3xl text-green-500 mb-2" />
-              <span className="text-3xl font-bold text-green-500">{overallStats.overallPerformance}%</span>
+              <FaChartLine className="text-3xl text-amber-500 mb-2" />
+              <span className="text-3xl font-bold text-amber-500">{overallStats.overallPerformance}%</span>
               <span className="text-md text-gray-600 dark:text-gray-300">Desempenho Geral</span>
             </div>
           </div>

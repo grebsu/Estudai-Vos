@@ -231,7 +231,7 @@ export default function MateriaDetalhes() {
           label: label,
           data: data.map(d => d.time / 3600000),
           fill: false,
-          borderColor: 'rgb(75, 192, 192)',
+          borderColor: 'rgb(245, 158, 11)',
           tension: 0.1,
         },
       ],
@@ -356,15 +356,18 @@ export default function MateriaDetalhes() {
             <div className="flex items-center space-x-4">
               <button
                 onClick={openRegisterModalForNew}
-                className="flex items-center px-4 py-2 bg-green-600 dark:bg-green-500 text-white rounded-full shadow-lg hover:bg-green-700 dark:hover:bg-green-600 transition-all duration-300 text-base font-semibold"
+                className="relative flex items-center px-4 py-2 bg-amber-500 text-white rounded-full shadow-lg hover:bg-amber-600 transition-all duration-300 text-base font-semibold overflow-hidden group"
               >
-                <FaPlusCircle className="mr-2 text-lg" />
-                Adicionar
+                <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-amber-300 to-transparent opacity-80 transform -skew-x-30 transition-all duration-700 ease-in-out group-hover:left-[100%]"></span>
+                <span className="relative flex items-center">
+                  <FaPlusCircle className="mr-2 text-lg" />
+                  Adicionar
+                </span>
               </button>
               <select
                 value={selectedDataFile || ''}
                 onChange={(e) => setSelectedDataFile(e.target.value)}
-                className="bg-white dark:bg-gray-700 border border-green-500 dark:border-green-400 rounded-full py-2 px-4 text-green-700 dark:text-green-300 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors shadow-md text-base font-medium appearance-none pr-8"
+                className="bg-white dark:bg-gray-700 border border-amber-500 dark:border-amber-400 rounded-full py-2 px-4 text-amber-700 dark:text-amber-300 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors shadow-md text-base font-medium appearance-none pr-8"
                 style={{ backgroundImage: 'url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 viewBox%3D%220 0 20 20%22 fill%3D%22%23A3BFFA%22%3E%3Cpath fill-rule%3D%22evenodd%22 d%3D%22M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z%22 clip-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1rem center', backgroundSize: '1.5em' }}
               >
                 {availablePlans.map((plan) => (
@@ -382,24 +385,24 @@ export default function MateriaDetalhes() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center justify-center">
             <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-200 mb-2">Tempo de Estudo</h3>
-            <p className="text-2xl font-bold text-teal-600 dark:text-teal-400">{formatTime(totalStudyTime)}</p>
+            <p className="text-2xl font-bold text-amber-600 dark:text-amber-400">{formatTime(totalStudyTime)}</p>
           </div>
           <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center justify-center">
             <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-200 mb-2">Desempenho</h3>
             <p className="text-xl font-bold text-gray-800 dark:text-gray-100">{totalCorrectQuestions} acertos</p>
             <p className="text-xl font-bold text-gray-800 dark:text-gray-100">{totalIncorrectQuestions} erros</p>
-            <p className="text-2xl font-bold text-teal-600 dark:text-teal-400">{performancePercentage}%</p>
+            <p className="text-2xl font-bold text-amber-600 dark:text-amber-400">{performancePercentage}%</p>
           </div>
           <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center justify-center">
             <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-200 mb-2">Progresso no Edital</h3>
             <p className="text-xl font-bold text-gray-800 dark:text-gray-100">{studiedTopics} tópicos concluídos</p>
             <p className="text-xl font-bold text-gray-800 dark:text-gray-100">{pendingTopics} tópicos pendentes</p>
-            <p className="text-2xl font-bold text-teal-600 dark:text-teal-400">{progressPercentage}%</p>
+            <p className="text-2xl font-bold text-amber-600 dark:text-amber-400">{progressPercentage}%</p>
           </div>
           <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center justify-center">
             <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-200 mb-2">Páginas Lidas</h3>
             <p className="text-xl font-bold text-gray-800 dark:text-gray-100">{pagesReadPerHour} páginas/hora</p>
-            <p className="text-2xl font-bold text-teal-600 dark:text-teal-400">{totalPagesRead}</p>
+            <p className="text-2xl font-bold text-amber-600 dark:text-amber-400">{totalPagesRead}</p>
           </div>
         </div>
 
@@ -411,7 +414,7 @@ export default function MateriaDetalhes() {
               <p className="text-gray-600 dark:text-gray-300 mb-4">Nenhum registro de estudo para esta matéria ainda.</p>
               <button
                 onClick={openRegisterModalForNew}
-                className="bg-blue-500 dark:bg-blue-600 hover:bg-blue-600 dark:hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2"
+                className="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2"
               >
                 <FaPlusCircle />
                 Adicionar Primeiro Registro
@@ -441,7 +444,7 @@ export default function MateriaDetalhes() {
                       <td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-red-600 dark:text-red-400 font-semibold">{(record.questions?.total || 0) - (record.questions?.correct || 0)}</td>
                       <td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-800 dark:text-gray-200">{record.pagesRead || '-'}</td>
                       <td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">
-                        <button onClick={() => handleEditRecord(record)} className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 mr-2">Editar</button>
+                        <button onClick={() => handleEditRecord(record)} className="text-amber-600 dark:text-amber-400 hover:text-amber-800 dark:hover:text-amber-300 mr-2">Editar</button>
                         <button onClick={() => handleDeleteRecord(record.id)} className="text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300">Excluir</button>
                       </td>
                     </tr>
@@ -458,19 +461,19 @@ export default function MateriaDetalhes() {
           <div className="flex justify-center mb-4">
             <button
               onClick={() => setActiveTab('daily')}
-              className={`px-4 py-2 rounded-l-lg ${activeTab === 'daily' ? 'bg-blue-500 dark:bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-200'}`}
+              className={`px-4 py-2 rounded-l-lg ${activeTab === 'daily' ? 'bg-amber-500 text-white' : 'bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-200'}`}
             >
               Diário
             </button>
             <button
               onClick={() => setActiveTab('weekly')}
-              className={`px-4 py-2 ${activeTab === 'weekly' ? 'bg-blue-500 dark:bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-200'}`}
+              className={`px-4 py-2 ${activeTab === 'weekly' ? 'bg-amber-500 text-white' : 'bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-200'}`}
             >
               Semanal
             </button>
             <button
               onClick={() => setActiveTab('monthly')}
-              className={`px-4 py-2 rounded-r-lg ${activeTab === 'monthly' ? 'bg-blue-500 dark:bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-200'}`}
+              className={`px-4 py-2 rounded-r-lg ${activeTab === 'monthly' ? 'bg-amber-500 text-white' : 'bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-200'}`}
             >
               Mensal
             </button>
@@ -512,12 +515,12 @@ export default function MateriaDetalhes() {
                         <td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 whitespace-nowrap text-gray-800 dark:text-gray-200">{topic.topic_number}</td>
                         <td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-800 dark:text-gray-200">{topic.topic_text}</td>
                         <td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">
-                          <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${isTopicStudied ? 'bg-green-100 dark:bg-green-800 text-green-800 dark:text-green-200' : 'bg-red-100 dark:bg-red-800 text-red-800 dark:text-red-200'}`}>
+                          <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${isTopicStudied ? 'bg-amber-100 dark:bg-amber-800 text-amber-800 dark:text-amber-200' : 'bg-red-100 dark:bg-red-800 text-red-800 dark:text-red-200'}`}>
                             {isTopicStudied ? 'Concluído' : 'Pendente'}
                           </span>
                         </td>
                         <td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">
-                          <button onClick={() => openRegisterModalForTopic(topic)} className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">Adicionar Estudo</button>
+                          <button onClick={() => openRegisterModalForTopic(topic)} className="text-amber-600 dark:text-amber-400 hover:text-amber-800 dark:hover:text-amber-300">Adicionar Estudo</button>
                         </td>
                       </tr>
                     );

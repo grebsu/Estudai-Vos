@@ -188,15 +188,15 @@ const StopwatchModal: React.FC<StopwatchModalProps> = ({ isOpen, onClose, onSave
   return (
     <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex justify-center items-center z-50 p-4">
       <style>{barberPoleStyle}</style>
-      <div className="w-full max-w-4xl p-8 rounded-2xl text-white flex flex-col bg-gray-900 dark:bg-gray-800">
+      <div className="w-full max-w-4xl p-8 rounded-2xl text-gray-900 dark:text-white flex flex-col bg-white dark:bg-gray-800">
         <div className="flex justify-between items-center mb-6 gap-4">
-          <h2 className="text-2xl font-bold text-gray-300 dark:text-gray-100 truncate">{initialSubject || 'Sessão de Estudo'}</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 truncate">{initialSubject || 'Sessão de Estudo'}</h2>
           <div className="flex items-center space-x-4 flex-shrink-0">
             <div className="w-48">
               <select
                 value={selectedSubject}
                 onChange={(e) => setSelectedSubject(e.target.value)}
-                className="w-full bg-gray-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full bg-white border border-gray-700 rounded-md px-3 py-2 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500"
               >
                 <option value="">Selecione a Matéria</option>
                 {subjects.map((s: string) => (
@@ -211,7 +211,7 @@ const StopwatchModal: React.FC<StopwatchModalProps> = ({ isOpen, onClose, onSave
                 value={selectedTopic}
                 onChange={(e) => setSelectedTopic(e.target.value)}
                 disabled={!selectedSubject}
-                className="w-full bg-gray-800 border border-gray-700 rounded-md px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-teal-500 disabled:opacity-50"
+                className="w-full bg-white border border-gray-700 rounded-md px-3 py-2 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500 disabled:opacity-50"
               >
                 <option value="">Selecione o Tópico</option>
                 {topics.map((t: string) => (
@@ -230,7 +230,7 @@ const StopwatchModal: React.FC<StopwatchModalProps> = ({ isOpen, onClose, onSave
         <div className="w-full bg-gray-800/50 rounded-full h-8 mb-4 shadow-inner overflow-hidden dark:bg-gray-700/50">
           {mode === 'timer' ? (
             <div 
-              className="bg-gradient-to-r from-teal-400 to-cyan-500 h-8 rounded-full transition-all duration-500 ease-out shadow-lg shadow-cyan-500/30"
+              className="bg-gradient-to-r from-amber-400 to-amber-500 h-8 rounded-full transition-all duration-500 ease-out shadow-lg shadow-amber-500/30"
               style={{ width: `${timerProgress}%` }}
             ></div>
           ) : (
@@ -241,7 +241,7 @@ const StopwatchModal: React.FC<StopwatchModalProps> = ({ isOpen, onClose, onSave
                 backgroundImage: 'linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent)',
                 backgroundSize: '40px 40px',
                 animation: isRunning ? 'barberpole 1s linear infinite' : 'none',
-                backgroundColor: '#14b8a6' // teal-500
+                backgroundColor: '#F59E0B' // amber-500
               }}
             ></div>
           )}
@@ -258,22 +258,22 @@ const StopwatchModal: React.FC<StopwatchModalProps> = ({ isOpen, onClose, onSave
                 setTime(newTimeMs);
                 setInitialTimerTime(newTimeMs);
               }}
-              className="text-8xl font-mono font-bold text-center tracking-wider bg-transparent border-none focus:outline-none focus:ring-0 w-full dark:text-gray-100"
+              className="text-8xl font-mono font-bold text-center tracking-wider bg-transparent border-none focus:outline-none focus:ring-0 w-full text-amber-500 dark:text-amber-300"
             />
           ) : (
-            <div className="text-8xl font-mono font-bold text-center tracking-wider dark:text-gray-100">
+            <div className="text-8xl font-mono font-bold text-center tracking-wider text-amber-500 dark:text-amber-300">
               {formatTime(time)}
             </div>
           )}
           <div className="flex items-center ml-4">
             <div className="flex flex-col">
-              <button onClick={() => setMode('cronometro')} className={`px-3 py-1 text-sm font-semibold rounded-full ${mode === 'cronometro' ? 'bg-teal-600 text-white dark:bg-teal-700' : 'text-gray-400 dark:text-gray-500'}`}>CRONÔMETRO</button>
-              <button onClick={() => setMode('timer')} className={`mt-2 px-3 py-1 text-sm font-semibold rounded-full ${mode === 'timer' ? 'bg-teal-600 text-white dark:bg-teal-700' : 'text-gray-400 dark:text-gray-500'}`}>TIMER</button>
+              <button onClick={() => setMode('cronometro')} className={`px-3 py-1 text-sm font-semibold rounded-full ${mode === 'cronometro' ? 'bg-amber-600 text-gray-900 dark:text-white dark:bg-amber-700' : 'text-gray-400 dark:text-gray-500'}`}>CRONÔMETRO</button>
+              <button onClick={() => setMode('timer')} className={`mt-2 px-3 py-1 text-sm font-semibold rounded-full ${mode === 'timer' ? 'bg-amber-600 text-gray-900 dark:text-white dark:bg-amber-700' : 'text-gray-400 dark:text-gray-500'}`}>TIMER</button>
             </div>
             <button 
               onClick={handleGetRecommendation}
               title="Sugerir Próximo Estudo"
-              className="ml-4 p-3 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg transition-colors"
+              className="ml-4 p-3 bg-amber-500 hover:bg-amber-600 text-white rounded-full shadow-lg shadow-amber-500/50 transition-colors"
             >
               <FaHandSparkles className="h-5 w-5" />
             </button>
@@ -282,17 +282,17 @@ const StopwatchModal: React.FC<StopwatchModalProps> = ({ isOpen, onClose, onSave
 
         <div className="flex justify-center space-x-6">
           {!isRunning ? (
-            <button onClick={handlePlay} className="w-20 h-20 bg-teal-500 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-teal-600 transition-colors dark:bg-teal-600 dark:hover:bg-teal-700">
+            <button onClick={handlePlay} className="w-20 h-20 bg-amber-500 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-amber-600 transition-colors dark:bg-amber-600 dark:hover:bg-amber-700">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /></svg>
             </button>
           ) : (
-            <button onClick={handlePause} className="w-20 h-20 bg-teal-500 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-teal-600 transition-colors dark:bg-teal-600 dark:hover:bg-teal-700">
+            <button onClick={handlePause} className="w-20 h-20 bg-amber-500 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-amber-600 transition-colors dark:bg-amber-600 dark:hover:bg-amber-700">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 9v6m4-6v6" /></svg>
             </button>
           )}
 
           {hasStarted && (
-            <button onClick={handleReset} className="w-20 h-20 bg-teal-500 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-teal-600 transition-colors dark:bg-teal-600 dark:hover:bg-teal-700">
+            <button onClick={handleReset} className="w-20 h-20 bg-amber-500 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-amber-600 transition-colors dark:bg-amber-600 dark:hover:bg-amber-700">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h5M20 20v-5h-5" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 9a9 9 0 0 1 14.23-5.77M20 15a9 9 0 0 1-14.23 5.77" /></svg>
             </button>
           )}

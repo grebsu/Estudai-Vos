@@ -164,10 +164,13 @@ export default function Revisao() {
           <div className="flex items-center space-x-4">
             <button
               onClick={handleAddClick}
-              className="flex items-center px-4 py-2 bg-teal-500 text-white rounded-full shadow-lg hover:bg-teal-600 transition-all duration-300 text-base font-semibold"
+              className="relative flex items-center px-4 py-2 bg-amber-500 text-white rounded-full shadow-lg hover:bg-amber-600 transition-all duration-300 text-base font-semibold overflow-hidden group"
             >
-              <BsPlusCircleFill className="mr-2 text-lg" />
-              Adicionar Estudo
+              <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-amber-300 to-transparent opacity-80 transform -skew-x-30 transition-all duration-700 ease-in-out group-hover:left-[100%]"></span>
+              <span className="relative flex items-center">
+                <BsPlusCircleFill className="mr-2 text-lg" />
+                Adicionar Estudo
+              </span>
             </button>
             
           </div>
@@ -177,25 +180,25 @@ export default function Revisao() {
 
       <div className="flex ml-6 mb-[-1px] z-10 relative">
           <div
-            className={`px-4 py-2 mx-0.5 rounded-t-lg cursor-pointer font-semibold text-sm transition-all duration-300 border border-gray-300 dark:border-gray-600 border-b-0 ${activeTab === 'scheduled' ? 'bg-green-500 text-white shadow-md' : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'}`}
+            className={`px-4 py-2 mx-0.5 rounded-t-lg cursor-pointer font-semibold text-sm transition-all duration-300 border border-gray-300 dark:border-gray-600 border-b-0 ${activeTab === 'scheduled' ? 'bg-amber-500 text-white shadow-md' : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'}`}
             onClick={() => setActiveTab('scheduled')}
           >
             PROGRAMADAS
           </div>
           <div
-            className={`px-4 py-2 mx-0.5 rounded-t-lg cursor-pointer font-semibold text-sm transition-all duration-300 border border-gray-300 dark:border-gray-600 border-b-0 ${activeTab === 'overdue' ? 'bg-red-500 text-white shadow-md' : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'}`}
+            className={`px-4 py-2 mx-0.5 rounded-t-lg cursor-pointer font-semibold text-sm transition-all duration-300 border border-gray-300 dark:border-gray-600 border-b-0 ${activeTab === 'overdue' ? 'bg-amber-500 text-white shadow-md' : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'}`}
             onClick={() => setActiveTab('overdue')}
           >
             ATRASADAS
           </div>
           <div
-            className={`px-4 py-2 mx-0.5 rounded-t-lg cursor-pointer font-semibold text-sm transition-all duration-300 border border-gray-300 dark:border-gray-600 border-b-0 ${activeTab === 'ignored' ? 'bg-yellow-500 text-white shadow-md' : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'}`}
+            className={`px-4 py-2 mx-0.5 rounded-t-lg cursor-pointer font-semibold text-sm transition-all duration-300 border border-gray-300 dark:border-gray-600 border-b-0 ${activeTab === 'ignored' ? 'bg-amber-500 text-white shadow-md' : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'}`}
             onClick={() => setActiveTab('ignored')}
           >
             IGNORADAS
           </div>
           <div
-            className={`px-4 py-2 mx-0.5 rounded-t-lg cursor-pointer font-semibold text-sm transition-all duration-300 border border-gray-300 dark:border-gray-600 border-b-0 ${activeTab === 'completed' ? 'bg-purple-500 text-white shadow-md' : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'}`}
+            className={`px-4 py-2 mx-0.5 rounded-t-lg cursor-pointer font-semibold text-sm transition-all duration-300 border border-gray-300 dark:border-gray-600 border-b-0 ${activeTab === 'completed' ? 'bg-amber-500 text-white shadow-md' : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'}`}
             onClick={() => setActiveTab('completed')}
           >
             CONCLUÍDAS
@@ -238,7 +241,7 @@ export default function Revisao() {
                       </div>
                     );
                   })()}
-                  <div className="flex-grow h-1 bg-green-500 ml-4"></div>
+                  <div className="flex-grow h-1 bg-amber-500 ml-4"></div>
                 </h2>
                 {recordsForDate.map((record) => {
                   const studyRecord = studyRecords.find(sr => sr.id === record.studyRecordId);
@@ -254,7 +257,7 @@ export default function Revisao() {
                       <div className="flex items-start space-x-4">
                         {/* Coluna da Esquerda: Selo de Dias */}
                         <div>
-                          <span className="bg-white dark:bg-gray-700 border border-green-500 dark:border-green-400 rounded-full px-3 py-1 text-base font-semibold text-blue-700 dark:text-blue-300 whitespace-nowrap">
+                          <span className="bg-white dark:bg-gray-700 border border-amber-500 dark:border-amber-400 rounded-full px-3 py-1 text-base font-semibold text-amber-700 dark:text-amber-300 whitespace-nowrap">
                             {diffDays === 0 ? 'HOJE' : `${diffDays} dia${diffDays !== 1 ? 's' : ''}`}
                           </span>
                         </div>
@@ -267,7 +270,7 @@ export default function Revisao() {
                               <button
                                 onClick={() => handleTriggerReviewAction(record)}
                                 title="Iniciar Revisão"
-                                className="flex items-center justify-center p-1 bg-green-600 text-white rounded-full shadow-md hover:bg-green-700 transition-colors"
+                                className="flex items-center justify-center p-1 bg-amber-500 text-white rounded-full shadow-md hover:bg-amber-600 transition-colors"
                               >
                                 <BsPlayFill className="text-sm" />
                               </button>
@@ -275,7 +278,7 @@ export default function Revisao() {
                                 <button
                                   onClick={() => handleTriggerReviewAction(record)}
                                   title="Concluir"
-                                  className="flex items-center justify-center p-1 bg-green-600 text-white rounded-full shadow-md hover:bg-green-700 transition-colors"
+                                  className="flex items-center justify-center p-1 bg-amber-500 text-white rounded-full shadow-md hover:bg-amber-600 transition-colors"
                                 >
                                   <BsPlusCircleFill className="text-sm text-white" />
                                 </button>

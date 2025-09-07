@@ -145,7 +145,7 @@ export default function PlanoDetalhes() {
     if (!plan) return stats;
 
     plan.subjects.forEach(subject => {
-      const totalTopics = subject.topics.length;
+      const totalTopics = subject.topics?.length || 0;
       let studiedTopics = 0;
       let totalQuestions = 0;
 
@@ -411,7 +411,7 @@ export default function PlanoDetalhes() {
               <div className="absolute bottom-4 right-4">
                 <button
                   onClick={() => { setIsSubjectModalOpen(true); setSubjectToEdit(null); }}
-                  className="flex items-center px-4 py-2 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 transition-all duration-300 text-base font-semibold"
+                  className="flex items-center px-4 py-2 bg-amber-500 text-white rounded-full shadow-lg hover:bg-amber-600 transition-all duration-300 text-base font-semibold"
                 >
                   <FaPlusCircle className="mr-2 text-lg" />
                   Nova Disciplina
@@ -420,7 +420,7 @@ export default function PlanoDetalhes() {
 
               {/* Informações */}
               <div>
-                <h1 className="text-3xl font-bold text-teal-500 mb-4">{planData.name}</h1>
+                <h1 className="text-3xl font-bold text-amber-500 mb-4">{planData.name}</h1>
                 {planData.edital && (
                   <p className="text-md text-gray-700 dark:text-gray-200">
                     <strong>Edital:</strong> {planData.edital}
@@ -433,7 +433,7 @@ export default function PlanoDetalhes() {
                 )}
                 <p className="text-md text-gray-700 dark:text-gray-200">
                   <strong>Disciplinas:</strong> {planData.subjects.length} | 
-                  <strong> Tópicos:</strong> {planData.subjects.reduce((acc, subject) => acc + subject.topics.length, 0)}
+                  <strong> Tópicos:</strong> {planData.subjects.reduce((acc, subject) => acc + (subject.topics?.length || 0), 0)}
                 </p>
                 <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
                   <strong>Observações:</strong> {planData.observations || 'Nenhuma.'}
@@ -446,15 +446,15 @@ export default function PlanoDetalhes() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" key="subjects-grid">
             <div className="lg:col-span-3 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md flex justify-around items-center text-center">
               <div className="flex flex-col items-center">
-                <span className="text-2xl font-bold text-teal-500">{formatTime(planStats.totalStudyTime)}</span>
+                <span className="text-2xl font-bold text-amber-500">{formatTime(planStats.totalStudyTime)}</span>
                 <span className="text-sm text-gray-600 dark:text-gray-300">Horas Estudadas</span>
               </div>
               <div className="flex flex-col items-center">
-                <span className="text-2xl font-bold text-teal-500">{planStats.totalQuestions}</span>
+                <span className="text-2xl font-bold text-amber-500">{planStats.totalQuestions}</span>
                 <span className="text-sm text-gray-600 dark:text-gray-300">Questões Resolvidas</span>
               </div>
               <div className="flex flex-col items-center">
-                <span className="text-2xl font-bold text-teal-500">{planStats.overallPerformance}%</span>
+                <span className="text-2xl font-bold text-amber-500">{planStats.overallPerformance}%</span>
                 <span className="text-sm text-gray-600 dark:text-gray-300">Desempenho</span>
               </div>
             </div>
@@ -469,7 +469,7 @@ export default function PlanoDetalhes() {
                   onMouseLeave={() => setHoveredSubjectIndex(null)}
                 >
                   <div className="flex items-center mb-2">
-                    <span className="bg-teal-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded-md mr-2">
+                    <span className="bg-amber-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded-md mr-2">
                       {planData.name}
                     </span>
                     <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100" key={`subject-title-${subjectIndex}`}>

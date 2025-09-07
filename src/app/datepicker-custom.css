@@ -26,7 +26,7 @@ html.dark {
   .react-datepicker__day--keyboard-selected,
   .react-datepicker__day--in-selecting-range,
   .react-datepicker__day--in-range {
-    background-color: #047857; /* teal-700 */
+    background-color: #F59E0B; /* amber-500 */
     color: #ffffff;
   }
 
@@ -35,7 +35,7 @@ html.dark {
   }
 
   .react-datepicker__day--highlighted {
-    background-color: #10b981; /* emerald-500 */
+    background-color: #FBBF24; /* amber-400 */
     color: #ffffff;
   }
 

@@ -394,9 +394,9 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
       <div className="fixed inset-0 bg-black/80 flex justify-center items-center z-50 p-4">
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] overflow-y-auto">
           {/* Header */}
-          <div className="flex justify-between items-center p-4 border-b border-teal-200 bg-teal-50 dark:border-teal-700 dark:bg-teal-900">
-            <h2 className="text-xl font-bold text-teal-800 dark:text-teal-200">Registro de Estudo</h2>
-            <button onClick={onClose} className="text-teal-600 hover:text-teal-800 text-2xl font-bold dark:text-teal-400 dark:hover:text-teal-200">
+          <div className="flex justify-between items-center p-4 border-b border-gold-200 bg-gold-50 dark:border-gold-700 dark:bg-gold-900">
+            <h2 className="text-xl font-bold text-gold-800 dark:text-gold-200">Registro de Estudo</h2>
+            <button onClick={onClose} className="text-gold-600 hover:text-gold-800 text-2xl font-bold dark:text-gold-400 dark:hover:text-gold-200">
               &times;
             </button>
           </div>
@@ -420,19 +420,19 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
             <div className="flex items-center space-x-2 mb-4">
               <button
                 onClick={() => handleDateSelect('today')}
-                className={`py-2 px-4 rounded-lg font-semibold ${selectedDate === new Date().toISOString().split('T')[0] && !showDatePicker ? 'bg-teal-600 text-white dark:bg-teal-700' : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600'}`}
+                className={`py-2 px-4 rounded-lg font-semibold ${selectedDate === new Date().toISOString().split('T')[0] && !showDatePicker ? 'bg-gold-600 text-white dark:bg-gold-700' : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600'}`}
               >
                 Hoje
               </button>
               <button
                 onClick={() => handleDateSelect('yesterday')}
-                className={`py-2 px-4 rounded-lg font-semibold ${selectedDate === new Date(new Date().setDate(new Date().getDate() - 1)).toISOString().split('T')[0] && !showDatePicker ? 'bg-teal-600 text-white dark:bg-teal-700' : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600'}`}
+                className={`py-2 px-4 rounded-lg font-semibold ${selectedDate === new Date(new Date().setDate(new Date().getDate() - 1)).toISOString().split('T')[0] && !showDatePicker ? 'bg-gold-600 text-white dark:bg-gold-700' : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600'}`}
               >
                 Ontem
               </button>
               <button
                 onClick={() => setShowDatePicker(true)}
-                className={`py-2 px-4 rounded-lg font-semibold ${showDatePicker ? 'bg-teal-600 text-white dark:bg-teal-700' : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600'}`}
+                className={`py-2 px-4 rounded-lg font-semibold ${showDatePicker ? 'bg-gold-600 text-white dark:bg-gold-700' : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600'}`}
               >
                 Outro
               </button>
@@ -441,7 +441,7 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                   type="date"
                   value={selectedDate}
                   onChange={(e) => setSelectedDate(e.target.value)}
-                  className="py-2 px-3 rounded-lg font-semibold border-gray-300 border focus:outline-none focus:ring-teal-500 focus:border-teal-500 text-gray-900 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
+                  className="py-2 px-3 rounded-lg font-semibold border-gray-300 border focus:outline-none focus:ring-gold-500 focus:border-gold-500 text-gray-900 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
                 />
               )}
             </div>
@@ -455,7 +455,7 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                   <button
                     type="button"
                     onClick={() => setIsCategoryDropdownOpen(!isCategoryDropdownOpen)}
-                    className={`mt-1 block w-full pl-3 pr-10 py-2 text-left text-base border-2 ${errors.category ? 'border-red-500' : 'border-teal-500 dark:border-teal-700'} focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm rounded-md bg-white dark:bg-gray-700 dark:text-gray-100`}
+                    className={`mt-1 block w-full pl-3 pr-10 py-2 text-left text-base border-2 ${errors.category ? 'border-red-500' : 'border-gold-500 dark:border-gold-700'} focus:outline-none focus:ring-gold-500 focus:border-gold-500 sm:text-sm rounded-md bg-white dark:bg-gray-700 dark:text-gray-100`}
                   >
                     <span className="block truncate text-gray-700 dark:text-gray-100">{categories.find(c => c.value === selectedCategory)?.label || 'Selecione...'}</span>
                     <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
@@ -473,7 +473,7 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                             setSelectedCategory(cat.value);
                             setIsCategoryDropdownOpen(false);
                           }}
-                          className="text-gray-900 dark:text-gray-200 cursor-pointer select-none relative py-2 pl-3 pr-9 hover:bg-teal-100 dark:hover:bg-teal-800"
+                          className="text-gray-900 dark:text-gray-200 cursor-pointer select-none relative py-2 pl-3 pr-9 hover:bg-gold-100 dark:hover:bg-gold-800"
                         >
                           <span className="block whitespace-normal">{cat.label}</span>
                         </div>
@@ -491,7 +491,7 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                   <button
                     type="button"
                     onClick={() => setIsSubjectDropdownOpen(!isSubjectDropdownOpen)}
-                    className={`mt-1 block w-full pl-3 pr-10 py-2 text-left text-base border-2 ${errors.subject ? 'border-red-500' : 'border-teal-500 dark:border-teal-700'} focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm rounded-md bg-white dark:bg-gray-700 dark:text-gray-100`}
+                    className={`mt-1 block w-full pl-3 pr-10 py-2 text-left text-base border-2 ${errors.subject ? 'border-red-500' : 'border-gold-500 dark:border-gold-700'} focus:outline-none focus:ring-gold-500 focus:border-gold-500 sm:text-sm rounded-md bg-white dark:bg-gray-700 dark:text-gray-100`}
                   >
                     <span className="block truncate text-gray-700 dark:text-gray-100">{selectedSubject || 'Selecione...'}</span>
                     <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
@@ -509,7 +509,7 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                             setSelectedSubject(sub.subject);
                             setIsSubjectDropdownOpen(false);
                           }}
-                          className="text-gray-900 dark:text-gray-200 cursor-pointer select-none relative py-2 pl-3 pr-9 hover:bg-teal-100 dark:hover:bg-teal-800"
+                          className="text-gray-900 dark:text-gray-200 cursor-pointer select-none relative py-2 pl-3 pr-9 hover:bg-gold-100 dark:hover:bg-gold-800"
                         >
                           <span className="block whitespace-normal">{sub.subject}</span>
                         </div>
@@ -528,7 +528,7 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                   id="studyTime"
                   value={studyTime}
                   onChange={(e) => setStudyTime(e.target.value)}
-                  className={`mt-1 block w-full border ${errors.studyTime ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm`}
+                  className={`mt-1 block w-full border ${errors.studyTime ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-gold-500 focus:border-gold-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm`}
                   placeholder="HH:MM:SS"
                 />
                 {errors.studyTime && <p className="mt-1 text-sm text-red-600">{errors.studyTime}</p>}
@@ -542,7 +542,7 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                     type="button"
                     disabled={!selectedSubject}
                     onClick={() => setIsTopicDropdownOpen(!isTopicDropdownOpen)}
-                    className={`mt-1 block w-full pl-3 pr-10 py-2 text-left text-base border-2 ${errors.topic ? 'border-red-500' : 'border-teal-500 dark:border-teal-700'} focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm rounded-md disabled:bg-gray-200 dark:disabled:bg-gray-600 disabled:cursor-not-allowed bg-white dark:bg-gray-700 dark:text-gray-100`}
+                    className={`mt-1 block w-full pl-3 pr-10 py-2 text-left text-base border-2 ${errors.topic ? 'border-red-500' : 'border-gold-500 dark:border-gold-700'} focus:outline-none focus:ring-gold-500 focus:border-gold-500 sm:text-sm rounded-md disabled:bg-gray-200 dark:disabled:bg-gray-600 disabled:cursor-not-allowed bg-white dark:bg-gray-700 dark:text-gray-100`}
                   >
                     <span className="block truncate text-gray-700 dark:text-gray-100">{selectedTopic || 'Selecione um tópico...'}</span>
                     <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
@@ -560,7 +560,7 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                             setSelectedTopic(top.topic_text);
                             setIsTopicDropdownOpen(false);
                           }}
-                          className="text-gray-900 dark:text-gray-200 cursor-pointer select-none relative py-2 pl-3 pr-9 hover:bg-teal-100 dark:hover:bg-teal-800"
+                          className="text-gray-900 dark:text-gray-200 cursor-pointer select-none relative py-2 pl-3 pr-9 hover:bg-gold-100 dark:hover:bg-gold-800"
                         >
                           <span className="block whitespace-normal">{top.topic_text}</span>
                         </div>
@@ -581,7 +581,7 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                   placeholder="Ex.: Aula 01"
                   value={material}
                   onChange={(e) => setMaterial(e.target.value)}
-                  className="mt-1 block w-full border border-gray-300 dark:border-gray-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm"
+                  className="mt-1 block w-full border border-gray-300 dark:border-gray-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-gold-500 focus:border-gold-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm"
                 />
               </div>
             </div>
@@ -593,7 +593,7 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                   <input 
                     id="teoriaFinalizada" 
                     type="checkbox" 
-                    className="h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 rounded dark:bg-gray-700 dark:border-gray-600 accent-teal-500" 
+                    className="h-4 w-4 text-gold-600 focus:ring-gold-500 border-gray-300 rounded dark:bg-gray-700 dark:border-gray-600 accent-gold-500" 
                     checked={isTeoriaFinalizada}
                     onChange={(e) => setIsTeoriaFinalizada(e.target.checked)}
                   />
@@ -603,7 +603,7 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                   <input 
                     id="countInPlanning" 
                     type="checkbox" 
-                    className="h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 rounded dark:bg-gray-700 dark:border-gray-600 accent-teal-500" 
+                    className="h-4 w-4 text-gold-600 focus:ring-gold-500 border-gray-300 rounded dark:bg-gray-700 dark:border-gray-600 accent-gold-500" 
                     checked={countInPlanning}
                     onChange={(e) => setCountInPlanning(e.target.checked)}
                   />
@@ -614,7 +614,7 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                 <input
                   id="programarRevisoes"
                   type="checkbox"
-                  className="h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 rounded dark:bg-gray-700 dark:border-gray-600 accent-teal-500"
+                  className="h-4 w-4 text-gold-600 focus:ring-gold-500 border-gray-300 rounded dark:bg-gray-700 dark:border-gray-600 accent-gold-500"
                   checked={isReviewSchedulingEnabled}
                   onChange={(e) => setIsReviewSchedulingEnabled(e.target.checked)}
                 />
@@ -625,9 +625,9 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
             {isReviewSchedulingEnabled && (
               <div className="flex flex-wrap gap-2 mt-2">
                 {reviewPeriods.map((period, index) => (
-                  <span key={index} className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-semibold flex items-center dark:bg-teal-800 dark:text-teal-100">
+                  <span key={index} className="bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-semibold flex items-center dark:bg-gold-800 dark:text-gold-100">
                     {period}
-                    <button onClick={() => setReviewPeriods(prev => prev.filter((_, i) => i !== index))} className="ml-2 text-teal-600 hover:text-teal-800 dark:text-teal-300 dark:hover:text-teal-100">
+                    <button onClick={() => setReviewPeriods(prev => prev.filter((_, i) => i !== index))} className="ml-2 text-gold-600 hover:text-gold-800 dark:text-gold-300 dark:hover:text-gold-100">
                       &times;
                     </button>
                   </span>
@@ -635,7 +635,7 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                 <div className="ml-2">
                   <button
                     onClick={() => setIsAddReviewModalOpen(true)} // Abre o novo modal
-                    className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-1 px-2 rounded-full text-xs dark:bg-teal-600 dark:hover:bg-teal-700"
+                    className="bg-gold-500 hover:bg-gold-600 text-white font-bold py-1 px-2 rounded-full text-xs dark:bg-gold-600 dark:hover:bg-gold-700"
                   >
                     +
                   </button>
@@ -645,8 +645,8 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {/* Questões */}
-              <div className="border border-teal-300 dark:border-teal-700 p-4 rounded-md md:col-span-1">
-                <h3 className="text-lg font-semibold text-teal-800 dark:text-teal-200 mb-3">Questões</h3>
+              <div className="border border-gold-300 dark:border-gold-700 p-4 rounded-md md:col-span-1">
+                <h3 className="text-lg font-semibold text-gold-800 dark:text-gold-200 mb-3">Questões</h3>
                 {questions.map((q, index) => (
                   <div key={index} className="flex space-x-2 mb-2 w-full">
                     <div className="flex-1">
@@ -661,7 +661,7 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                           newQuestions[index].correct = parseInt(e.target.value) || 0;
                           setQuestions(newQuestions);
                         }}
-                        className={`mt-1 block w-full border ${errors[`question-${index}`] ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm`}
+                        className={`mt-1 block w-full border ${errors[`question-${index}`] ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-gold-500 focus:border-gold-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm`}
                       />
                       {errors[`question-${index}`] && <p className="mt-1 text-sm text-red-600">{errors[`question-${index}`]}</p>}
                     </div>
@@ -677,7 +677,7 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                           newQuestions[index].incorrect = parseInt(e.target.value) || 0;
                           setQuestions(newQuestions);
                         }}
-                        className={`mt-1 block w-full border ${errors[`question-${index}`] ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm`}
+                        className={`mt-1 block w-full border ${errors[`question-${index}`] ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-gold-500 focus:border-gold-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm`}
                       />
                     </div>
                   </div>
@@ -685,8 +685,8 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
               </div>
 
               {/* Páginas */}
-              <div className="border border-teal-300 dark:border-teal-700 p-4 rounded-md md:col-span-1 relative">
-                <h3 className="text-lg font-semibold text-teal-800 dark:text-teal-200 mb-3">Páginas</h3>
+              <div className="border border-gold-300 dark:border-gold-700 p-4 rounded-md md:col-span-1 relative">
+                <h3 className="text-lg font-semibold text-gold-800 dark:text-gold-200 mb-3">Páginas</h3>
                 {pages.map((p, index) => (
                   <div key={index} className="flex space-x-2 mb-2 w-full">
                     <div className="flex-1">
@@ -701,7 +701,7 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                           newPages[index].start = parseInt(e.target.value) || 0;
                           setPages(newPages);
                         }}
-                        className={`mt-1 block w-full border ${errors[`page-${index}`] ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm`}
+                        className={`mt-1 block w-full border ${errors[`page-${index}`] ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-gold-500 focus:border-gold-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm`}
                       />
                     </div>
                     <div className="flex-1">
@@ -716,20 +716,20 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                           newPages[index].end = parseInt(e.target.value) || 0;
                           setPages(newPages);
                         }}
-                        className={`mt-1 block w-full border ${errors[`page-${index}`] ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm`}
+                        className={`mt-1 block w-full border ${errors[`page-${index}`] ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-gold-500 focus:border-gold-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm`}
                       />
                       {errors[`page-${index}`] && <p className="mt-1 text-sm text-red-600">{errors[`page-${index}`]}</p>}
                     </div>
                   </div>
                 ))}
-                <button onClick={addPagePair} className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-teal-500 hover:bg-teal-600 text-white font-bold py-1 px-2 rounded-full text-xs z-10 dark:bg-teal-600 dark:hover:bg-teal-700">
+                <button onClick={addPagePair} className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-gold-500 hover:bg-gold-600 text-white font-bold py-1 px-2 rounded-full text-xs z-10 dark:bg-gold-600 dark:hover:bg-gold-700">
                   +
                 </button>
               </div>
 
               {/* Vídeo/Aulas */}
-              <div className="border border-teal-300 dark:border-teal-700 p-4 rounded-md md:col-span-2 relative">
-                <h3 className="text-lg font-semibold text-teal-800 dark:text-teal-200 mb-3">Vídeo/Aulas</h3>
+              <div className="border border-gold-300 dark:border-gold-700 p-4 rounded-md md:col-span-2 relative">
+                <h3 className="text-lg font-semibold text-gold-800 dark:text-gold-200 mb-3">Vídeo/Aulas</h3>
                 {videos.map((v, index) => (
                   <div key={index} className="grid grid-cols-3 gap-2 mb-2">
                     <div>
@@ -743,7 +743,7 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                           newVideos[index] = { ...newVideos[index], title: e.target.value };
                           setVideos(newVideos);
                         }}
-                        className={`mt-1 block w-full border ${errors[`video-title-${index}`] ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm`}
+                        className={`mt-1 block w-full border ${errors[`video-title-${index}`] ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-gold-500 focus:border-gold-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm`}
                       />
                       {errors[`video-title-${index}`] && <p className="mt-1 text-sm text-red-600">{errors[`video-title-${index}`]}</p>}
                     </div>
@@ -758,7 +758,7 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                           newVideos[index] = { ...newVideos[index], start: e.target.value };
                           setVideos(newVideos);
                         }}
-                        className={`mt-1 block w-full border ${errors[`video-time-${index}`] ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm`}
+                        className={`mt-1 block w-full border ${errors[`video-time-${index}`] ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-gold-500 focus:border-gold-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm`}
                         placeholder="HH:MM:SS"
                       />
                     </div>
@@ -773,14 +773,14 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                           newVideos[index] = { ...newVideos[index], end: e.target.value };
                           setVideos(newVideos);
                         }}
-                        className={`mt-1 block w-full border ${errors[`video-time-${index}`] ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm`}
+                        className={`mt-1 block w-full border ${errors[`video-time-${index}`] ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'} rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-gold-500 focus:border-gold-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm`}
                         placeholder="HH:MM:SS"
                       />
                       {errors[`video-time-${index}`] && <p className="mt-1 text-sm text-red-600">{errors[`video-time-${index}`]}</p>}
                     </div>
                   </div>
                 ))}
-                <button onClick={addVideoRow} className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-teal-500 hover:bg-teal-600 text-white font-bold py-1 px-2 rounded-full text-xs z-10 dark:bg-teal-600 dark:hover:bg-teal-700">
+                <button onClick={addVideoRow} className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-gold-500 hover:bg-gold-600 text-white font-bold py-1 px-2 rounded-full text-xs z-10 dark:bg-gold-600 dark:hover:bg-gold-700">
                   +
                 </button>
               </div>
@@ -794,13 +794,13 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
                 rows={3}
                 value={comments}
                 onChange={(e) => setComments(e.target.value)}
-                className="mt-1 block w-full border border-gray-300 dark:border-gray-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm"
+                className="mt-1 block w-full border border-gray-300 dark:border-gray-600 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-gold-500 focus:border-gold-500 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 sm:text-sm"
               ></textarea>
             </div>
           </div>
 
           {/* Footer */}
-          <div className="flex justify-end items-center p-4 border-t border-teal-200 dark:border-teal-700 bg-teal-50 dark:bg-teal-900/50 space-x-4">
+          <div className="flex justify-end items-center p-4 border-t border-gold-200 dark:border-gold-700 bg-gold-50 dark:bg-gold-900/50 space-x-4">
             {initialRecord && showDeleteButton && (
               <button onClick={handleDelete} className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg dark:bg-red-600 dark:hover:bg-red-700">
                 Excluir
@@ -809,7 +809,7 @@ const StudyRegisterModal: React.FC<StudyRegisterModalProps> = ({
             <button onClick={onClose} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-lg dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-gray-200">
               Cancelar
             </button>
-            <button onClick={handleSave} className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-lg dark:bg-teal-700 dark:hover:bg-teal-800">
+            <button onClick={handleSave} className="bg-gold-600 hover:bg-gold-700 text-white font-bold py-2 px-4 rounded-lg dark:bg-gold-700 dark:hover:bg-gold-800">
               Salvar
             </button>
           </div>
