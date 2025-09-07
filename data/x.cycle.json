@@ -1,0 +1,16 @@
+{
+  "studyCycle": null,
+  "studyHours": "40",
+  "weeklyQuestionsGoal": "250",
+  "currentProgressMinutes": 0,
+  "sessionProgressMap": {},
+  "reminderNotes": [],
+  "studyDays": [
+    "Segunda",
+    "Terça",
+    "Quarta",
+    "Quinta",
+    "Sexta"
+  ],
+  "completedCycles": 0
+}
