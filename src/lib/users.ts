@@ -1,11 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-<<<<<<< HEAD
 const USERS_FILE = path.join(process.cwd(), 'data', 'users.json');
-=======
-const USERS_FILE = path.join(process.cwd(), 'data', 'users.json');
->>>>>>> 07557e884c9895994f1e42d9a50962985d6371eb
 
 export interface User {
   id: string;
@@ -48,5 +44,3 @@ export async function createUser(username: string, hashedPassword: string): Prom
   await saveUsers(users);
   return newUser;
 }
-
-
