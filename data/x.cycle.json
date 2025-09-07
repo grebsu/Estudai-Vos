@@ -1,5 +1,210 @@
 {
-  "studyCycle": null,
+  "studyCycle": [
+    {
+      "id": "1757237110575-asd-0",
+      "subject": "asd",
+      "duration": 71,
+      "color": "#EF4444"
+    },
+    {
+      "id": "1757237110575-qwert-17",
+      "subject": "qwert",
+      "duration": 71,
+      "color": "#A3E635"
+    },
+    {
+      "id": "1757237110575-asd-1",
+      "subject": "asd",
+      "duration": 71,
+      "color": "#EF4444"
+    },
+    {
+      "id": "1757237110575-qwert-18",
+      "subject": "qwert",
+      "duration": 71,
+      "color": "#A3E635"
+    },
+    {
+      "id": "1757237110575-asd-2",
+      "subject": "asd",
+      "duration": 71,
+      "color": "#EF4444"
+    },
+    {
+      "id": "1757237110575-qwert-19",
+      "subject": "qwert",
+      "duration": 71,
+      "color": "#A3E635"
+    },
+    {
+      "id": "1757237110575-asd-3",
+      "subject": "asd",
+      "duration": 71,
+      "color": "#EF4444"
+    },
+    {
+      "id": "1757237110575-qwert-20",
+      "subject": "qwert",
+      "duration": 71,
+      "color": "#A3E635"
+    },
+    {
+      "id": "1757237110575-asd-4",
+      "subject": "asd",
+      "duration": 71,
+      "color": "#EF4444"
+    },
+    {
+      "id": "1757237110575-qwert-21",
+      "subject": "qwert",
+      "duration": 71,
+      "color": "#A3E635"
+    },
+    {
+      "id": "1757237110575-asd-5",
+      "subject": "asd",
+      "duration": 71,
+      "color": "#EF4444"
+    },
+    {
+      "id": "1757237110575-qwert-22",
+      "subject": "qwert",
+      "duration": 71,
+      "color": "#A3E635"
+    },
+    {
+      "id": "1757237110575-asd-6",
+      "subject": "asd",
+      "duration": 71,
+      "color": "#EF4444"
+    },
+    {
+      "id": "1757237110575-qwert-23",
+      "subject": "qwert",
+      "duration": 71,
+      "color": "#A3E635"
+    },
+    {
+      "id": "1757237110575-asd-7",
+      "subject": "asd",
+      "duration": 71,
+      "color": "#EF4444"
+    },
+    {
+      "id": "1757237110575-qwert-24",
+      "subject": "qwert",
+      "duration": 71,
+      "color": "#A3E635"
+    },
+    {
+      "id": "1757237110575-asd-8",
+      "subject": "asd",
+      "duration": 71,
+      "color": "#EF4444"
+    },
+    {
+      "id": "1757237110575-qwert-25",
+      "subject": "qwert",
+      "duration": 71,
+      "color": "#A3E635"
+    },
+    {
+      "id": "1757237110575-asd-9",
+      "subject": "asd",
+      "duration": 71,
+      "color": "#EF4444"
+    },
+    {
+      "id": "1757237110575-qwert-26",
+      "subject": "qwert",
+      "duration": 71,
+      "color": "#A3E635"
+    },
+    {
+      "id": "1757237110575-asd-10",
+      "subject": "asd",
+      "duration": 70,
+      "color": "#EF4444"
+    },
+    {
+      "id": "1757237110575-qwert-27",
+      "subject": "qwert",
+      "duration": 70,
+      "color": "#A3E635"
+    },
+    {
+      "id": "1757237110575-asd-11",
+      "subject": "asd",
+      "duration": 70,
+      "color": "#EF4444"
+    },
+    {
+      "id": "1757237110575-qwert-28",
+      "subject": "qwert",
+      "duration": 70,
+      "color": "#A3E635"
+    },
+    {
+      "id": "1757237110575-asd-12",
+      "subject": "asd",
+      "duration": 70,
+      "color": "#EF4444"
+    },
+    {
+      "id": "1757237110575-qwert-29",
+      "subject": "qwert",
+      "duration": 70,
+      "color": "#A3E635"
+    },
+    {
+      "id": "1757237110575-asd-13",
+      "subject": "asd",
+      "duration": 70,
+      "color": "#EF4444"
+    },
+    {
+      "id": "1757237110575-qwert-30",
+      "subject": "qwert",
+      "duration": 70,
+      "color": "#A3E635"
+    },
+    {
+      "id": "1757237110575-asd-14",
+      "subject": "asd",
+      "duration": 70,
+      "color": "#EF4444"
+    },
+    {
+      "id": "1757237110575-qwert-31",
+      "subject": "qwert",
+      "duration": 70,
+      "color": "#A3E635"
+    },
+    {
+      "id": "1757237110575-asd-15",
+      "subject": "asd",
+      "duration": 70,
+      "color": "#EF4444"
+    },
+    {
+      "id": "1757237110575-qwert-32",
+      "subject": "qwert",
+      "duration": 70,
+      "color": "#A3E635"
+    },
+    {
+      "id": "1757237110575-asd-16",
+      "subject": "asd",
+      "duration": 70,
+      "color": "#EF4444"
+    },
+    {
+      "id": "1757237110575-qwert-33",
+      "subject": "qwert",
+      "duration": 70,
+      "color": "#A3E635"
+    }
+  ],
   "studyHours": "40",
   "weeklyQuestionsGoal": "250",
   "currentProgressMinutes": 0,

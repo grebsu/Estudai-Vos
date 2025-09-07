@@ -9,7 +9,8 @@
       "topics": [
         {
           "topic_number": "1.1",
-          "topic_text": "a"
+          "topic_text": "a",
+          "userWeight": 2
         },
         {
           "topic_number": "1.2",

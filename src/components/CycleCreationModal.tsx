@@ -301,13 +301,13 @@ const CycleCreationModal: React.FC<CycleCreationModalProps> = ({ isOpen, onClose
             <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-2">{isEditing ? 'Editar Ciclo de Estudos' : 'Criar Novo Ciclo de Estudos'}</h2>
             <p className="text-gray-600 dark:text-gray-300 mb-8">Escolha como você prefere montar seu plano de estudos.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div onClick={() => setModalStep(1)} className="group border-2 border-gray-200 hover:border-teal-500 p-6 rounded-lg cursor-pointer transition-all duration-300 transform hover:scale-105 dark:border-gray-700 dark:hover:border-teal-400">
-                <FaMagic className="text-4xl text-teal-500 mx-auto mb-4 transition-transform duration-300 group-hover:rotate-12 dark:text-teal-400" />
+              <div onClick={() => setModalStep(1)} className="group border-2 border-gray-200 hover:border-amber-500 p-6 rounded-lg cursor-pointer transition-all duration-300 transform hover:scale-105 dark:border-gray-700 dark:hover:border-amber-400">
+                <FaMagic className="text-4xl text-amber-500 mx-auto mb-4 transition-transform duration-300 group-hover:rotate-12 dark:text-amber-400" />
                 <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2">Modo Guiado</h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">Nós guiaremos você passo a passo para criar um plano otimizado e personalizado.</p>
               </div>
-              <div onClick={() => setModalStep(4)} className="group border-2 border-gray-200 hover:border-purple-500 p-6 rounded-lg cursor-pointer transition-all duration-300 transform hover:scale-105 dark:border-gray-700 dark:hover:border-purple-400">
-                <FaTools className="text-4xl text-purple-500 mx-auto mb-4 transition-transform duration-300 group-hover:rotate-12 dark:text-purple-400" />
+              <div onClick={() => setModalStep(4)} className="group border-2 border-gray-200 hover:border-amber-500 p-6 rounded-lg cursor-pointer transition-all duration-300 transform hover:scale-105 dark:border-gray-700 dark:hover:border-amber-400">
+                <FaTools className="text-4xl text-amber-500 mx-auto mb-4 transition-transform duration-300 group-hover:rotate-12 dark:text-amber-400" />
                 <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2">Modo Manual</h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">Crie seu ciclo de estudos adicionando sessões de estudo uma a uma.</p>
               </div>
@@ -332,14 +332,14 @@ const CycleCreationModal: React.FC<CycleCreationModalProps> = ({ isOpen, onClose
                     placeholder="Buscar matéria..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-teal-400"
+                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-amber-400"
                   />
                 </div>
                 <div className="flex items-center mb-3 pl-1">
                     <input
                         type="checkbox"
                         id="selectAll"
-                        className="h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 rounded dark:bg-gray-700 dark:border-gray-600 accent-teal-500"
+                        className="h-4 w-4 text-amber-600 focus:ring-amber-500 border-gray-300 rounded dark:bg-gray-700 dark:border-gray-600 accent-amber-500"
                         onChange={() => {
                             const allSubjectNames = filteredSubjects.map(s => s.subject);
                             const allSelected = allSubjectNames.every(s => selectedSubjects.includes(s));
@@ -360,9 +360,9 @@ const CycleCreationModal: React.FC<CycleCreationModalProps> = ({ isOpen, onClose
                     <div
                       key={s.subject}
                       onClick={() => handleSubjectSelect(s.subject)}
-                      className={`p-3 rounded-lg cursor-pointer transition-all duration-200 flex justify-between items-center ${selectedSubjects.includes(s.subject) ? 'bg-teal-100 text-teal-800 font-semibold dark:bg-teal-800 dark:text-teal-100' : 'bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-gray-100'}`}>
+                      className={`p-3 rounded-lg cursor-pointer transition-all duration-200 flex justify-between items-center ${selectedSubjects.includes(s.subject) ? 'bg-amber-100 text-amber-800 font-semibold dark:bg-amber-800 dark:text-amber-100' : 'bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-gray-100'}`}>
                       <span className="text-gray-800">{s.subject}</span>
-                      {selectedSubjects.includes(s.subject) && <FaCheckCircle className="text-teal-500 dark:text-teal-400" />}
+                      {selectedSubjects.includes(s.subject) && <FaCheckCircle className="text-amber-500 dark:text-amber-400" />}
                     </div>
                   ))}
                 </div>
@@ -389,7 +389,7 @@ const CycleCreationModal: React.FC<CycleCreationModalProps> = ({ isOpen, onClose
             </div>
             <div className="flex justify-between mt-8">
               <button onClick={isEditing ? onClose : () => setModalStep(0)} className="px-6 py-2 bg-gray-300 text-gray-800 font-semibold rounded-lg hover:bg-gray-400 transition-colors dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600">Voltar</button>
-              <button onClick={() => setModalStep(2)} className="px-6 py-2 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-600 transition-colors dark:bg-teal-600 dark:hover:bg-teal-700" disabled={selectedSubjects.length === 0}>Avançar</button>
+              <button onClick={() => setModalStep(2)} className="px-6 py-2 bg-amber-500 text-white font-semibold rounded-lg hover:bg-amber-600 transition-colors dark:bg-amber-600 dark:hover:bg-amber-700" disabled={selectedSubjects.length === 0}>Avançar</button>
             </div>
           </div>
         );
@@ -400,7 +400,7 @@ const CycleCreationModal: React.FC<CycleCreationModalProps> = ({ isOpen, onClose
             {[1, 2, 3, 4, 5].map(star => (
               <FaStar
                 key={star}
-                className={`cursor-pointer ${star <= value ? 'text-yellow-400' : 'text-gray-300'}`}
+                className={`cursor-pointer ${star <= value ? 'text-amber-400' : 'text-gray-300'}`}
                 onClick={() => onChange(star)}
               />
             ))}
@@ -431,7 +431,7 @@ const CycleCreationModal: React.FC<CycleCreationModalProps> = ({ isOpen, onClose
                     </div>
                     <button
                       onClick={() => openTopicWeightsModal(subject)}
-                      className="absolute top-2 right-2 text-gray-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
+                      className="absolute top-2 right-2 text-gray-400 hover:text-amber-500 dark:hover:text-amber-400 transition-colors"
                       title="Ajustar relevância dos tópicos"
                     >
                       <FaHandSparkles />
@@ -467,7 +467,7 @@ const CycleCreationModal: React.FC<CycleCreationModalProps> = ({ isOpen, onClose
             </div>
             <div className="flex justify-between mt-8">
               <button onClick={() => setModalStep(1)} className="px-6 py-2 bg-gray-300 text-gray-800 font-semibold rounded-lg hover:bg-gray-400 transition-colors dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600">Voltar</button>
-              <button onClick={() => setModalStep(3)} className="px-6 py-2 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-600 transition-colors dark:bg-teal-600 dark:hover:bg-teal-700">Avançar</button>
+              <button onClick={() => setModalStep(3)} className="px-6 py-2 bg-amber-500 text-white font-semibold rounded-lg hover:bg-amber-600 transition-colors dark:bg-amber-600 dark:hover:bg-amber-700">Avançar</button>
             </div>
           </div>
         );
@@ -480,33 +480,33 @@ const CycleCreationModal: React.FC<CycleCreationModalProps> = ({ isOpen, onClose
               <div className="space-y-6">
                 <div>
                   <label className="block text-lg font-semibold text-gray-700 dark:text-gray-100 mb-2 flex items-center">
-                    <FaClock className="mr-3 text-teal-500" />
+                    <FaClock className="mr-3 text-amber-500" />
                     Horas Semanais
                   </label>
                   <input
                     type="number"
                     value={studyHours}
                     onChange={(e) => setStudyHours(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-teal-400"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-amber-400"
                     placeholder="Ex: 40"
                   />
                 </div>
                 <div>
                   <label className="block text-lg font-semibold text-gray-700 dark:text-gray-100 mb-2 flex items-center">
-                    <FaQuestionCircle className="mr-3 text-teal-500" />
+                    <FaQuestionCircle className="mr-3 text-amber-500" />
                     Meta de Questões
                   </label>
                   <input
                     type="number"
                     value={weeklyQuestionsGoal}
                     onChange={(e) => setWeeklyQuestionsGoal(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-teal-400"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-amber-400"
                     placeholder="Ex: 250"
                   />
                 </div>
                 <div>
                   <label className="block text-lg font-semibold text-gray-700 dark:text-gray-100 mb-2 flex items-center">
-                    <FaHourglassHalf className="mr-3 text-teal-500" />
+                    <FaHourglassHalf className="mr-3 text-amber-500" />
                     Duração da Sessão (min)
                   </label>
                   <div className="flex items-center space-x-4">
@@ -515,7 +515,7 @@ const CycleCreationModal: React.FC<CycleCreationModalProps> = ({ isOpen, onClose
                       placeholder="Mínimo"
                       value={minSession}
                       onChange={(e) => setMinSession(e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-teal-400"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-amber-400"
                     />
                     <span className="text-gray-500 font-bold dark:text-gray-400">-</span>
                     <input
@@ -523,14 +523,14 @@ const CycleCreationModal: React.FC<CycleCreationModalProps> = ({ isOpen, onClose
                       placeholder="Máximo"
                       value={maxSession}
                       onChange={(e) => setMaxSession(e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-teal-400"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-amber-400"
                     />
                   </div>
                 </div>
               </div>
               <div>
                 <label className="block text-lg font-semibold text-gray-700 dark:text-gray-100 mb-3 flex items-center">
-                  <FaCalendarAlt className="mr-3 text-teal-500" />
+                  <FaCalendarAlt className="mr-3 text-amber-500" />
                   Dias de Estudo
                 </label>
                 <div className="flex justify-around items-center pt-4">
@@ -538,7 +538,7 @@ const CycleCreationModal: React.FC<CycleCreationModalProps> = ({ isOpen, onClose
                     <button
                       key={day}
                       onClick={() => handleDaySelect(day)}
-                      className={`w-10 h-10 rounded-full text-sm font-bold flex items-center justify-center transition-all duration-200 ${studyDays.includes(day) ? 'bg-teal-500 text-white transform scale-110 shadow-lg' : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600'}`}
+                      className={`w-10 h-10 rounded-full text-sm font-bold flex items-center justify-center transition-all duration-200 ${studyDays.includes(day) ? 'bg-amber-500 text-white transform scale-110 shadow-lg' : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600'}`}
                       title={day}
                     >
                       {day.charAt(0)}
@@ -547,9 +547,9 @@ const CycleCreationModal: React.FC<CycleCreationModalProps> = ({ isOpen, onClose
                 </div>
               </div>
             </div>
-            <div className="p-6 bg-teal-50 dark:bg-teal-900/50 rounded-lg border-2 border-teal-200 dark:border-teal-700">
-              <h3 className="text-xl font-bold text-teal-800 dark:text-teal-200 mb-4">Resumo do seu Planejamento</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-teal-900 dark:text-teal-100">
+            <div className="p-6 bg-amber-50 dark:bg-amber-900/50 rounded-lg border-2 border-amber-200 dark:border-amber-700">
+              <h3 className="text-xl font-bold text-amber-800 dark:text-amber-200 mb-4">Resumo do seu Planejamento</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-amber-900 dark:text-amber-100">
                 <p><strong>Matérias:</strong> {selectedSubjects.length}</p>
                 <p><strong>Horas/Semana:</strong> {studyHours}h</p>
                 <p><strong>Meta de Questões:</strong> {weeklyQuestionsGoal}</p>
@@ -559,7 +559,7 @@ const CycleCreationModal: React.FC<CycleCreationModalProps> = ({ isOpen, onClose
             </div>
             <div className="flex justify-between mt-8">
               <button onClick={() => setModalStep(2)} className="px-6 py-2 bg-gray-300 text-gray-800 font-semibold rounded-lg hover:bg-gray-400 transition-colors dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600">Voltar</button>
-              <button onClick={handleGenerateCycle} className="px-6 py-2 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-600 transition-colors dark:bg-teal-600 dark:hover:bg-teal-700">Gerar Ciclo</button>
+              <button onClick={handleGenerateCycle} className="px-6 py-2 bg-amber-500 text-white font-semibold rounded-lg hover:bg-amber-600 transition-colors dark:bg-amber-600 dark:hover:bg-amber-700">Gerar Ciclo</button>
             </div>
           </div>
         );
@@ -578,7 +578,7 @@ const CycleCreationModal: React.FC<CycleCreationModalProps> = ({ isOpen, onClose
                     <button
                       type="button"
                       onClick={() => setIsManualSubjectDropdownOpen(!isManualSubjectDropdownOpen)}
-                      className="mt-1 block w-full pl-3 pr-10 py-2 text-left text-base border-2 border-gray-300 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm rounded-md dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-teal-400"
+                      className="mt-1 block w-full pl-3 pr-10 py-2 text-left text-base border-2 border-gray-300 focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm rounded-md dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-amber-400"
                     >
                       <span className="block truncate text-gray-900">{newManualSessionSubject || 'Selecione uma matéria'}</span>
                       <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
@@ -596,7 +596,7 @@ const CycleCreationModal: React.FC<CycleCreationModalProps> = ({ isOpen, onClose
                               setNewManualSessionSubject(s.subject);
                               setIsManualSubjectDropdownOpen(false);
                             }}
-                            className="text-gray-900 cursor-pointer select-none relative py-2 pl-3 pr-9 hover:bg-teal-100 dark:text-gray-100 dark:hover:bg-teal-800"
+                            className="text-gray-900 cursor-pointer select-none relative py-2 pl-3 pr-9 hover:bg-amber-100 dark:text-gray-100 dark:hover:bg-amber-800"
                           >
                             <span className="block whitespace-normal">{s.subject}</span>
                           </div>
@@ -622,7 +622,7 @@ const CycleCreationModal: React.FC<CycleCreationModalProps> = ({ isOpen, onClose
                   id="manualDuration"
                   value={newManualSessionDuration}
                   onChange={(e) => setNewManualSessionDuration(e.target.value)}
-                  className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-teal-400"
+                  className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-amber-400"
                   placeholder="Ex: 60"
                   min="1"
                 />
@@ -630,7 +630,7 @@ const CycleCreationModal: React.FC<CycleCreationModalProps> = ({ isOpen, onClose
             </div>
             <button
               onClick={handleAddManualSession}
-              className="w-full py-2 px-4 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-600 transition-colors mb-6 dark:bg-teal-600 dark:hover:bg-teal-700"
+              className="w-full py-2 px-4 bg-amber-500 text-white font-semibold rounded-lg hover:bg-amber-600 transition-colors mb-6 dark:bg-amber-600 dark:hover:bg-amber-700"
             >
               Adicionar Sessão
             </button>
@@ -665,28 +665,28 @@ const CycleCreationModal: React.FC<CycleCreationModalProps> = ({ isOpen, onClose
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
               <div>
                 <label className="block text-lg font-semibold text-gray-700 mb-2 flex items-center">
-                  <FaClock className="mr-3 text-teal-500 dark:text-teal-400" />
+                  <FaClock className="mr-3 text-amber-500 dark:text-amber-400" />
                   Horas Semanais
                 </label>
                 <p className="text-2xl font-bold text-gray-800 dark:text-gray-100">{(totalManualDuration / 60).toFixed(1)}h</p>
               </div>
               <div>
                 <label className="block text-lg font-semibold text-gray-700 mb-2 flex items-center">
-                  <FaQuestionCircle className="mr-3 text-teal-500 dark:text-teal-400" />
+                  <FaQuestionCircle className="mr-3 text-amber-500 dark:text-amber-400" />
                   Meta de Questões
                 </label>
                 <input
                   type="number"
                   value={weeklyQuestionsGoal}
                   onChange={(e) => setWeeklyQuestionsGoal(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-teal-400"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 dark:focus:ring-amber-400"
                   placeholder="Ex: 250"
                 />
               </div>
             </div>
             <div className="mt-6">
               <label className="block text-lg font-semibold text-gray-700 mb-3 flex items-center">
-                <FaCalendarAlt className="mr-3 text-teal-500 dark:text-teal-400" />
+                <FaCalendarAlt className="mr-3 text-amber-500 dark:text-amber-400" />
                 Dias de Estudo
               </label>
               <div className="flex justify-around items-center pt-4">
@@ -694,7 +694,7 @@ const CycleCreationModal: React.FC<CycleCreationModalProps> = ({ isOpen, onClose
                   <button
                     key={day}
                     onClick={() => handleDaySelect(day)}
-                    className={`w-10 h-10 rounded-full text-sm font-bold flex items-center justify-center transition-all duration-200 ${studyDays.includes(day) ? 'bg-teal-500 text-white transform scale-110 shadow-lg dark:bg-teal-600' : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600'}`}
+                    className={`w-10 h-10 rounded-full text-sm font-bold flex items-center justify-center transition-all duration-200 ${studyDays.includes(day) ? 'bg-amber-500 text-white transform scale-110 shadow-lg dark:bg-amber-600' : 'bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600'}`}
                     title={day}
                   >
                     {day.charAt(0)}
@@ -705,7 +705,7 @@ const CycleCreationModal: React.FC<CycleCreationModalProps> = ({ isOpen, onClose
 
             <div className="flex justify-between mt-8">
               <button onClick={() => setModalStep(0)} className="px-6 py-2 bg-gray-300 text-gray-800 font-semibold rounded-lg hover:bg-gray-400 transition-colors dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600">Voltar</button>
-              <button onClick={handleSaveManualCycle} className="px-6 py-2 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-600 transition-colors dark:bg-teal-600 dark:hover:bg-teal-700">Salvar Ciclo</button>
+              <button onClick={handleSaveManualCycle} className="px-6 py-2 bg-amber-500 text-white font-semibold rounded-lg hover:bg-amber-600 transition-colors dark:bg-amber-600 dark:hover:bg-amber-700">Salvar Ciclo</button>
             </div>
           </div>
         );

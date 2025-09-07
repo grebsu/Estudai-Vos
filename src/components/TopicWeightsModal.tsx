@@ -46,7 +46,7 @@ const TopicWeightsModal: React.FC<TopicWeightsModalProps> = ({ isOpen, onClose, 
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-2xl max-h-[80vh] flex flex-col">
         <div className="flex justify-between items-center p-4 border-b border-gray-200 dark:border-gray-700">
           <h2 className="text-xl font-bold text-gray-800 dark:text-gray-100">
-            Ajustar Relevância: <span className="text-teal-500">{subject.subject}</span>
+            Ajustar Relevância: <span className="text-amber-500">{subject.subject}</span>
           </h2>
           <button onClick={onClose} className="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 text-2xl font-bold">
             &times;
@@ -65,9 +65,9 @@ const TopicWeightsModal: React.FC<TopicWeightsModalProps> = ({ isOpen, onClose, 
                   step="1"
                   value={topicWeights[topic.topic_text] || 3}
                   onChange={(e) => handleWeightChange(topic.topic_text, parseInt(e.target.value))}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 accent-amber-500"
                 />
-                <span className="font-bold text-teal-500 w-8 text-center">{topicWeights[topic.topic_text] || 3}</span>
+                <span className="font-bold text-amber-500 w-8 text-center">{topicWeights[topic.topic_text] || 3}</span>
               </div>
             </div>
           ))}
@@ -76,7 +76,7 @@ const TopicWeightsModal: React.FC<TopicWeightsModalProps> = ({ isOpen, onClose, 
         <div className="p-4 border-t border-gray-200 dark:border-gray-700 mt-auto">
           <button
             onClick={onClose}
-            className="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-lg"
+            className="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-lg"
           >
             Fechar
           </button>
