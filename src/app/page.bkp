@@ -1,0 +1,230 @@
+'use client';
+
+import { useState, useEffect, useCallback } from 'react';
+import Link from 'next/link';
+import { useData } from '../context/DataContext';
+import { useSidebar } from '../context/SidebarContext';
+import StudyRegisterModal, { StudyRecord } from '../components/StudyRegisterModal';
+import StopwatchModal from '../components/StopwatchModal';
+import { BsStopwatch, BsPlusCircleFill } from 'react-icons/bs';
+
+// Interfaces para os dados
+interface Topic {
+  topic_text: string;
+  is_completed: boolean;
+  completed: number;
+  reviewed: number;
+}
+
+interface Subject {
+  subject: string;
+  topics: Topic[];
+}
+
+// Função auxiliar para formatar o tempo
+const formatTime = (milliseconds: number) => {
+  if (isNaN(milliseconds) || milliseconds < 0) {
+    return '0h 0m';
+  }
+  const totalSeconds = Math.floor(milliseconds / 1000);
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  return `${hours}h ${minutes}m`;
+};
+
+export default function Home() {
+  const { selectedDataFile, setSelectedDataFile, availablePlans } = useData();
+  const [stats, setStats] = useState({
+    totalStudyTime: 0,
+    dailyAverage: 0,
+    overallPerformance: 0,
+    overallProgress: 0,
+  });
+  const [panelData, setPanelData] = useState<Subject[]>([]);
+  const [showRegisterModal, setShowRegisterModal] = useState(false);
+  const [showStopwatchModal, setShowStopwatchModal] = useState(false);
+  const [savedStudyTime, setSavedStudyTime] = useState<number | null>(null);
+
+  const calculateStats = useCallback(() => {
+    // Carregar dados do localStorage
+    const studyRecordsJSON = localStorage.getItem('studyRecords');
+    const studyRecords: StudyRecord[] = studyRecordsJSON ? JSON.parse(studyRecordsJSON) : [];
+    
+    const storageKey = `edital_progress_${selectedDataFile}`;
+    const editalProgressJSON = localStorage.getItem(storageKey);
+    const editalProgress: Subject[] = editalProgressJSON ? JSON.parse(editalProgressJSON) : [];
+
+    // Calcular Tempo Total de Estudo
+    const totalStudyTime = studyRecords.reduce((acc, record) => acc + (record.studyTime || 0), 0);
+
+    // Calcular Média Diária
+    const uniqueDays = new Set(studyRecords.map(r => r.date));
+    const dailyAverage = uniqueDays.size > 0 ? totalStudyTime / uniqueDays.size : 0;
+
+    // Calcular Desempenho Geral
+    const totalCorrect = studyRecords.reduce((acc, record) => acc + (record.correctQuestions || 0), 0);
+    const totalIncorrect = studyRecords.reduce((acc, record) => acc + (record.incorrectQuestions || 0), 0);
+    const totalQuestions = totalCorrect + totalIncorrect;
+    const overallPerformance = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
+
+    // Calcular Progresso no Edital
+    const allTopics = editalProgress.flatMap(subject => subject.topics);
+    const completedTopics = allTopics.filter(topic => topic.is_completed).length;
+    const overallProgress = allTopics.length > 0 ? Math.round((completedTopics / allTopics.length) * 100) : 0;
+
+    setStats({ totalStudyTime, dailyAverage, overallPerformance, overallProgress });
+    setPanelData(editalProgress);
+
+  }, [selectedDataFile]);
+
+  useEffect(() => {
+    calculateStats();
+  }, [calculateStats]);
+
+  const handleSaveStudy = (record: StudyRecord) => {
+    const existingRecordsJSON = localStorage.getItem('studyRecords');
+    const existingRecords: StudyRecord[] = existingRecordsJSON ? JSON.parse(existingRecordsJSON) : [];
+    existingRecords.push(record);
+    localStorage.setItem('studyRecords', JSON.stringify(existingRecords));
+    
+    // Recalcular estatísticas após salvar
+    calculateStats();
+    closeRegisterModal();
+  };
+
+  const openRegisterModal = () => setShowRegisterModal(true);
+  const closeRegisterModal = () => {
+    setShowRegisterModal(false);
+    setSavedStudyTime(null);
+  };
+
+  const openStopwatchModal = () => setShowStopwatchModal(true);
+  const closeStopwatchModal = () => setShowStopwatchModal(false);
+
+  const handleStopwatchSave = (time: number) => {
+    setSavedStudyTime(time);
+    closeStopwatchModal();
+    openRegisterModal();
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center p-4 pt-20">
+      
+      <div className="mb-6 w-full">
+        <header className="flex justify-between items-center">
+          <h1 className="text-3xl font-bold text-gray-800">Home</h1>
+          <div className="flex items-center space-x-4">
+            <button 
+              onClick={openRegisterModal} 
+              className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 flex items-center shadow-md transition-colors duration-200"
+            >
+              <BsPlusCircleFill className="mr-2" />
+              Adicionar Estudo
+            </button>
+            <select
+              value={selectedDataFile}
+              onChange={(e) => setSelectedDataFile(e.target.value)}
+              className="bg-white border border-gray-300 rounded-md py-2 px-4 text-gray-700 hover:bg-gray-50 transition-colors duration-200 shadow-sm"
+            >
+              {availablePlans.map((plan) => (
+                <option key={plan} value={plan}>
+                  {plan.replace('.json', '').toUpperCase()}
+                </option>
+              ))}
+            </select>
+          </div>
+        </header>
+        <div className="border-b border-gray-200 mt-4"></div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 w-full">
+        <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Tempo de Estudo</h2>
+          <div className="mt-4 text-blue-600 text-3xl font-bold">{formatTime(stats.totalStudyTime)}</div>
+        </div>
+
+        <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Média Diária</h2>
+          <div className="mt-4 text-yellow-600 text-3xl font-bold">{formatTime(stats.dailyAverage)}</div>
+        </div>
+
+        <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Desempenho</h2>
+          <div className="mt-4 text-green-600 text-3xl font-bold">{stats.overallPerformance}%</div>
+        </div>
+
+        <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">Progresso no Edital</h2>
+          <div className="mt-4 text-purple-600 text-3xl font-bold">{stats.overallProgress}%</div>
+          <Link href="/edital" className="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+            Ver Edital
+          </Link>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mt-6">
+        <div className="bg-white shadow-lg rounded-lg p-6">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">Painel</h2>
+          <div className="overflow-x-auto">
+            <table className="min-w-full bg-white">
+              <thead>
+                <tr className="bg-gray-50">
+                  <th className="py-2 px-4 border-b text-left text-sm font-semibold text-gray-600">Matérias</th>
+                  <th className="py-2 px-4 border-b text-center text-sm font-semibold text-gray-600">Progresso</th>
+                  <th className="py-2 px-4 border-b text-center text-sm font-semibold text-gray-600">Desempenho</th>
+                </tr>
+              </thead>
+              <tbody>
+                {panelData.map((subject, index) => {
+                  const completed = subject.topics.reduce((acc, t) => acc + (t.completed || 0), 0);
+                  const reviewed = subject.topics.reduce((acc, t) => acc + (t.reviewed || 0), 0);
+                  const total = completed + reviewed;
+                  const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
+                  const progress = subject.topics.length > 0 ? Math.round(subject.topics.filter(t => t.is_completed).length / subject.topics.length * 100) : 0;
+                  
+                  const getPerformanceColor = (p: number) => {
+                    if (p >= 80) return 'text-green-600';
+                    if (p >= 60) return 'text-yellow-600';
+                    return 'text-red-600';
+                  };
+
+                  return (
+                    <tr key={index} className="hover:bg-gray-50">
+                      <td className="py-2 px-4 border-b text-left">{subject.subject}</td>
+                      <td className="py-2 px-4 border-b text-center">{progress}%</td>
+                      <td className={`py-2 px-4 border-b text-center font-bold ${getPerformanceColor(percentage)}`}>{percentage}%</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-6">
+          <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Metas da Semana</h2>
+            <div className="mt-4 text-indigo-600 text-3xl font-bold">Em breve</div>
+          </div>
+          <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Constância</h2>
+            <div className="mt-4 text-orange-600 text-3xl font-bold">Em breve</div>
+          </div>
+        </div>
+      </div>
+
+      {showRegisterModal && 
+        <StudyRegisterModal 
+          isOpen={showRegisterModal} 
+          onClose={closeRegisterModal} 
+          onSave={handleSaveStudy} 
+          initialStudyTime={savedStudyTime} 
+        />}
+      {showStopwatchModal && <StopwatchModal isOpen={showStopwatchModal} onClose={closeStopwatchModal} onSaveAndClose={handleStopwatchSave} />}
+
+      <button onClick={openStopwatchModal} className="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50">
+        <BsStopwatch size={24} />
+      </button>
+    </div>
+  );
+}
