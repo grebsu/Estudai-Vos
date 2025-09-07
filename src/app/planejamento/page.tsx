@@ -197,7 +197,7 @@ const SortableItem = ({
             </span>
           </div>
           <div className={`w-full bg-gray-200 dark:bg-gray-600 rounded-full ${hoveredSession === session.id ? 'h-3' : 'h-1'} transition-all duration-700 ease`}>
-            <div className="bg-gradient-to-r from-gold-400 to-orange-500 h-full rounded-full" style={{ width: `${progressPercentage}%` }}></div>
+            <div className="bg-gradient-to-r from-teal-400 to-cyan-500 h-full rounded-full" style={{ width: `${progressPercentage}%` }}></div>
           </div>
           {hoveredSession === session.id && !isCompleted && (
             <div className="flex space-x-4 mt-2 w-full justify-start">
@@ -208,7 +208,7 @@ const SortableItem = ({
                   setCurrentStudySession(session);
                   setIsStopwatchModalOpen(true);
                 }}
-                className="flex items-center text-gold-500 hover:text-gold-700 hover:underline text-sm py-1 font-bold"
+                className="flex items-center text-teal-500 hover:text-teal-700 hover:underline text-sm py-1 font-bold"
               >
                 <FaPlay className="mr-2" />
                 Iniciar Estudo
@@ -223,7 +223,7 @@ const SortableItem = ({
                   setCurrentStudySession(session);
                   setIsRegisterModalOpen(true);
                 }}
-                className="text-gold-500 hover:text-gold-700 hover:underline text-sm py-1 font-bold flex items-center"
+                className="text-teal-500 hover:text-teal-700 hover:underline text-sm py-1 font-bold flex items-center"
               >
                 <FaPlus className="mr-2" />
                 Registrar Estudo Manual
@@ -526,8 +526,8 @@ export default function Planejamento() {
             </div>
             <div className="md:col-span-4 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
               <div className="flex border-b border-gray-200 dark:border-gray-700 mb-4">
-                <button onClick={() => setActiveTab('pending')} className={`py-2 px-4 text-lg font-medium ${activeTab === 'pending' ? 'border-b-2 border-gold-500 text-gold-600' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'}`}>Sequência de Estudos</button>
-                <button onClick={() => setActiveTab('completed')} className={`py-2 px-4 text-lg font-medium ${activeTab === 'completed' ? 'border-b-2 border-gold-500 text-gold-600' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'}`}>Estudos Concluídos</button>
+                <button onClick={() => setActiveTab('pending')} className={`py-2 px-4 text-lg font-medium ${activeTab === 'pending' ? 'border-b-2 border-teal-500 text-teal-600' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'}`}>Sequência de Estudos</button>
+                <button onClick={() => setActiveTab('completed')} className={`py-2 px-4 text-lg font-medium ${activeTab === 'completed' ? 'border-b-2 border-teal-500 text-teal-600' : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'}`}>Estudos Concluídos</button>
               </div>
               <div className="space-y-4 h-96 overflow-y-auto pr-2">
                 <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>

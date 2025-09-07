@@ -196,11 +196,11 @@ const StopwatchModal: React.FC<StopwatchModalProps> = ({ isOpen, onClose, onSave
               <select
                 value={selectedSubject}
                 onChange={(e) => setSelectedSubject(e.target.value)}
-                className="w-full bg-white border border-gray-700 rounded-md px-3 py-2 text-gray-900 dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+                className="w-full bg-white border border-gray-700 rounded-md px-3 py-2 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500"
               >
                 <option value="">Selecione a Matéria</option>
                 {subjects.map((s: string) => (
-                  <option key={s} value={s} title={s} className="dark:bg-gray-800 dark:text-gray-100">
+                  <option key={s} value={s} title={s}>
                     {s.length > 25 ? `${s.substring(0, 22)}...` : s}
                   </option>
                 ))}
@@ -211,11 +211,11 @@ const StopwatchModal: React.FC<StopwatchModalProps> = ({ isOpen, onClose, onSave
                 value={selectedTopic}
                 onChange={(e) => setSelectedTopic(e.target.value)}
                 disabled={!selectedSubject}
-                className="w-full bg-white border border-gray-700 rounded-md px-3 py-2 text-gray-900 dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500 disabled:dark:text-gray-500"
+                className="w-full bg-white border border-gray-700 rounded-md px-3 py-2 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500 disabled:opacity-50"
               >
                 <option value="">Selecione o Tópico</option>
                 {topics.map((t: string) => (
-                  <option key={t} value={t} title={t} className="dark:bg-gray-800 dark:text-gray-100">
+                  <option key={t} value={t} title={t}>
                     {t.length > 25 ? `${t.substring(0, 22)}...` : t}
                   </option>
                 ))}

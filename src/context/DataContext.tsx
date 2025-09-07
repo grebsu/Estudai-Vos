@@ -656,11 +656,6 @@ const calculateTopicScores = (
 };
 
 export const DataProvider = ({ children }: { children: ReactNode }) => {
-  const [hasMounted, setHasMounted] = useState(false);
-
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
   const [selectedDataFile, _setSelectedDataFile] = useState<string>('');
   const [availablePlans, setAvailablePlans] = useState<string[]>([]);
   const [studyPlans, setStudyPlans] = useState<any[]>([]);
@@ -768,18 +763,12 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
       const plansData = await Promise.all(planDataPromises);
       setStudyPlans(plansData);
 
+      const lastSelected = localStorage.getItem('selectedDataFile');
       let initialSelectedFile = '';
-      if (hasMounted) {
-        const lastSelected = localStorage.getItem('selectedDataFile');
-        if (lastSelected && planFiles.includes(lastSelected)) {
-          initialSelectedFile = lastSelected;
-        } else if (planFiles.length > 0) {
-          initialSelectedFile = planFiles[0];
-        }
-      } else {
-        if (planFiles.length > 0) {
-          initialSelectedFile = planFiles[0];
-        }
+      if (lastSelected && planFiles.includes(lastSelected)) {
+        initialSelectedFile = lastSelected;
+      } else if (planFiles.length > 0) {
+        initialSelectedFile = planFiles[0];
       }
       
       if (initialSelectedFile) {
@@ -805,7 +794,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
       setLoading(false);
     }
     loadPlansAndData();
-  }, [hasMounted]);
+  }, []);
 
   useEffect(() => {
     async function loadRecordsForSelectedFile() {
