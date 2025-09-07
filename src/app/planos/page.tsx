@@ -61,7 +61,8 @@ export default function Planos() {
 
   const fetchPlanData = useCallback(async () => {
     setLoading(true);
-    const filesToLoad = await getJsonFiles();
+    const allFiles = await getJsonFiles();
+    const filesToLoad = allFiles.filter(file => file.toUpperCase() !== 'USERS.JSON');
     const loadedPlanos: PlanInfo[] = [];
 
     for (const file of filesToLoad) {
