@@ -196,7 +196,7 @@ const StopwatchModal: React.FC<StopwatchModalProps> = ({ isOpen, onClose, onSave
               <select
                 value={selectedSubject}
                 onChange={(e) => setSelectedSubject(e.target.value)}
-                className="w-full bg-white border border-gray-700 rounded-md px-3 py-2 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+                className="w-full rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
               >
                 <option value="">Selecione a Matéria</option>
                 {subjects.map((s: string) => (
@@ -211,7 +211,7 @@ const StopwatchModal: React.FC<StopwatchModalProps> = ({ isOpen, onClose, onSave
                 value={selectedTopic}
                 onChange={(e) => setSelectedTopic(e.target.value)}
                 disabled={!selectedSubject}
-                className="w-full bg-white border border-gray-700 rounded-md px-3 py-2 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500 disabled:opacity-50"
+                className="w-full rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-500 disabled:opacity-50 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
               >
                 <option value="">Selecione o Tópico</option>
                 {topics.map((t: string) => (
