@@ -81,6 +81,20 @@ Para executar a aplicação em um contêiner Docker, garantindo um ambiente de p
     ```
     A aplicação estará disponível em [http://localhost:3000](http://localhost:3000).
 
+#### Executando com Imagem Pré-construída do Docker Hub
+
+Para executar a aplicação usando a imagem pré-construída do Docker Hub:
+
+1.  **Puxe a imagem Docker:**
+    ```bash
+    docker pull ouroboros73/ouroboros:latest
+    ```
+2.  **Execute o contêiner Docker:**
+    Certifique-se de configurar suas variáveis de ambiente (por exemplo, `DATABASE_URL`, `NEXTAUTH_SECRET`, `NEXTAUTH_URL`) ao executar o contêiner. Você pode passá-las usando a flag `-e`.
+    ```bash
+    docker run -p 3000:3000 -e DATABASE_URL="your_database_url" -e NEXTAUTH_SECRET="your_nextauth_secret" -e NEXTAUTH_URL="http://localhost:3000" ouroboros73/ouroboros:latest
+    ```
+
 ## 📄 Licença
 
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
