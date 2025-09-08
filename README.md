@@ -87,9 +87,15 @@ Para uma implantação robusta que reinicia com o sistema, recomendamos o uso do
     ```bash
     pm2 startup
     ```
-    *Este comando irá gerar outro que você precisará copiar e executar para finalizar a configuração.*
+    Este comando irá detectar seu sistema operacional (Linux, macOS ou Windows) e gerar um novo comando que você precisará executar em seguida.
 
-5.  **Salve a configuração atual do pm2:**
+    -   **No Linux/macOS:** Ele irá gerar um comando começando com `sudo`. Copie e cole esse comando gerado no terminal para registrar o serviço de inicialização.
+    -   **No Windows:** É crucial abrir seu terminal (PowerShell ou CMD) **como Administrador** antes de rodar `pm2 startup`. Siga as instruções que aparecerem na tela.
+
+    O comando gerado é específico para a sua máquina e seu usuário, garantindo que tudo funcione corretamente.
+
+5.  **Salve a lista de processos para o boot:**
+    Após executar o comando de inicialização do passo anterior, salve a lista de processos atual do pm2. Isso fará com que eles reiniciem junto com o sistema.
     ```bash
     pm2 save
     ```
