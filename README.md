@@ -29,6 +29,7 @@ Assista a uma demonstração completa da aplicação e suas funcionalidades no v
 - **Visualização de Dados:** [Chart.js](https://www.chartjs.org/)
 - **Drag & Drop:** [dnd-kit](https://dndkit.com/)
 - **Gerenciamento de Datas:** [date-fns](https://date-fns.org/)
+- **Containerização:** [Docker](https://www.docker.com/)
 
 ## 🏁 Como Começar
 
@@ -38,6 +39,7 @@ Siga estas instruções para obter uma cópia do projeto e executá-lo em sua m�
 
 - [Node.js](https://nodejs.org/en/) (versão 20.x ou superior recomendada)
 - [npm](https://www.npmjs.com/)
+- [Docker](https://www.docker.com/get-started) e [Docker Compose](https://docs.docker.com/compose/install/)
 
 ### Instalação
 
@@ -64,41 +66,20 @@ npm run dev
 ```
 Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
 
-#### Modo de Produção (Recomendado)
+#### Modo de Produção com Docker
 
-Para uma implantação robusta que reinicia com o sistema, recomendamos o uso do `pm2`.
+Para executar a aplicação em um contêiner Docker, garantindo um ambiente de produção consistente:
 
-1.  **Instale o pm2 globalmente:**
+1.  **Construa a imagem Docker:**
     ```bash
-    npm install pm2 -g
+    docker compose build
     ```
 
-2.  **Crie a build de produção do projeto:**
+2.  **Inicie a aplicação:**
     ```bash
-    npm run build
+    docker compose up -d
     ```
-
-3.  **Inicie a aplicação com o pm2:**
-    ```bash
-    pm2 start npm --name "Ouroboros" -- run start
-    ```
-
-4.  **Configure o pm2 para iniciar com o sistema:**
-    ```bash
-    pm2 startup
-    ```
-    Este comando irá detectar seu sistema operacional (Linux, macOS ou Windows) e gerar um novo comando que você precisará executar em seguida.
-
-    -   **No Linux/macOS:** Ele irá gerar um comando começando com `sudo`. Copie e cole esse comando gerado no terminal para registrar o serviço de inicialização.
-    -   **No Windows:** É crucial abrir seu terminal (PowerShell ou CMD) **como Administrador** antes de rodar `pm2 startup`. Siga as instruções que aparecerem na tela.
-
-    O comando gerado é específico para a sua máquina e seu usuário, garantindo que tudo funcione corretamente.
-
-5.  **Salve a lista de processos para o boot:**
-    Após executar o comando de inicialização do passo anterior, salve a lista de processos atual do pm2. Isso fará com que eles reiniciem junto com o sistema.
-    ```bash
-    pm2 save
-    ```
+    A aplicação estará disponível em [http://localhost:3000](http://localhost:3000).
 
 ## 📄 Licença
 
