@@ -6,7 +6,7 @@ O Ouroboros é uma aplicação completa para planejamento de estudos, projetada 
 
 Assista a uma demonstração completa da aplicação e suas funcionalidades no vídeo abaixo:
 
-**[➡️ Assistir à demonstração no YouTube](https://youtu.be/cTVlvHOR89g)**
+**[➡️ Assistir à demonstração no YouTube](https://youtu.be/P_JK7Mv0yJQ)**
 
 ## ✨ Funcionalidades
 
