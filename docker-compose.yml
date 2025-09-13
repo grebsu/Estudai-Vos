@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   web:
+    image: ouroboros-web
     build: .
     container_name: ouroboros-app
     ports:

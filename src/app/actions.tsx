@@ -2,6 +2,8 @@
 
 import fs from 'fs/promises';
 import path from 'path';
+import { getServerSession } from 'next-auth';
+import { authOptions } from './api/auth/[...nextauth]/route';
 
 export interface StudyRecord {
   id: string; // Adicionado id
@@ -81,9 +83,15 @@ export interface StudyCycleData {
 }
 
 
-// Helper function to get the data directory path
-function getDataDirectory() {
-  return path.join(process.cwd(), 'data');
+// Helper function to get the user-specific data directory path
+async function getUserDataDirectory(): Promise<string> {
+  const session = await getServerSession(authOptions);
+  if (!session || !session.user || !session.user.id) {
+    throw new Error('Usuário não autenticado.');
+  }
+  const userDir = path.join(process.cwd(), 'data', session.user.id);
+  await fs.mkdir(userDir, { recursive: true });
+  return userDir;
 }
 
 // --- Funções para o Ciclo de Estudos ---
@@ -94,7 +102,8 @@ export async function saveStudyCycleToFile(planFileName: string, cycleData: Stud
     return { success: false, error: 'Nome do arquivo do plano não fornecido.' };
   }
   const cycleFileName = planFileName.replace('.json', '.cycle.json');
-  const filePath = path.join(getDataDirectory(), cycleFileName);
+  const userDir = await getUserDataDirectory();
+  const filePath = path.join(userDir, cycleFileName);
   try {
     await fs.writeFile(filePath, JSON.stringify(cycleData, null, 2), 'utf-8');
     return { success: true };
@@ -108,7 +117,8 @@ export async function saveStudyCycleToFile(planFileName: string, cycleData: Stud
 export async function getStudyCycleFromFile(planFileName: string): Promise<StudyCycleData | null> {
   if (!planFileName) return null;
   const cycleFileName = planFileName.replace('.json', '.cycle.json');
-  const filePath = path.join(getDataDirectory(), cycleFileName);
+  const userDir = await getUserDataDirectory();
+  const filePath = path.join(userDir, cycleFileName);
   try {
     await fs.access(filePath);
     const fileContent = await fs.readFile(filePath, 'utf-8');
@@ -128,7 +138,8 @@ export async function deleteStudyCycleFile(planFileName: string): Promise<{ succ
     return { success: false, error: 'Nome do arquivo do plano não fornecido.' };
   }
   const cycleFileName = planFileName.replace('.json', '.cycle.json');
-  const filePath = path.join(getDataDirectory(), cycleFileName);
+  const userDir = await getUserDataDirectory();
+  const filePath = path.join(userDir, cycleFileName);
   try {
     await fs.access(filePath); // Verifica se o arquivo existe antes de tentar deletar
     await fs.unlink(filePath);
@@ -145,19 +156,22 @@ export async function deleteStudyCycleFile(planFileName: string): Promise<{ succ
 
 // Get list of available JSON files
 export async function getJsonFiles(): Promise<string[]> {
-  const dataDir = getDataDirectory();
+  const dataDir = await getUserDataDirectory();
   try {
     const files = await fs.readdir(dataDir);
     // Filtra para incluir apenas arquivos .json, excluindo os .cycle.json
     return files.filter(file => file.endsWith('.json') && !file.endsWith('.cycle.json'));
   } catch (error) {
+    if (error instanceof Error && 'code' in error && error.code === 'ENOENT') {
+      return []; // Directory doesn't exist, so no files
+    }
     console.error('Failed to read data directory:', error);
     return [];
   }
 }
 
 export async function deleteJsonFile(fileName: string): Promise<void> {
-  const dataDir = getDataDirectory();
+  const dataDir = await getUserDataDirectory();
   const filePath = path.join(dataDir, fileName);
   try {
     await fs.unlink(filePath);
@@ -175,7 +189,7 @@ export async function getJsonContent(fileName: string) {
     return null;
   }
   try {
-    const dataDir = getDataDirectory();
+    const dataDir = await getUserDataDirectory();
     const filePath = path.join(dataDir, fileName);
     const fileContent = await fs.readFile(filePath, 'utf-8');
     return JSON.parse(fileContent);
@@ -188,7 +202,7 @@ export async function getJsonContent(fileName: string) {
 // Save a study record to a file
 export async function saveStudyRecord(fileName: string, record: StudyRecord): Promise<void> {
   try {
-    const dataDir = getDataDirectory();
+    const dataDir = await getUserDataDirectory();
     const filePath = path.join(dataDir, fileName);
     console.log(`saveStudyRecord: Attempting to save to ${filePath}`);
     
@@ -242,7 +256,7 @@ export async function getStudyRecords(fileName: string): Promise<StudyRecord[]> 
 // Save a review record to a file
 export async function saveReviewRecord(fileName: string, record: ReviewRecord): Promise<void> {
   try {
-    const dataDir = getDataDirectory();
+    const dataDir = await getUserDataDirectory();
     const filePath = path.join(dataDir, fileName);
     
     // eslint-disable-next-line prefer-const
@@ -285,7 +299,7 @@ export async function getReviewRecords(fileName: string): Promise<ReviewRecord[]
 // Save a simulado record to a file
 export async function saveSimuladoRecord(fileName: string, record: SimuladoRecord): Promise<void> {
   try {
-    const dataDir = getDataDirectory();
+    const dataDir = await getUserDataDirectory();
     const filePath = path.join(dataDir, fileName);
 
     let planData: PlanData = await fs.access(filePath).then(async () => {
@@ -327,7 +341,8 @@ export async function getSimuladoRecords(fileName: string): Promise<SimuladoReco
 }
 
 export async function migrateStudyRecordIds(fileName: string) {
-  const filePath = path.join(process.cwd(), 'src', 'data', fileName);
+  const userDir = await getUserDataDirectory();
+  const filePath = path.join(userDir, fileName);
   try {
     const fileContent = await fs.readFile(filePath, 'utf-8');
     const data = JSON.parse(fileContent);
@@ -369,7 +384,7 @@ export async function migrateStudyRecordIds(fileName: string) {
 // Delete a study record from a file
 export async function deleteStudyRecordAction(fileName: string, recordId: string): Promise<void> {
   try {
-    const dataDir = getDataDirectory();
+    const dataDir = await getUserDataDirectory();
     const filePath = path.join(dataDir, fileName);
 
     let planData: PlanData | null = await getJsonContent(fileName);
@@ -413,7 +428,8 @@ export async function createPlanFile(formData: FormData): Promise<{ success: boo
 
   const sanitizedPlanName = planName.trim().toLowerCase().replace(/\s+/g, '-');
   const jsonFileName = `${sanitizedPlanName}.json`;
-  const jsonFilePath = path.join(getDataDirectory(), jsonFileName);
+  const userDir = await getUserDataDirectory();
+  const jsonFilePath = path.join(userDir, jsonFileName);
 
   // Verifica se o arquivo já existe
   try {
@@ -479,7 +495,8 @@ export async function updatePlanFile(fileName: string, updatedData: Partial<Plan
   }
 
   const jsonFileName = fileName.endsWith('.json') ? fileName : `${fileName}.json`;
-  const jsonFilePath = path.join(getDataDirectory(), jsonFileName);
+  const userDir = await getUserDataDirectory();
+  const jsonFilePath = path.join(userDir, jsonFileName);
 
   try {
     const fileContent = await fs.readFile(jsonFilePath, 'utf-8');
@@ -501,7 +518,8 @@ export async function deletePlanFile(fileName: string): Promise<{ success: boole
   }
 
   const jsonFileName = fileName.endsWith('.json') ? fileName : `${fileName}.json`;
-  const jsonFilePath = path.join(getDataDirectory(), jsonFileName);
+  const userDir = await getUserDataDirectory();
+  const jsonFilePath = path.join(userDir, jsonFileName);
 
   try {
     await fs.unlink(jsonFilePath);
@@ -549,7 +567,7 @@ export async function uploadImage(formData: FormData): Promise<{ success: boolea
 
 export async function updateSimuladoRecord(fileName: string, record: SimuladoRecord): Promise<void> {
   try {
-    const dataDir = getDataDirectory();
+    const dataDir = await getUserDataDirectory();
     const filePath = path.join(dataDir, fileName);
 
     let planData: PlanData = await fs.access(filePath).then(async () => {
@@ -582,7 +600,7 @@ export async function updateSimuladoRecord(fileName: string, record: SimuladoRec
 
 export async function deleteSimuladoRecordAction(fileName: string, recordId: string): Promise<void> {
   try {
-    const dataDir = getDataDirectory();
+    const dataDir = await getUserDataDirectory();
     const filePath = path.join(dataDir, fileName);
 
     let planData: PlanData | null = await getJsonContent(fileName);
@@ -605,7 +623,7 @@ export async function deleteSimuladoRecordAction(fileName: string, recordId: str
 }
 
 export async function exportFullBackupAction(): Promise<any> {
-  const dataDir = getDataDirectory();
+  const dataDir = await getUserDataDirectory();
   const planFiles = await getJsonFiles();
   const allPlansData = [];
 
@@ -622,7 +640,7 @@ export async function exportFullBackupAction(): Promise<any> {
 }
 
 export async function restoreFullBackupAction(backupData: { plans: { fileName: string, content: any }[] }): Promise<{ success: boolean; error?: string }> {
-  const dataDir = getDataDirectory();
+  const dataDir = await getUserDataDirectory();
 
   try {
     // 1. Clear the existing data directory
@@ -651,7 +669,7 @@ export async function restoreFullBackupAction(backupData: { plans: { fileName: s
 }
 
 export async function clearAllDataAction(): Promise<{ success: boolean; error?: string }> {
-  const dataDir = getDataDirectory();
+  const dataDir = await getUserDataDirectory();
   try {
     const existingFiles = await fs.readdir(dataDir);
     for (const file of existingFiles) {
@@ -667,7 +685,7 @@ export async function clearAllDataAction(): Promise<{ success: boolean; error?: 
 }
 
 export async function exportAllDataAction(): Promise<any> {
-  const dataDir = getDataDirectory();
+  const dataDir = await getUserDataDirectory();
   const planFiles = await getJsonFiles();
   const allPlansData = [];
 
@@ -693,7 +711,8 @@ export async function updateTopicWeightAction(
     return { success: false, error: 'Parâmetros inválidos.' };
   }
 
-  const filePath = path.join(getDataDirectory(), fileName);
+  const userDir = await getUserDataDirectory();
+  const filePath = path.join(userDir, fileName);
 
   try {
     const fileContent = await fs.readFile(filePath, 'utf-8');

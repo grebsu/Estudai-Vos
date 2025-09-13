@@ -72,23 +72,20 @@ export default function Planos() {
       let plan: PlanContent; // Declare a variable to hold the normalized plan data
 
       if (Array.isArray(rawData)) {
-        // If it's an array of subjects (like sefaz-df.json)
+        // Legacy plan: array of subjects
         plan = {
           name: file.replace('.json', '').split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
           observations: '',
-          iconUrl: undefined,
-          subjects: rawData, // rawData is already Subject[]
+          subjects: rawData,
         };
-      } else if (rawData && typeof rawData === 'object' && rawData.subjects !== undefined) {
-        // If it's a PlanContent object (like meu-plano.json or newly created plans)
-        plan = rawData as PlanContent; // Cast it, assuming it matches PlanContent structure
+      } else if (rawData && typeof rawData === 'object') {
+        // Modern plan: an object that should match PlanContent
+        plan = rawData as PlanContent;
       } else {
-        // Handle cases where the file might be empty or malformed, or just {}
-        // Treat it as an empty plan
+        // Fallback for empty or malformed files
         plan = {
           name: file.replace('.json', '').split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
           observations: '',
-          iconUrl: undefined,
           subjects: [],
         };
       }
